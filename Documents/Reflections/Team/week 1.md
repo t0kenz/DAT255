@@ -27,13 +27,13 @@
 
 
 ## 9. The three KPIs you use for monitoring your progress
-- Burn up chart (accepted velocity vs points taken)
+### Burn up chart (accepted velocity vs points taken)
 - One problem we might have is estimating the velocity correctly which might lead to us taking more or less points than we can handle. We will solve this by logging the amount of points we complete each sprint and compare it to the current estimated velocity so that we know if we have to change our velocity. With this KPI we will also be able to tell if our ability to estimate velocity changes. Our goal is to make the gap between estimated velocity and completed points per sprint smaller.
 
-- Code Coverage in %
+### Code Coverage in %
 - Another issue might be to know how much of our code is correct. To solve this we will log the percentage of code that is covered by unit tests. We want to have as high code coverage as possible and at least cover 70% of the code, with an exception for uncheckable code such as UI.
 
-- Code deletion
+### Code deletion
 - The final thing that we are looking at is deletion of code which generally implies that the planning phase was not extensive enough. We will therefore measure the amount of code deleted by lines commited to git, so that we know if we write unnecessary code. If we see that a lot of code is getting deleted we will know that we have to plan more before we code. This way we will not spend too much time at writing code that will not get used.
 
 ## 10. Code quality using a tool such as Findbugs (1 point if your code includes issues concerning correctness or bad style, 2 points if you have dodgy or performance issues and 3 points if the code is fine), only asses the code you have written yourself
