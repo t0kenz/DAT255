@@ -1,30 +1,30 @@
 # DAT255 SOFTWARE ENGINEERING PROJECT
 
-## Overview
+# Overview
 ...
 
-## Document locations
-# Social contract
+# Document locations
+## Social contract
 ````
 /Documents/Reflections/Socialtkontrakt.docx
 ````
-# Source of code
+## Source of code
 ````
 /src/
 ````
-# Code documents
+## Code documents
 ````
 /Documents/Tech/...
 ````
-# APKs
+## APKs
 ````
 /APK/...
 ````
-# Team reflections
+## Team reflections
 ````
 /Documents/Reflections/Team/Reflections...
 ````
-# Individual reflections
+## Individual reflections
 ````
 /Documents/Reflections/Individual/_Member_Name_/...
 ````
