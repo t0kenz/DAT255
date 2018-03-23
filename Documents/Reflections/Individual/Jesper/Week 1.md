@@ -14,6 +14,6 @@
 
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 #### For the next week
-- Get a good understanding of how scrum works.
-- Understand how softwares like git/trello can increase the efficiency of a project
+- Get a good understanding of how scrum works. I will do this by rechecking the lectures and read literature about scrum.
+- Understand how softwares like git/trello can increase the efficiency of a project.
 - Get a good feel for the codebase, and if it's a coding language I'm unfamiliar with I'll look into the basics of that language 
