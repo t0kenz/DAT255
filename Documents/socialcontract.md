@@ -1,4 +1,4 @@
-#Social Contract
+# Social Contract
 
 - A good team member should be in time. If the member is late three times “fika” has to be offered at the next meeting. A member should notify the group if they know that they will be late. “Akademisk kvart” is in effect. 
 - Sent = 5 min + självförvållat
