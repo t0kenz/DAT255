@@ -9,7 +9,7 @@
 # Document locations
 ## Social contract
 ````
-/Documents/Reflections/Socialtkontrakt.docx
+/Documents/Reflections/socialcontract.md
 ````
 ## Source of code
 ````
