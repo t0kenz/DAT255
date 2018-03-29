@@ -1,5 +1,5 @@
 
-# Week 1
+# Week 2
 
 ## 1. The chosen scope of the application under development including priority of features and for whom you are creating value
 - We will create an application designed for a towage operator. The full scope and the priority of features have not yet been decided as we have not had a meeting with the product owner yet. 
