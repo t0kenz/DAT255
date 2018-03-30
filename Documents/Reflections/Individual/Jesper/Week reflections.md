@@ -18,7 +18,7 @@
 -
 
 
-# Week 2 (under construction)
+# Week 2
 ### What do I want to learn or understand better?
 - Have have a broad knowledge of NodeJS and javascript but I need to read into the specifics of the project, more specific what kind libraries we will use and how they work.
 - I will look into gradle and research how grade will be impemented in our project to increase our efficiency. I will do this by reading guides on gradle and also looking through gradle's websites documentation.
@@ -31,9 +31,12 @@
 - So far my contribution of our scrum has been low, but it'll increase during next week when we start planing our project. 
 
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
-#### For the next week
-
-#### For the next weeks
+#### For previous weeks
+- I've read a lot of documentation about scrum and feel that I still have much to learn within scrum, and see it in practise.
+- I still want to learn how to work effective in a big group and still need to get to know my fellow team members better.
+#### For next week
+- For the following weeks I will need to read the code base of the project and code from my team so I get a good knowledge of the program we're building.
+- I also want to get to know the product owners view of our project aswell as talking to a person working within the branch.
 
 # Week 1
 ### What do I want to learn or understand better?
@@ -49,7 +52,7 @@
 - As of now it's hard to tell how I'll contribution towards our team’s application of scrum since we haven't had the chance yet to implement it in our project. But I do know that I'll complete my tasks to the best of my ability and help our team to complete our tasks.
 
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
-#### For the next week
+#### For next week
 - Get a good understanding of how scrum works. I will do this by rechecking the lectures and read literature about scrum.
 - Understand how softwares like git/trello can increase the efficiency of a project.
 - Get a good feel for the codebase, and if it's a coding language I'm unfamiliar with I'll look into the basics of that language 
