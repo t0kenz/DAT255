@@ -1,5 +1,6 @@
 ﻿
 ## Reflections each week by John
+Basically the same as last week not much has changed
 
 ### What do I want to learn or understand better?
 - I've used trello before in other software projects but not truly incorporated with scrum which caused a few problems so therefore i would like to get better at agile practices and scrum so that i will be better at it in the future
@@ -19,4 +20,4 @@
 
 - As of yet no goals have been set which means that i have accomplished my goals so far
 - Next week i want get a better understanding of the project that we will be working with so that i can better know how we should plan the project
-- Other than that i would also just like to understand scrum better which i will (hopefully) learn by attending the lectures next week
+- I want to focus on understanding the app and js and stuff like that
