@@ -2,7 +2,9 @@
 
 # Overview
 ## Links
-- Slack: https://dat255-vt18.slack.com/messages/C9T1ABPQS/
+- Kurshemsida: https://github.com/hburden/DAT255
+- Källkod: https://github.com/avajadi/portablecdm
+- Vår slack: https://dat255-vt18.slack.com/messages/C9T1ABPQS/
 - Trello: https://trello.com/dat255vt18
 - Google docs: https://drive.google.com/drive/folders/1L8lPBh5Pu5ahq1h5NkwrGsKcAIZQkmDn
 
