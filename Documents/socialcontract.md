@@ -15,9 +15,12 @@ If a member feels like he/she will not be able to complete their tasks in time, 
 We will mainly work together 8-17 on weekdays and avoid weekends, regardless of how we work by ourselves.
 
 We will have a meeting every 
-Monday 9.30-10 
+Monday 9.30-10 (purpose: daily scrum)
 Wednesday 12-17
-Thursday 9-11
+  12-13 (purpose: get ready for review)
+  13-15 (purpose: review from PO)
+  15-17 (purpose: weekly reflections)
+Thursday 9-11 (purpose: change scrum board and get ready for the new sprint)
 
 A member should strive to stay up to date in regards to group messages (Slack) and try to stay on-topic.
 
