@@ -1,0 +1,3 @@
+[submodule "portablecdm"]
+	path = portablecdm
+	url = https://github.com/t0kenz/portablecdm
