@@ -15,6 +15,10 @@
 ````
 /Documents/Reflections/socialcontract.md
 ````
+## Meeting agendas
+````
+/Documents/Meetings/
+````
 ## Source of code
 ````
 /src/
