@@ -1,76 +1,69 @@
 # Template week X
-	### What do I want to learn or understand better?
-	-
+### What do I want to learn or understand better?
+-
 
 
-	### How can I help someone else, or the entire team, to learn something new?
-	-
+### How can I help someone else, or the entire team, to learn something new?
+-
 
 
-	### What is my contribution towards the team’s application of scrum?
-	-
+### What is my contribution towards the team’s application of scrum?
+-
+
+### What is my contribution towards the team’s deliveries? That means 
+that for the personal learning objective you will each week write down 
+what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 
 
-	### What is my contribution towards the team’s deliveries? That means 
-	that for the personal learning objective you will each week write down 
-	what you have achieved in relation to last week's ambition (technologies, 
-	concepts and skills learnt as well as how this was achieved), what you 
-	would like to achieve for the next week and how to make the change happen. 
-	The first week of the course you describe the current situation by 
-	motivating a learning objective. It is perfectly fine to change objective/s 
-	each week as long as you can motivate the change and you evaluate the 
-	outcome of the previous week (e.g. describing the current situation.
+#### For the next week
+-
 
 
-	#### For the next week
-	-
+#### For the next weeks
+-
 
 
-	#### For the next weeks
-	-
+Week 1
 
 
-	Week 1
-
-
-	### What do I want to learn or understand better?
-	-       I need a better overview over the workflow, scrum and the project itself.
-	-       There are also a few communication channels that are new to me, and I want to understand them better and see the structure of them, together.
-	-       I want to understand both how scrum works in theory and how it could be used in this project
-	-       In order to get a better overview, I need to get more information about the “coding parts” of the project, to learn more within that area.
+### What do I want to learn or understand better?
+-       I need a better overview over the workflow, scrum and the project itself.
+-       There are also a few communication channels that are new to me, and I want to understand them better and see the structure of them, together.
+-       I want to understand both how scrum works in theory and how it could be used in this project
+-       In order to get a better overview, I need to get more information about the “coding parts” of the project, to learn more within that area.
 
 
 
 
-	### How can I help someone else, or the entire team, to learn something new?
-	-       My hopes is that I can develop my management skills as one of three scrum masters, and also to contribute with these skills to help organize workflow and work tasks within the group.
+### How can I help someone else, or the entire team, to learn something new?
+-      My hopes is that I can develop my management skills as one of three scrum masters, and also to contribute with these skills to help organize workflow and work tasks within the group.
 
 
 
 
-	### What is my contribution towards the team’s application of scrum?
-	-   	So far I don’t have enough information and knowledge of Scrum to comment this much further, however, I will make sure I am up to date with deadlines, sprints and work tasks to help develop the project.
+### What is my contribution towards the team’s application of scrum?
+-   	So far I don’t have enough information and knowledge of Scrum to comment this much further, however, I will make sure I am up to date with deadlines, sprints and work tasks to help develop the project.
 
 
 
 
-	### What is my contribution towards the team’s deliveries? That means 
-	that for the personal learning objective you will each week write down 
-	what you have achieved in relation to last week's ambition (technologies, 
-	concepts and skills learnt as well as how this was achieved), what you 
-	would like to achieve for the next week and how to make the change happen. 
-	The first week of the course you describe the current situation by 
-	motivating a learning objective. It is perfectly fine to change objective/s 
-	each week as long as you can motivate the change and you evaluate the 
-	outcome of the previous week (e.g. describing the current situation.
+### What is my contribution towards the team’s deliveries? That means 
+that for the personal learning objective you will each week write down 
+what you have achieved in relation to last week's ambition (technologies, 
+concepts and skills learnt as well as how this was achieved), what you 
+would like to achieve for the next week and how to make the change happen. 
+The first week of the course you describe the current situation by 
+motivating a learning objective. It is perfectly fine to change objective/s 
+each week as long as you can motivate the change and you evaluate the 
+outcome of the previous week (e.g. describing the current situation.
 
 
-	#### For the next week
-	During the following week I aim to:
-	-  	Understand Scrum, both theoretical and also how Scrum could be useful in this particular problem
-	- 	Be well aware of what is expected from a Scrum master
-	- 	Understand the project, the code foundation that is needed and the customer’s wishes as well as what I need to get more knowledge within to contribute to the project and the development of code.
-	- 	Feel comfortable with the project structure, in order to see what natural steps should be taken further on.
+####    For the next week
+    During the following week I aim to:
+-       Understand Scrum, both theoretical and also how Scrum could be useful in this particular problem
+- 	    Be well aware of what is expected from a Scrum master
+- 	    Understand the project, the code foundation that is needed and the customer’s wishes as well as what I need to get more knowledge within to contribute to the project and the development of code.
+- 	    Feel comfortable with the project structure, in order to see what natural steps should be taken further on.
 
 
 	Week 2
