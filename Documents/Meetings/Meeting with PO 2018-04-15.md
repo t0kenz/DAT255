@@ -5,8 +5,8 @@ Sebastian var mer intresserad av en app som kan visualisera information än att 
 
 ### Anteckningar
 Vad skulle vara bra att ha med i appen:
-    - Få reda på hur många bogserings båtar som behövs
-    - Vilken tid bogseringsbåt behövs
+- Få reda på hur många bogserings båtar som behövs
+- Vilken tid bogseringsbåt behövs
 
 
 Flyttar runt båtar mellan hamnar i skandinavien => viktigt att veta vilka tider båtar ska vara på plats.
