@@ -1,7 +1,7 @@
 # Reflections
 
 ## Questions
-#1. What do I want to learn or understand better?
+##1. What do I want to learn or understand better?
 
 #2. How can I help someone else, or the entire team, to learn something new?
 
