@@ -10,6 +10,32 @@
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
 ## Week 3
+### 1. What do I want to learn or understand better?
+- I need to understand the current code base and application even further, why I during the upcoming week will try to change some output of the application in order to see how it's responding. 
+- I want to learn more about the User stories since I'm the Scrum Master. The problems I have at the moment are to figure out the scope of the stories and how to write good acceptance criteria. I will ask for some help during our next review session in order to tackle these problems. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- I will sit down with some other team members from my class and try to figure out the code structure. During that session, I think that I can contribute to others understanding as well as they can contribute to mine.
+- As a Scrum master, I've been responsible for handing out tasks during the upcoming week. I think this will make it easier for everyone else to understand what they are supposed to do. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- As mentioned before, I have the role as Scrum Master. In this role, I've taken some initiatives during the last week: 
+	- I've created a new Slack Channel in the Course Slack. In this, we'll discussion 	which information from the tug boat (our part) other groups depend on and what 		information we need from other groups. 
+	- I led the work with creating the first set of tasks from our first real User 		Story. We've added velocities to each task which will make it easier for us to 		follow up on our KPI:s. 
+	- I've been in contact with the tugboat operator and established a meeting session 	during which discussed what needs this operator has and how we can fulfill 		those needs. 
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- I've reach my learning objectives through: 
+	- Reading about JavaScript, NodeJs, Git, Expo and installing all the programs 		needed for our work
+	- Arrange a meeting with the tugboat operator during which I got some answers to 	what value our application should and should not deliver 
+- During the upcoming week I want to 
+	1. get deeper knowledge about the current code structure of the application
+	2. create some User Stories that adds value to our customer
+	3. get a even better understanding of how we depend on other groups in the value 	chain
+- I will reach this targets by
+	1. together with other team members, analyze the code structure and try to create 	some visible change in the application
+	2. create some User Stories together with our group and review these stories 		during the upcoming review session
+	3. read the scenario once more and really focus on how other groups depend on us 	and how we depend on them, regarding information exchange
 
 ## Week 2
 ### 1. What do I want to learn or understand better?
