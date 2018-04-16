@@ -1,30 +1,30 @@
 # Reflections
 
 ## Questions
-##1. What do I want to learn or understand better?
+# 1. What do I want to learn or understand better?
 
-#2. How can I help someone else, or the entire team, to learn something new?
+# 2. How can I help someone else, or the entire team, to learn something new?
 
-#3. What is my contribution towards the team’s application of scrum?
+# 3. What is my contribution towards the team’s application of scrum?
 
-#4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+# 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
 ## Week 3
 
 ## Week 2
-#1. What do I want to learn or understand better?
+# 1. What do I want to learn or understand better?
 - I need to learn more about the programming language and tools we’ll be using to build the application, especially JavaScript, NodeJS and Gradle
 - I want to get deeper knowledge about the requirements for the application that we’ll build. 
 
-#2. How can I help someone else, or the entire team, to learn something new?
+# 2. How can I help someone else, or the entire team, to learn something new?
 - I can be up to date regarding what’s happening in the group and with each group member and constantly seek to help other members. 
 - I can talk to my classmates, whom missed today’s meeting, and get them updated on what we talked about.
 
-#3. What is my contribution towards the team’s application of scrum?
+# 3. What is my contribution towards the team’s application of scrum?
 - I will probably be the Scrum master which will be an important role against executing scrum in a good and efficient way
 - During today’s meeting I asked a lot of questions regarding how we should use Scrum which led to some clarifying decisions in which we decided who we should build our user stories, how we should map our tasks and in general use Scrum.   
 
-#4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+# 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 - I’ve reached my learning objectives that I stated during last week’s reflection: 
 	- I’ve learn more about Scrum by reading literature and repeating the lectures on 	that topic. 
 	- I’ve watched some videos regarding Git and how to use version control. 
@@ -39,18 +39,18 @@
 
 
 ## Week 1
-#1. What do I want to learn or understand better?
+# 1. What do I want to learn or understand better?
 - At the moment, I want to understand the scrum methodology even better and further on, next week, I want to see how scrum can be used in practise. 
 - I want to understand more about the project itself, which we will do during next week. 
 - I need to understand the tools we’ll be using to follow up our KPI’s and the different code language we’ll be using in order to complete the project and the product. 
 
-#2.How can I help someone else, or the entire team, to learn something new?
+# 2. How can I help someone else, or the entire team, to learn something new?
 - We have not distributed any work assignments yet so it’s hard for me to help another individual but I do think that my skills and knowledges will be useful during the next week when it comes to establishing the project and getting the team together. 
-What is my contribution towards the team’s application of scrum?
+# 3. What is my contribution towards the team’s application of scrum?
 - I will be one of the scrum masters because the role will be rotated among me and 	two other team members. 
 - I have taken initiatives in the reflection of this week to focus our discussion on 	the three main questions of reflection. The reason for this was to find a solid 	and common ground for our future reflections. Hopefully, this will increase our 	ability to create weekly tasks that are based on our reflections. 
 
-#3.What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+# 3. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 - During the following week I want to: 
 	- deepen my knowledge within Scrum as a subject by reading literature and 		repeating the lectures
 	-learn more about the role as scrum master by reading literature and repeating the 	lectures
