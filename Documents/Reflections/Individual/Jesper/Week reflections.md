@@ -11,11 +11,40 @@
 -
 
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### From the previous week
+- 
+
 #### For the next week
 -
 
 #### For the next weeks
 -
+
+# Week 3 (Late update due to meeting with PO on Sunday)
+### What do I want to learn or understand better?
+- After spending some time with the code base it's clear that I'll need a lot more time to fully understand it and be able to produce code that's similar to the already written code.
+- I need to look into vertical slicing within scrum and learn how to apply it in real world scenarios, which we will start to do on monday and wednesday the following week.
+
+### How can I help someone else, or the entire team, to learn something new?
+- Since I've gotten the code to run on my computer I will be able to help if someone gets stuck on the same problems as I did. I will also try to explain the code base to anyone of my team if they have a hard time understanding how it all works. I've spent a lot of time this week to learn how to write React code (the library that the program uses) and will try to help my team if they have trouble getting started
+- When we try to slice the epics from our scrum board I will try to use my knowledge of producing nodeJS code and help with an accurate time estimate for each user story.v
+
+
+### What is my contribution towards the team’s application of scrum?
+- So far I have been active on most of our team's meetings and have also been active in the discussions outside meetings, for example how to use most of git's built in features to streamline our teams progress.
+- For now it's hard to say how I will contribute to our application of scrum more that beeing active in the progress of making our application and how we should apply scrum.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### From the previous week
+- I have spent a lot of time getting the application to run on my computer. I've used this knowledge to help the other members in our team to get the application to run on their computers.
+- I still have a lot to learn within scrum and the last week we got a short talk with our Product Owner to get a feel what's asked from us.
+- I have watched some youtube lectures to better understand how React (The library that the code base uses) works and how to apply it. I feel like I'm ready to start producing code, however I still need to spend more time with our code base to write code that matched the previous code.
+
+#### For the next week
+- I will continue to learn about Scrum and I still need more skill within React. I feel like I still need to spend more time with the existing code to understand how it's written and what patterns the use. 
+- During the next week we will start replan our epics and slice them up into smaller pieces. I will try to be active in this to get a better understanding on how to slice user stories/epics up and still keep some value for the PO.
+
+
 
 
 # Week 2
@@ -37,6 +66,10 @@
 #### For next week
 - For the following weeks I will need to read the code base of the project and code from my team so I get a good knowledge of the program we're building.
 - I also want to get to know the product owners view of our project aswell as talking to a person working within the branch.
+
+
+
+
 
 # Week 1
 ### What do I want to learn or understand better?
