@@ -1,3 +1,37 @@
+# Week 3
+## 1. What do I want to learn or understand better?
+
+●The project codebase, JavaScript, the development tools (e.g. Visual Studio Code)
+●Sprint planning and execution.
+
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+●I spent a lot of time getting the project to run, so I should be able to help anyone who still has problems (at least on linux)
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+●I participated in most group meetings including the Friday meeting where we wrote the reflection and made some improvements to the user stories.
+
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Since last week:
+
+●Scrum: we further developed the user stories after some feedback. The first user stories were too large, and lacked motivation.
+
+●JavaScript, nodeJS, Gradle: did some reading and tried writing some code. However I still need to improve my JavaScript skills.
+
+●Project: I had a look at the codebase. However it was not well documented and my lack of JavaScript knowledge didn't help. Also, I spent a lot of time just getting the project to run, which left me with less time than expected to spend on other goals. Consequently I do not feel that I understand the codebase well enough.
+ 
+My learning objectives for the next week are:
+
+Next week I will primarily focus on understanding the codebase, familiarizing myself with the development tools, and further improving my JavaScript skills enough to be able to contribute during the first sprint. To achieve this I will do some reading and trying things out. In the project I will get an overview of the different components, then start modifying the current app, starting with very basic changes and make them more advanced as I improve my understanding.
+  
+The second goal is to get my first real experience of performing a sprint, and learn as much as possible from it. This will be achieved through participating in the upcoming sprint and reflecting on it continuously (i.e. I need to keep the process in mind and not just focus on the coding).
+
+--------------------------------------------------------------------------------
 # Week 2
 ## 1. What do I want to learn or understand better?
 
