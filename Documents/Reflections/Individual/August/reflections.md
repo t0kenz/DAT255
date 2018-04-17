@@ -2,6 +2,7 @@
 ## 1. What do I want to learn or understand better?
 
 ●The project codebase, JavaScript, the development tools (e.g. Visual Studio Code)
+
 ●Sprint planning and execution.
 
 
