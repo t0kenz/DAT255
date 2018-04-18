@@ -1,7 +1,7 @@
 ## Anteckningar från möte med Sebastian
 
 ### Sammanfattning av önskemål i appen:
-- Sebastian var mer intresserad av en app som kan visualisera information än att vi ska ändra på sättet som dom kommunicerar på
+- Sebastian var mer intresserad av en app som kan visualisera information än att vi ska ändra på sättet som dom kommunicerar på.
   Exempel på sådan information var hur många bogserings båtar som behövs, vilken tid, vart kopplingspunkten är, vilken kaj. 
 - Han tyckte att preliminär bokning av bogserings båtar skulle vara intressant, men han ville inte tappa kommunkationen över telefon för fastställande av bokning.
 - Han sade också att det skulle vara bra om man kunde få en mailnotifikation för en bokning. 
