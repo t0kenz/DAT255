@@ -1,7 +1,18 @@
 ## Anteckningar från möte med Sebastian
 
-### Sammanfattning:
-Sebastian var mer intresserad av en app som kan visualisera information än att vi ska förändra sättet som dom kommunicerar på. Exempel på sådan information var hur många bogserings båtar som behövs, vilken tid, vart kopplingspunkten är, vilken kaj. Det verkade dock som att han tyckte att preliminär bokning av bogserings båtar skulle vara intressant, men han ville inte tappa telefon kommunikationen för fastställande av bokning.
+### Sammanfattning av önskemål i appen:
+- Sebastian var mer intresserad av en app som kan visualisera information än att vi ska ändra på sättet som dom kommunicerar på
+  Exempel på sådan information var hur många bogserings båtar som behövs, vilken tid, vart kopplingspunkten är, vilken kaj. 
+- Han tyckte att preliminär bokning av bogserings båtar skulle vara intressant, men han ville inte tappa kommunkationen över telefon för fastställande av bokning.
+- Han sade också att det skulle vara bra om man kunde få en mailnotifikation för en bokning. 
+- Han tycker även att det ska var enkelt att hitta information och att överflödig information inte bör finnas i appen.
+- Sebastian tyckte att en chattfunktion för inblandade parter i en bogserings bokning skulle vara bra.
+
+### Hur bokningen går till:
+- Restriktioner för hur många bogserings båtar som behövs för en typ av båt finns i Sjöfartsverkets regler.
+- Agent mailar för att boka en preliminär tid.
+- Agent ringer för att fastställa en tid för bogsering.
+- vill att bokningen ska vara fastställd 5 timmar innan bogsering.
 
 ### Anteckningar
 Vad skulle vara bra att ha med i appen:
