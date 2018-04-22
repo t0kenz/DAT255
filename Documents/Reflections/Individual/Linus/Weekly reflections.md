@@ -1,5 +1,70 @@
 ## Linus individual reflections
 
+# Week 4
+
+
+### What do I want to learn or understand better?
+
+- We're currently in a seat with our product owner where we know roughly what they want and what we should produce as a MVP. Consequently, this has created a few tasks and I and another person in our group has been assigned to deal with the database part of the weekly sprint. I want to get an exhaustive picture of how we best should create an exhaustive database structure for our current use and future use.
+
+- I want to understand how tugboat operators might use this product to minimize their current workload and find further features that they might want.
+
+### How can I help someone learn, or the entire team, to learn something new? 
+
+- Once I get a more wholesome understanding of what tugboat operators in their current daily job, it'll help me explain to the others in the group and to the product owner how we can best develop the MVP. 
+
+### What is my contribution towrads the team's application of Scrum?
+
+- I have completed my assigned tasks from the weekly sprint log and participated in a majority of the weekly meetings. 
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+#### I reached my last week's learning objectives by:
+
+- Me and Jesper in the group was assigned a task where we would present our understanding of the existing code base to the rest of the group. This allowed me to get a better understanding of the pervasive idea behind the project. 
+
+- I read up on example applicance of Scrum in other and bigger projects and got a better understanding of how we can use agile methods and Scrum in our project
+
+
+#### Learning objectives for the next week:
+
+- I will read up on more advanced database structure technology to find a suitable model for our software. I have read a course in databases earlier, and I will simply read up on some theory related to this and try to find other examples of more exhaustive database structures online.
+
+- I will study the use cases and speak with the product owner. From the use cases I will try to recognize a pattern of certain tasks that can be improved by automating the process and/or task.  
+
+
+# Week 3
+
+### What do I want to learn or understand better?
+- I want to get a more in-depth knowledge in the current code base.
+With this I mean that I want to on a graspable level be able to understand the idea behind their solutions to the problems creating an app like this.
+- I also want to understand the applicance of Scrum in our project and agile methods in general in order to properly review and extend our applicance in the project in possible ways. 
+
+### How can I help someone learn, or the entire team, to learn something new?
+- I will continue as before, trying to first establish an understanding of a task or objective and then share my findings/understanding with the rest of the group in the most appropriate way. 
+
+### What is my contribution towards the team's application of scrum?
+
+- I have contributed in terms of participating in the meetings and constructing a proper way of applying scrum to our project. 
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+#### I reached my last week's learning objectives by:
+
+- Forcing myself to find situations where I want to get further understanding of a subject by asking the lecturer questions during breaks. 
+
+- I have thoroughly studied litterature related to the tools we're to use in the project 
+
+- Been in meetings discussing requirements for our project.
+
+
+#### Learning objectives for the next week:
+
+- I will aim to get a better understanding of the current existing code base by looking into how we can extend the current application base and from that figure out how we'll construct our MVP (minimum valuable product) for the product owner. I will also thoroughly try to process how things are executed and in turn create a flowchart or equivalent to give a more general overview of the project structure.
+
+- I will try to participate in all meetings and discuss how we think scrum is best applied in our project. 
+
+
 # Week 2
 
 ### What do I want to learn or understand better?
