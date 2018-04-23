@@ -9,6 +9,28 @@
 
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
+## Week 4
+### 1. What do I want to learn or understand better?
+- At the moment, we have a conceptual idea over what we should deliver to our PO and the end user. I want to understand how we should develop our UI even further and I will try to do this by painting a UI. 
+- At the moment, I have some understanding of the different time stamps and state tapes that are used in the current application. I want to understand these even better and get a sense of which stamps/types the tugboat operator use. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- When I get a better understanding of the state types/time stamps used in the application, I'm able to share this knowledge with my team mates. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- I was partly responsible for creating a set of user stories during the past week which we reviewed to our product owner. We've now changed these stories but they were a good foundation on which we could develop them further. 
+- As a scrum master, I'm currently responsible for the communication with other teams, securing that we use our scrum board in a proper way and that our reflections lead the way for the changes we need to do in our work. At the moment, I see the need for more and deeper contact with other groups why I will contact them during the upcoming week to present our soloution.  
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the past week I reached almost all my ambitions except of the part where I was supposed to read the scenario even more. I haven't got the time to do that unfortunately. 
+- During the upcoming week I want to: 
+	- Get a better understanding of the scenario we should be able to tackle and 		analyze if our conceptual solution will do this. 
+	- Develop a conceptual idea over how our UI should manifest itself
+- I will reach this by
+	- Reading the scenarion once again
+	- Develop a painting that shows our different UIs
+
+
 ## Week 3
 ### 1. What do I want to learn or understand better?
 - I need to understand the current code base and application even further, why I during the upcoming week will try to change some output of the application in order to see how it's responding. 

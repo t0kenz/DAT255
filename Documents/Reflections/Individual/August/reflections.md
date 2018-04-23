@@ -1,3 +1,37 @@
+# Week 4 
+
+This was a shorter week due to a change in our scheduling: sprints are now Thur-Wed. Consequently some objectives are unchanged from last week, as we have not completed our first sprint. The previous reflection was written expecting to go through the first sprint before writing this reflection. Week 4 covers Sat 14th - Wed 18th.
+
+## 1. What do I want to learn or understand better? (unchanged since last week)
+
+●The project codebase, JavaScript, the development tools (e.g. Visual Studio Code)
+
+●Sprint planning and execution.
+
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+●Once I learn more about the codebase, as I work on my tasks, I can discuss it with the group and we can help each other fill in any gaps in our understanding.
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+●I have participated in group meetings and completed my assigned task to prepare for our first sprint.
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Since last week:
+
+Regarding the codebase, tools and JS, I have done what was planned the week before. 
+The sprint-related goal has not been achieved because we haven't started the first sprint yet, due to the schedule change.
+
+My learning objectives for the next week are:
+
+1: Continue to learn about the codebase, tools and JS by working on my assigned tasks during our first sprint.
+
+2: Same as last week: learn as much as possible from the first sprint. This will be achieved through participating in the upcoming sprint and reflecting on it continuously (i.e. I need to keep the process in mind and not just focus on the coding).
+
+
 # Week 3
 ## 1. What do I want to learn or understand better?
 
