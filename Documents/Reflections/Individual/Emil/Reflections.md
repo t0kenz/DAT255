@@ -9,7 +9,55 @@
 
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
+## Week 4
+### 1. What do I want to learn or understand better?
+- At the moment, we have a conceptual idea over what we should deliver to our PO and the end user. I want to understand how we should develop our UI even further and I will try to do this by painting a UI. 
+- At the moment, I have some understanding of the different time stamps and state tapes that are used in the current application. I want to understand these even better and get a sense of which stamps/types the tugboat operator use. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- When I get a better understanding of the state types/time stamps used in the application, I'm able to share this knowledge with my team mates. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- I was partly responsible for creating a set of user stories during the past week which we reviewed to our product owner. We've now changed these stories but they were a good foundation on which we could develop them further. 
+- As a scrum master, I'm currently responsible for the communication with other teams, securing that we use our scrum board in a proper way and that our reflections lead the way for the changes we need to do in our work. At the moment, I see the need for more and deeper contact with other groups why I will contact them during the upcoming week to present our soloution.  
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the past week I reached almost all my ambitions except of the part where I was supposed to read the scenario even more. I haven't got the time to do that unfortunately. 
+- During the upcoming week I want to: 
+	- Get a better understanding of the scenario we should be able to tackle and 		analyze if our conceptual solution will do this. 
+	- Develop a conceptual idea over how our UI should manifest itself
+- I will reach this by
+	- Reading the scenarion once again
+	- Develop a painting that shows our different UIs
+
+
 ## Week 3
+### 1. What do I want to learn or understand better?
+- I need to understand the current code base and application even further, why I during the upcoming week will try to change some output of the application in order to see how it's responding. 
+- I want to learn more about the User stories since I'm the Scrum Master. The problems I have at the moment are to figure out the scope of the stories and how to write good acceptance criteria. I will ask for some help during our next review session in order to tackle these problems. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- I will sit down with some other team members from my class and try to figure out the code structure. During that session, I think that I can contribute to others understanding as well as they can contribute to mine.
+- As a Scrum master, I've been responsible for handing out tasks during the upcoming week. I think this will make it easier for everyone else to understand what they are supposed to do. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- As mentioned before, I have the role as Scrum Master. In this role, I've taken some initiatives during the last week: 
+	- I've created a new Slack Channel in the Course Slack. In this, we'll discussion 	which information from the tug boat (our part) other groups depend on and what 		information we need from other groups. 
+	- I led the work with creating the first set of tasks from our first real User 		Story. We've added velocities to each task which will make it easier for us to 		follow up on our KPI:s. 
+	- I've been in contact with the tugboat operator and established a meeting session 	during which discussed what needs this operator has and how we can fulfill 		those needs. 
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- I've reach my learning objectives through: 
+	- Reading about JavaScript, NodeJs, Git, Expo and installing all the programs 		needed for our work
+	- Arrange a meeting with the tugboat operator during which I got some answers to 	what value our application should and should not deliver 
+- During the upcoming week I want to 
+	1. get deeper knowledge about the current code structure of the application
+	2. create some User Stories that adds value to our customer
+	3. get a even better understanding of how we depend on other groups in the value 	chain
+- I will reach this targets by
+	1. together with other team members, analyze the code structure and try to create 	some visible change in the application
+	2. create some User Stories together with our group and review these stories 		during the upcoming review session
+	3. read the scenario once more and really focus on how other groups depend on us 	and how we depend on them, regarding information exchange
 
 ## Week 2
 ### 1. What do I want to learn or understand better?
