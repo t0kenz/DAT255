@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { 
   sendPortCall, 
-  initPortCall,
+  //initPortCall,
   clearReportResult,
   clearVesselResult,
   selectLocation,
@@ -43,11 +43,6 @@ import colorScheme from '../../config/colors';
 import { createPortCallMessageAsObject, objectToXml } from '../../util/xmlUtils';
 import { cleanURN } from '../../util/stringUtils';
 import { getDateTimeString } from '../../util/timeservices';
-<<<<<<< HEAD
-=======
-import { hasComment, promptOpposite } from '../../config/instances';
->>>>>>> 7db59deffae50f7ed04d9ac475b6bdca6e768c8d
-
 
 let navBackTimer      = null;
 let initRedirectTimer = null;
@@ -162,70 +157,71 @@ class SendPortcall extends Component {
     );
   }
 
-  _initPortCall() {
-    const { stateId } = this.props.navigation.state.params;
-    const { selectedDate, selectedTimeType, comment } = this.state;
-    const { portCall, getState, initPortCall, sendingState, navigation, clearVesselResult } = this.props;
-    const { navigate } = navigation;
-    const { selectedVessel } = this.state;
-    const vesselId = selectedVessel.imo;
-    const { atLocation, fromLocation, toLocation, } = sendingState;
-    const state = getState(stateId);
+  // --Deprecated due to removal of Create New Port Call feature--
+  // _initPortCall() {
+  //   const { stateId } = this.props.navigation.state.params;
+  //   const { selectedDate, selectedTimeType, comment } = this.state;
+  //   const { portCall, getState, initPortCall, sendingState, navigation, clearVesselResult } = this.props;
+  //   const { navigate } = navigation;
+  //   const { selectedVessel } = this.state;
+  //   const vesselId = selectedVessel.imo;
+  //   const { atLocation, fromLocation, toLocation, } = sendingState;
+  //   const state = getState(stateId);
 
-    console.log('Selected vessel: ' + JSON.stringify(selectedVessel));
+  //   console.log('Selected vessel: ' + JSON.stringify(selectedVessel));
 
-    if (!atLocation && state.ServiceType !== 'NAUTICAL') {
-        Alert.alert('Invalid location', 'At-location is missing!');
-        return;
-    }
+  //   if (!atLocation && state.ServiceType !== 'NAUTICAL') {
+  //       Alert.alert('Invalid location', 'At-location is missing!');
+  //       return;
+  //   }
 
-    if (state.ServiceType === 'NAUTICAL' && (!fromLocation || !toLocation)) {
-        Alert.alert('Invalid location(s)', 'From- or To-location is missing!');
-        return;
-    } 
+  //   if (state.ServiceType === 'NAUTICAL' && (!fromLocation || !toLocation)) {
+  //       Alert.alert('Invalid location(s)', 'From- or To-location is missing!');
+  //       return;
+  //   } 
 
-    Alert.alert(
-        'Confirmation',
-        'Would you like to create a new port call with ' + selectedTimeType.toLowerCase() + ' ' + state.Name + ' for vessel ' + selectedVessel.name + '?',
-        [
-            {text: 'No'},
-            {text: 'Yes', onPress: () => {
-                const {type, pcm} = createPortCallMessageAsObject({atLocation, fromLocation, toLocation, vesselId, portCallId: null, selectedDate, selectedTimeType, comment}, state);
+  //   Alert.alert(
+  //       'Confirmation',
+  //       'Would you like to create a new port call with ' + selectedTimeType.toLowerCase() + ' ' + state.Name + ' for vessel ' + selectedVessel.name + '?',
+  //       [
+  //           {text: 'No'},
+  //           {text: 'Yes', onPress: () => {
+  //               const {type, pcm} = createPortCallMessageAsObject({atLocation, fromLocation, toLocation, vesselId, portCallId: null, selectedDate, selectedTimeType, comment}, state);
                 
-                initPortCall(pcm, type).then((portCallId) => {
-                    if(!!this.props.sendingState.error) {
-                        Alert.alert(
-                            'Error',
-                            'Unable to send message!'
-                        );
-                    } else {
-                        this.refs._scrollView.scrollToEnd();
+  //               initPortCall(pcm, type).then((portCallId) => {
+  //                   if(!!this.props.sendingState.error) {
+  //                       Alert.alert(
+  //                           'Error',
+  //                           'Unable to send message!'
+  //                       );
+  //                   } else {
+  //                       this.refs._scrollView.scrollToEnd();
 
-                        let fetching = false;
-                        // Fetch the portCall so that we can navigate to timeline, need to be on a delay so that the backend have time to create the port call
-                        initRedirectTimer = setInterval(() => {
-                            if(!fetching) {
-                                fetching = true;
-                                this.props.fetchPortCall(portCallId)
-                                    .then(portCall => {
-                                        if(!!portCall) {
-                                            this.props.selectPortCall(portCall);
-                                            clearInterval(initRedirectTimer);
-                                            navigate('TimeLineDetails');
-                                        }
+  //                       let fetching = false;
+  //                       // Fetch the portCall so that we can navigate to timeline, need to be on a delay so that the backend have time to create the port call
+  //                       initRedirectTimer = setInterval(() => {
+  //                           if(!fetching) {
+  //                               fetching = true;
+  //                               this.props.fetchPortCall(portCallId)
+  //                                   .then(portCall => {
+  //                                       if(!!portCall) {
+  //                                           this.props.selectPortCall(portCall);
+  //                                           clearInterval(initRedirectTimer);
+  //                                           navigate('TimeLineDetails');
+  //                                       }
 
-                                        fetching = false;
-                                    })
-                            }
-                        }, 2000);
+  //                                       fetching = false;
+  //                                   })
+  //                           }
+  //                       }, 2000);
 
-                    }
-                    clearVesselResult();
-                });       
-            }}
-        ]
-    );
-  }
+  //                   }
+  //                   clearVesselResult();
+  //               });       
+  //           }}
+  //       ]
+  //   );
+  // }
 
   componentWillMount() {
     const { atLocation, fromLocation, toLocation } = this.props.navigation.state.params;
@@ -743,7 +739,7 @@ export default connect(
         fetchVesselByName, 
         removeError, 
         sendPortCall, 
-        initPortCall,
+        //initPortCall,
         clearReportResult, 
         selectLocation,
         clearVesselResult,
@@ -751,3 +747,4 @@ export default connect(
         fetchPortCall,
         selectPortCall,
     })(SendPortcall);
+

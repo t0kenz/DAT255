@@ -113,9 +113,9 @@ class SideMenu extends Component {
                             if(activeItemKey !== 'Login') navigate('Berths');
                         }}
                     />
-
-                    {true &&<ListItem
-                        containerStyle={activeItemKey === 'FavoriteStatesSideMenu' /* TODO: Change color when selected */ ? [containerStyle, styles.selectedContainer] : containerStyle}
+                    
+                    {/*true &&<ListItem //TODO_S1 ta bort
+                        containerStyle={activeItemKey === 'FavoriteStatesSideMenu' /* TODO: Change color when selected */ /* ? [containerStyle, styles.selectedContainer] : containerStyle}
                           leftIcon={{
                           name: 'add',
                           color: 'white'
@@ -137,8 +137,8 @@ class SideMenu extends Component {
                                   });
                             }
                         }}
-                    />}
-     
+                    />*/}
+       
                     <ListItem
                         containerStyle={activeItemKey === 'FavoriteStatesSideMenu' ? [containerStyle, styles.selectedContainer] : containerStyle}
                           leftIcon={{

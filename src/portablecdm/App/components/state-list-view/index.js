@@ -31,15 +31,14 @@ class StateList extends Component {
 
   render() {
     const { navigate, state } = this.props.navigation;
-    const initNew = !!state.params;
     const { getState, stateCatalogue } = this.props;
     let favoriteStates = this.props.favoriteStates.sort((a,b) => (a < b ? -1 : 1));
 
     return(
       <View style={styles.container}>
-        <TopHeader title={initNew ? 'Create port call' : 'Favorite States'}
+        <TopHeader title={'Favorite States'}
           navigation={this.props.navigation}
-          firstPage={initNew}
+          firstPage={false}
           rightIconFunction={this.onAddStatesPress.bind(this)} 
         />
         <View style={styles.headerContainer} >
@@ -54,11 +53,7 @@ class StateList extends Component {
                   key={index}
                   title={state.Name}
                   onPress={() => {
-                      if (initNew) {
-                        navigate('InitPortCall', {stateId: state.StateId, newVessel: true});
-                      } else {
                         navigate('SendPortCall', {stateId: state.StateId, newVessel: false});
-                      }
                     }}
                 />
               );

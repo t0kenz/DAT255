@@ -50,36 +50,37 @@ export const sendPortCall = (pcmAsObject, stateType) => {
     }
 }
 
-export const initPortCall = (pcmAsObject, stateType) => {
-    return (dispatch, getState) => {
-        const { connection, token } = getState().settings;
-        dispatch({type: types.SEND_PORTCALL});
-        const headers = connection.username ? createLegacyHeaders(connection) : createTokenHeaders(token, connection.host);
+// --Deprecated due to removal of Create New Port Call feature--
+// export const initPortCall = (pcmAsObject, stateType) => {
+//     return (dispatch, getState) => {
+//         const { connection, token } = getState().settings;
+//         dispatch({type: types.SEND_PORTCALL});
+//         const headers = connection.username ? createLegacyHeaders(connection) : createTokenHeaders(token, connection.host);
 
-        return pinch.fetch(`${connection.scheme + connection.host}:${connection.port}/pcr/port_call/`, {
-            method: 'POST',
-            headers: {
-              ...headers, 
-              'Content-Type' : 'application/json'},
-            body: createInitParams(pcmAsObject.vesselId),
-            sslPinning: getCert(connection),
-        })
-        .then(result => {
-            console.log(JSON.stringify(result));
-            if(result.status === 200) return JSON.parse(result.bodyString);
+//         return pinch.fetch(`${connection.scheme + connection.host}:${connection.port}/pcr/port_call/`, {
+//             method: 'POST',
+//             headers: {
+//               ...headers, 
+//               'Content-Type' : 'application/json'},
+//             body: createInitParams(pcmAsObject.vesselId),
+//             sslPinning: getCert(connection),
+//         })
+//         .then(result => {
+//             console.log(JSON.stringify(result));
+//             if(result.status === 200) return JSON.parse(result.bodyString);
 
-            let error = result.bodyString;              
-            throw new Error(result.status + ': ' + error);
-        })
-        .then(result => {
-            pcmAsObject.portCallId = result.portCallId;
-            return dispatch(sendPortCall(pcmAsObject, stateType));
-        })
-        .catch(error => {
-            dispatch({type: types.SEND_PORTCALL_FAILURE, payload: error.message})
-        })
-    }
-}
+//             let error = result.bodyString;              
+//             throw new Error(result.status + ': ' + error);
+//         })
+//         .then(result => {
+//             pcmAsObject.portCallId = result.portCallId;
+//             return dispatch(sendPortCall(pcmAsObject, stateType));
+//         })
+//         .catch(error => {
+//             dispatch({type: types.SEND_PORTCALL_FAILURE, payload: error.message})
+//         })
+//     }
+// }
 
 export const withdrawStatement = (statement) => (dispatch, getState) => {
     const { messageId, portCallId } = statement;
