@@ -13,7 +13,7 @@ A member should strive to stay up to date in regards to group messages (Slack) a
 
 
 #### Roles
-The role as Scrum master will be permanent. The preliminary Scrum master is Emil.
+The role as Scrum master will be permanent. The Scrum master is Emil.
 
 The following will be responsible for compiling the KPI data before every weekly reflection meeting:
 Robin - Burnup-chart
