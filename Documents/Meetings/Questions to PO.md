@@ -5,7 +5,9 @@
 - Feedback about our UI
 - Is it useful to implement a chat-function in our soloution?
 - When a tugboat operator denies a request, we would like to give the operator the ability to suggest a new time. What do you think about that?
-- 
+
+### Questions to Pontus
+- How should we get data from about the timestamps, from PortableCDM or your database?
 
 ## Week 3
 ### Questions to PO
