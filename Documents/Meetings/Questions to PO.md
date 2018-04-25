@@ -1,5 +1,12 @@
 # Questions
 
+## Week 4
+### Questions to PO
+- Feedback about our UI
+- Is it useful to implement a chat-function in our soloution?
+- When a tugboat operator denies a request, we would like to give the operator the ability to suggest a new time. What do you think about that?
+- 
+
 ## Week 3
 ### Questions to PO
 - Feedback on our User Stories
