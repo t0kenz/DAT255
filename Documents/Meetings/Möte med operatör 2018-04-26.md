@@ -16,11 +16,12 @@ Så länge ett portcall är preliminär ska man inte behöva godkänna den bokni
 
 Sätta in filterfunktion i listvyn
 
-Dela upp UI i 4 delar. 
+#### Dela upp UI i 4 delar. 
+`````````````
 - Portcalls som visar alla inkommande båtar 
 - Requests som visar alla ej accepterade/noted requests på bogseringsbåtar
 - "Ongoing jobs" som visar alla requests som svitzer har svarat på. Ska kunna filtreras på preliminär och bestämd tid.
 - Settings(?) som visar hur användaren ska få in notiser, vilken information de vill dela osv.
-
+`````````````
 Nästa möte går bra V.19 tisdag EM, fredag EM och söndag EM. V.20 är det onsdag
 
