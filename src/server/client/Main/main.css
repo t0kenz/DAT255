@@ -1,0 +1,74 @@
+.left {
+    left: 15px;
+    position: relative;
+    float: left;
+    min-height: 700px;
+    height: 100%;
+    width: Calc(50% - 30px);
+    border: 1px solid #c7c6c6;
+    border-radius: 10px;
+}
+.right {
+    right: 15px;
+    position: relative;
+    float: right;
+    height: 700px;
+    width: Calc(50% - 30px);
+    border: 1px solid #c7c6c6;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    width: 96%;
+    left: 2%;
+    height: 35px;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.reqButton {
+    position: relative;
+    margin-left: Calc(50% - 75px);
+    text-align: center;
+    font-size: 24px;
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 40px;
+    border: 1px solid #377a7c;
+    border-radius: 10%;
+    user-select: none;
+}
+
+.reqButton:hover {
+    background: blanchedalmond;
+    cursor: pointer;
+}
+
+.requestedTugboat {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    width: Calc(100% - 2px);
+    height: 40px;
+    border-top: 1px solid #30c3c8;
+}
+
+.requestedTugboat:hover {
+    background: #30c3c8;
+    cursor: pointer;
+}
+
+.requests {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    border: 1px solid #f0f0f0;
+}   
+
+.greyBackground {
+    background-color: #f0f0f0;
+} 
