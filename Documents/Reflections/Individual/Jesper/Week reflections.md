@@ -17,8 +17,24 @@
 #### For the next week
 -
 
-#### For the next weeks
--
+
+# Week 4
+### What do I want to learn or understand better?
+- I need to look into how we can communicate between our server and portCDM's. This is done over http requests and I need to read up on portCDM's API and how we can receive/post the information we need.
+
+### How can I help someone else, or the entire team, to learn something new?
+- I will try to help my team with how http requests work. If there's uncertainty within the backend and how it works I will also try to help my team to understand it. 
+
+### What is my contribution towards the team’s application of scrum?
+- I've been active during all the meetings I've been able to atend. I've also atended both meetings with our operator and been active during those meetings aswell. I've used my knowledge from nodeJS projects combined with what our PO/Operator want from the application and have helped our team to create userstories that is valuable for the PO and the Operator.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### From the previous week
+- I still have a lot to learn within scrum and the this week we got a short but valuable talk with our Product Owner and got some great ideas for the application. We got our first real feeling what scrum actually is like.
+#### For the next week
+- As mentioned earlier we got some great ideas when talking to the PO. But we need to make certain that we dont bite off more than we can chew, we need to be able to deliver a good product and not just a lot of ideas that never got implemented. To acheive this I will try to get a grip on what's actually manageable for us to achieve within 5 weeks, and only implement the most important parts.
+
+
 
 # Week 3 (Late update due to meeting with PO on Sunday)
 ### What do I want to learn or understand better?
