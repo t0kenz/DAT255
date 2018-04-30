@@ -1,7 +1,7 @@
 # Reflection week 3 - Robin
 
 ### What do I want to learn or understand better?
-- I still feel that I wont to be more active in our discussions, so this will be my goal. I will take notes during the week of things that I think be good to discuss during our meetings as it is easy to forget, I believe this will help me to be more active.
+- I still feel that I want to be more active in our discussions, so this will be my goal. I will take notes during the week of things that I think be good to discuss during our meetings as it is easy to forget, I believe this will help me to be more active.
 
 ### How can I help someone else, or the entire team, to learn something new?
 - Aside from helping someone that asks for help, I can share resources that I use if I find something that I consider helpful that is not on the course homepage.
