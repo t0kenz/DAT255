@@ -5,7 +5,7 @@
 http.GET
 {
 method: "GET",
-url: ...,
+url: 'http://sandbox-6.portcdm.eu:8080/pcb/port_call?limit=20&sort_by=LAST_UPDATE&order=DESCENDING&stage=PLANNED&stage=ARRIVED&stage=BERTHED&stage=ANCHORED&stage=UNDER_WAY&stage=SAILED&updated_after=2018-04-2T10:43:35.572Z'
 header: {
          X-PortCDM-UserId: Tugboat 
          X-PortCDM-Password: De7Haven
@@ -13,10 +13,16 @@ header: {
          Content-Type: application/json
          }
  }
+ 
+ RETURNS {
+ ...
+ }
+ 
  ```````````
  #### 2 Get vessel Info
  ```````````
  http.GET
+ url: http://sandbox-6.portcdm.eu:8080/pcb/port_call/{PORTCALL_ID}/events
  ```````````
  #### 3 Get endpoint
  ```````````
