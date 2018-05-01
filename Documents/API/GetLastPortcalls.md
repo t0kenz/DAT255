@@ -31,7 +31,36 @@
  ]
  
  ```````````
- #### 2 Get vessel Info
+ #### 2 Get information about a specific portcall-ID
+```````````
+{
+         method: "GET",
+         URL: http://sandbox-6.portcdm.eu:8080/pcb/port_call/$portcall-id
+         header: {
+                  X-PortCDM-UserId: Tugboat 
+                  X-PortCDM-Password: De7Haven
+                  X-PortCDM-APIKey: PortableCDM
+                  }
+ }
+ 
+ RETURNS [
+     {
+    "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:00021d23-4841-4211-8eda-38cc4a1afb5d",
+    "vesselId": "urn:mrn:stm:vessel:IMO:9197791",
+    "startTime": "2018-05-02T04:00:00Z",
+    "endTime": "2018-05-02T04:00:00Z",
+    "stage": "PLANNED",
+    "status": "OK",
+    "lastUpdated": "2018-04-30T15:45:27Z",
+    "lastUpdatedBy": "GHAB",
+    "lastUpdatedState": "PortVisit_Confirmed",
+    "lastUpdatedTimeType": null
+}
+ ]
+ 
+ ```````````
+ 
+ #### 3 Get vessel Info
  ```````````
 Get basic vessel info from portCDM
 {
@@ -76,7 +105,7 @@ RETURNS: {
     "vesselType": "GENERAL CARGO"
 }
  ```````````
- #### 3 Get endpoint
+ #### 4 Get endpoint
  ```````````
  {
          method: "GET",
@@ -125,23 +154,23 @@ RETURNS: {
     },
     ...
  ```````````
- #### 4 Get ETA from portCDM
+ #### 5 Get ETA from portCDM
   ```````````
  http.GET
  ```````````
- #### (5 Get ETA from marineTime)
+ #### (6 Get ETA from marineTime)
   ```````````
  http.GET
  ```````````
- #### 6 Status on towage
+ #### 7 Status on towage
   ```````````
  http.GET
  ```````````
- #### 7 Type of towage
+ #### 8 Type of towage
   ```````````
  http.GET
  ```````````
- #### 8 ETA planned or set
+ #### 9 ETA planned or set
   ```````````
  http.GET
  ```````````
