@@ -127,7 +127,9 @@ outcome of the previous week (e.g. describing the current situation.
 - As stated, JavaScript is a big part and I want to make sure I really understand all the code that is written.
 - There are still programs and parts of the developing environment that I don't understand, even though I have a better overview now than in the beginning. This will also be an ongoing process, until everything is clear to me.
 
-# Week 4
+# Week 4 + 5
+Due to changed period of the sprint week 4 was short enough to be combined with week 5
+
 ### What do I want to learn or understand better?
 - Now I feel like I have a good overview of what is expected from the group in the overall project, and also roughly what the Tugboat Operator values in the app. This is a good foundation for the further development of the app, and for me the next step is to get an even better understanding of the underlying code that we should change and update to achive the goals we have set up through the user stories.
 - During this sprint I am going to write my first code that will actually give value to the user, and therefore I want to (and will) learn more about JavaScript through the practice it gives.
