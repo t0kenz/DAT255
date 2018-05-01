@@ -5,8 +5,7 @@
 http.GET
 {
 method: "GET",
-Example url: 'http://sandbox-6.portcdm.eu:8080/pcb/port_call?limit=20&sort_by=LAST_UPDATE&order=DESCENDING&stage=PLANNED&stage=ARRIVED&stage=BERTHED&stage=ANCHORED&stage=UNDER_WAY&stage=SAILED&updated_after=2018-04-2T10:43:35.572Z'
-Actuall url: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter={DATE}
+URL: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter={DATE}
 header: {
          X-PortCDM-UserId: Tugboat 
          X-PortCDM-Password: De7Haven
@@ -15,9 +14,24 @@ header: {
          }
  }
  
- RETURNS {
- ...
- }
+ RETURNS [
+  {
+     {
+        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:00021d23-4841-4211-8eda-38cc4a1afb5d",
+        "vesselId": "urn:mrn:stm:vessel:IMO:9197791",
+        "startTime": "2018-05-02T04:00:00Z",
+        "endTime": "2018-05-02T04:00:00Z",
+        "createdAt": "2018-04-30T15:46:30Z"
+    },
+    {
+        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:007cadab-3f3a-4fb4-afb1-60af8eada384",
+        "vesselId": "urn:mrn:stm:vessel:IMO:9319571",
+        "startTime": "2018-05-01T19:30:00Z",
+        "endTime": "2018-05-04T09:00:00Z",
+        "createdAt": "2018-04-26T15:02:31Z"
+    },
+    ....
+ ]
  
  ```````````
  #### 2 Get vessel Info
