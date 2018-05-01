@@ -4,7 +4,7 @@
 ```````````
 {
          method: "GET",
-         URL: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter={DATE}
+         URL: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter=$DATE
          header: {
                   X-PortCDM-UserId: Tugboat 
                   X-PortCDM-Password: De7Haven
@@ -33,9 +33,10 @@
  ```````````
  #### 2 Get vessel Info
  ```````````
+Get basic vessel info from portCDM
 {
          method: "GET",
-         URL: http://sandbox-6.portcdm.eu:8080/vr/vessel/{vesselId}
+         URL: http://sandbox-6.portcdm.eu:8080/vr/vessel/$vesselId
          header: {
                   X-PortCDM-UserId: Tugboat,
                   X-PortCDM-Password: De7Haven,
@@ -50,6 +51,29 @@
     "vesselType": "CARGO",
     "callSign": "PHHL",
     "photoURL": "http://photos.marinetraffic.com/ais/showphoto.aspx?photoid=154634"
+}
+
+Get vessel length and more
+{
+         method: "GET",
+         URL: http://segot.portcdm.eu:8080/SeaTrafficManagement/vessel-registry/vessel?name=$VESSEL_NAME
+         header: {
+                  X-PortCDM-UserId: Tugboat,
+                  X-PortCDM-Password: De7Haven,
+                  X-PortCDM-APIKey: PortableCDM
+         }
+ }
+RETURNS: {
+    "builtYear": "2000",
+    "callSign": "PHHL",
+    "flag": "NL",
+    "id": 215796,
+    "imo": "9197791",
+    "dataSource": null,
+    "mmsi": "246558000",
+    "name": "Skagern",
+    "photoURL": "http://photos.marinetraffic.com/ais/showphoto.aspx?photoid=154634",
+    "vesselType": "GENERAL CARGO"
 }
  ```````````
  #### 3 Get endpoint
