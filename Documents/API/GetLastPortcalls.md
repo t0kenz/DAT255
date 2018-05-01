@@ -2,20 +2,17 @@
 
 #### 1 Get last portcalls and use the portcall id query the server for more information
 ```````````
-http.GET
 {
-method: "GET",
-URL: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter={DATE}
-header: {
-         X-PortCDM-UserId: Tugboat 
-         X-PortCDM-Password: De7Haven
-         X-PortCDM-APIKey: PortableCDM
-         Content-Type: application/json
-         }
+         method: "GET",
+         URL: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter={DATE}
+         header: {
+                  X-PortCDM-UserId: Tugboat 
+                  X-PortCDM-Password: De7Haven
+                  X-PortCDM-APIKey: PortableCDM
+                  }
  }
  
  RETURNS [
-  {
      {
         "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:00021d23-4841-4211-8eda-38cc4a1afb5d",
         "vesselId": "urn:mrn:stm:vessel:IMO:9197791",
@@ -36,8 +33,24 @@ header: {
  ```````````
  #### 2 Get vessel Info
  ```````````
- http.GET
- url: http://sandbox-6.portcdm.eu:8080/pcb/port_call/{PORTCALL_ID}/events
+{
+         method: "GET",
+         URL: http://sandbox-6.portcdm.eu:8080/vr/vessel/{vesselId}
+         header: {
+                  X-PortCDM-UserId: Tugboat,
+                  X-PortCDM-Password: De7Haven,
+                  X-PortCDM-APIKey: PortableCDM
+         }
+ }
+ 
+ RETURNS {
+    "imo": "urn:mrn:stm:vessel:IMO:9197791",
+    "mmsi": "urn:mrn:stm:vessel:MMSI:246558000",
+    "name": "Skagern",
+    "vesselType": "CARGO",
+    "callSign": "PHHL",
+    "photoURL": "http://photos.marinetraffic.com/ais/showphoto.aspx?photoid=154634"
+}
  ```````````
  #### 3 Get endpoint
  ```````````
