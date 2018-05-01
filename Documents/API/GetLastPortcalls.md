@@ -5,7 +5,8 @@
 http.GET
 {
 method: "GET",
-url: 'http://sandbox-6.portcdm.eu:8080/pcb/port_call?limit=20&sort_by=LAST_UPDATE&order=DESCENDING&stage=PLANNED&stage=ARRIVED&stage=BERTHED&stage=ANCHORED&stage=UNDER_WAY&stage=SAILED&updated_after=2018-04-2T10:43:35.572Z'
+Example url: 'http://sandbox-6.portcdm.eu:8080/pcb/port_call?limit=20&sort_by=LAST_UPDATE&order=DESCENDING&stage=PLANNED&stage=ARRIVED&stage=BERTHED&stage=ANCHORED&stage=UNDER_WAY&stage=SAILED&updated_after=2018-04-2T10:43:35.572Z'
+Actuall url: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter={DATE}
 header: {
          X-PortCDM-UserId: Tugboat 
          X-PortCDM-Password: De7Haven
