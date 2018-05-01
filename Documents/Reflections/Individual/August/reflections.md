@@ -1,3 +1,39 @@
+# Week 5
+
+## 1. What do I want to learn or understand better?
+
+●How to use pair programming in a productive way.
+
+●How our app will communicate with our server and the portCDM backend, including how to write JavaScript code for network communication.
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+●I can share what I learn about the networking part during my work on related tasks.
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+● I have participated in all group meetings (except with the tugboat operator) and worked with my tasks according to the agreed upon workflow.
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Since last week:
+
+1: "Continue to learn about the codebase, tools and JS by working on my assigned tasks during our first sprint.":
+
+This went as planned. My tasks were small enough to allow me to spend lots of time on learning more about the above.
+
+2: "...learn as much as possible from the first sprint. This will be achieved through participating in the upcoming sprint and reflecting on it continuously (i.e. I need to keep the process in mind and not just focus on the coding).": 
+
+Due to how we divided the work, I was unable to get a partner to work with. Consequently I have worked on my own during this sprint.
+Our Monday meeting where we quickly went through the three daily standup questions went very well. We managed to keep it below 30 minutes, which is a lot faster than the typical meeting in any project course I have taken. Imposing a time limit and having a pre-defined set of questions makes the meeting a lot more efficient. One problem that I have noticed a lot in other meetings which this prevents very well is the tendency for people to feel the need to follow every thread of discussion to the end, right away, even when it doesn't concern that many meeting participants. Having a plan that forces people to save such discussions for later and in smaller groups helps a lot with efficiency. This is probably the most important lesson from this sprint.
+
+My learning objectives for the next week are:
+
+1: I feel like pair programming in other courses has varied a lot in how useful it has been. I would like to learn more about how to do it successfully. I will do some pair programming and reflect on the process.
+
+2: I still need to learn more about how the app works as well as improve my JavaScript skills.  I will achieve this by trying to get a bit of a broader knowledge than just the parts I will work on for my assigned tasks by trying things out in the app and reading up more on JavaScript.
+
 # Week 4 
 
 This was a shorter week due to a change in our scheduling: sprints are now Thur-Wed. Consequently some objectives are unchanged from last week, as we have not completed our first sprint. The previous reflection was written expecting to go through the first sprint before writing this reflection. Week 4 covers Sat 14th - Wed 18th.
