@@ -78,7 +78,52 @@ RETURNS: {
  ```````````
  #### 3 Get endpoint
  ```````````
- http.GET
+ {
+         method: "GET",
+         URL: /pcb/event?from_time=${fromTime}&to_time=${endTime}&location=${locationURN}&event_definition=VESSEL_AT_BERTH
+         header: {
+                  X-PortCDM-UserId: Tugboat 
+                  X-PortCDM-Password: De7Haven
+                  X-PortCDM-APIKey: PortableCDM
+                  }
+ }
+ 
+ RETURNS  {
+        "eventId": "21a4df4e-67ad-362f-b051-4e7ad68a94e6",
+        "definitionId": "VESSEL_AT_BERTH",
+        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:a503f633-3eab-429b-89ae-461e4378d900",
+        "vesselId": "urn:mrn:stm:vessel:IMO:9232955",
+        "startTime": "2018-04-28T22:13:54Z",
+        "startTimeType": "ACTUAL",
+        "endTime": "2018-04-30T00:42:00Z",
+        "endTimeType": "ACTUAL",
+        "from": "urn:mrn:stm:location:segot:anchoring_area:b",
+        "at": "urn:mrn:stm:location:segot:berth:skarvik519",
+        "to": "urn:mrn:stm:location:segot:anchoring_area:b",
+        "lastUpdate": "2018-04-30T00:46:51Z",
+        "status": "OK",
+        "isExpired": false,
+        "isCancelled": false,
+        "isDenied": false
+    },  {
+        "eventId": "bdef888c-6f53-3a74-b643-a27fa3c72d91",
+        "definitionId": "VESSEL_AT_BERTH",
+        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:90821a78-80ab-4683-99dd-28c022b45bdc",
+        "vesselId": "urn:mrn:stm:vessel:IMO:9431056",
+        "startTime": "2018-04-21T05:00:00Z",
+        "startTimeType": "ESTIMATED",
+        "endTime": "2018-05-02T15:56:59Z",
+        "endTimeType": "ACTUAL",
+        "from": null,
+        "at": "urn:mrn:stm:location:segot:berth:skarvik511",
+        "to": null,
+        "lastUpdate": "2018-04-23T12:09:16Z",
+        "status": "OK",
+        "isExpired": false,
+        "isCancelled": false,
+        "isDenied": false
+    },
+    ...
  ```````````
  #### 4 Get ETA from portCDM
   ```````````
