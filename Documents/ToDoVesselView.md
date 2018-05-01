@@ -1,4 +1,4 @@
-Linus and John on task 3.2 Implement an easy way of changing status to "received" in the Requests-view (See attachments in Stories.3)
+3.1 Implement the following data in the view: destination, ETA, vessel, nr of tugboats and type of job
 
 ### 1. Add all the info to vessel-info-view with dummy data
 
