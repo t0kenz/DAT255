@@ -1,4 +1,18 @@
-# Reflection week 3 - Robin
+# Week 4 and 5
+
+### What do I want to learn or understand better?
+- I need to learn what information a tugboat operator needs from an agent. I will do this by reading through our notes from the meetings with Sebastian at Svitzer and reading the scenario.
+
+### How can I help someone else, or the entire team, to learn something new?
+- I can help the team to understand the structure of the server.
+
+### What is my contribution towards the team's application of scrum?
+- I have attended out meetings, taken part in the discussions and completed the user stories that I was assigned to do.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+- I have been more active in our discussions, though more than a week has passed since the last reflection and we have started and completed our first sprint. I worked on the basis of the server Jesper and I learned a lot, however I did not contribute as much to the code as he did as he had more experience with javascript and nodejs. Some of my responsibilities in the next sprint will be to implement more functionality which really will test me in terms of how well I learned in the previous sprint as I will not be working with Jesper.
+
+# Week 3
 
 ### What do I want to learn or understand better?
 - I still feel that I want to be more active in our discussions, so this will be my goal. I will take notes during the week of things that I think be good to discuss during our meetings as it is easy to forget, I believe this will help me to be more active.
@@ -15,7 +29,7 @@ I would say that this goal was quite too big. But learning javascript and nodeJS
 - After some struggle on windows I decided to install ubuntu and the hassle with building the project reduced substantially.
 - I have read some of the code, however I would say that this goal was too large as well. A more fitting goal would have been to understand the code on a scale of modules and files. Understanding some part of the code in detail will be necesarry when I will work with it.
 
-# Reflection week 2 - Robin
+# Week 2
 
 ### What do I want to learn or understand better?
 
@@ -40,7 +54,7 @@ I would say that this goal was quite too big. But learning javascript and nodeJS
 - Install the technologies needed for the project.
 - Read and understand the code base.
 
-# Reflection week1 - Robin
+# Week 1
 
 ### What do I want to learn or understand better?
 

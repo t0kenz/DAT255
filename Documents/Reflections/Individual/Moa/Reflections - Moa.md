@@ -53,7 +53,7 @@
 - Get a deeper knowledge and understanding of the development tools that we use, their features etc. so that I will be able to be more productive during the time I spend on this course. This includes improving my skills in JavaScript, getting an overview of the codebase, understanding how the tools cooperate etc. I will achieve this by continuing experimenting and reading on the internet, but also by starting with the first sprint. 
 - Know more about the project, the requirements, features and the grasp of the application. I want to know every detail that is needed for us to develop the application as requested and for me to contribute more to the team’s deliveries. This will be achieved by participating in next week’s meeting with the product owner and discussing more with my team. It will get more clear once we start with the first sprint and start working more with the application.
 
-# Week 4
+# Week 4/5
 ### What do I want to learn or understand better?
 - I want to understand the codebase better in order to know exactly where to make some changes 
 - I want to understand the features of the programs better in order to be more productive during the time I spend in this course 
