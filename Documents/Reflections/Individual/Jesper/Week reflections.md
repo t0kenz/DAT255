@@ -17,8 +17,25 @@
 #### For the next week
 -
 
+# Week 6
+### What do I want to learn or understand better?
+- I feel like I have an understanding of the codebase and how its strucutred now. And scrum feels more at home, however I still have to learn a lot in Scrum to be able to use it in future projects. To get better at scrum I will continue to be active during meetings and reflect our thoughts with our teachers.
+- As of now I have some basic knowledge of the APIs that portCDM uses and supports. We have looked into how to extract the information we need for our remodeled version of the application. I still need to look into how to request information to our server from portCDM with the correct credentials and how to refactor the informtion into our database and clients. I will try to learn how to refactor the requests and update our database/clients by first looking at what's that we need from this requests, and then try to refactor them.
 
-# Week 4
+### How can I help someone else, or the entire team, to learn something new?
+- As of now, some members in our team have some problems with Android and getting it to run with the changes that has been made to the codebase, I will try to help them out and share the steps I took to get it to work for me.
+
+### What is my contribution towards the team’s application of scrum?
+- We have a problem with vertical slicing our problems into good tasks, they seem to get to big and the tasks has a high rate of failure in them. I hope that for the next sprint we'll be more thorough when creating vertical tasks, and I will do my best to keep them small and easy to implement. This is so we dont run into the chance of having a sprint review without anything to show.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### From the previous week
+- I did not deliver the tasks that I took on during the last sprint. This is mostly because of bad planing of the velocity beforehand and also that we had a holiday in the middle of the sprint. I overestimated the amount of time I would be able to spend and underestimated the time it would take to complete the tasks. We could not show our product owner anything of value due to this. 
+
+#### For the next week
+- In the future I will try to be more realistic with how much time I can spend on this course, but also the amount of time (velocity) it takes to get a task done. I will try to splice the tasks into smaller tasks, while still trying to make them valuable for the product owner.
+
+# Week 4/5 (We swapped dates to match the PO review)
 ### What do I want to learn or understand better?
 - I need to look into how we can communicate between our server and portCDM's. This is done over http requests and I need to read up on portCDM's API and how we can receive/post the information we need.
 
