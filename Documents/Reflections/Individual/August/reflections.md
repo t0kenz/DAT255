@@ -1,3 +1,37 @@
+# Week 6
+
+## 1. What do I want to learn or understand better?
+
+I want to get better at creating tasks and estimating their velocity. This week almost none of our team's tasks were finished, but a lot of them were almost done. Maybe we could have more of them done if we had broken them down differently and/or taken on fewer tasks. This was likely somewhat related to the May 1st holiday, even though we tried to take it into account when planning the sprint.
+
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+I will upload some of the code we have used for testing our tasks to the team repository, probably as a separate file with helper functions and examples. E.g. code to connect to our server from within the app.
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+I have participated in all team meetings and made significant progress on our assigned tasks together with my programming partner.
+
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Since last week:
+
+1: Pair programming:
+This week's pair programming has gone really well. I spent maybe 90% of my time working with my programming parter. It feels like we have gotten more done than we would have separately, probably partly because our tasks were not entirely clear in how they should be done. This required us to do a lot of discussing and exploring the options. Also, having a second person present lets you catch a lot of errors right right away. Errors that one person might overlook because they are juggling several different parts of the code in their head and miss some details.
+
+
+2: Learn more about the app and JavaScript in general:
+This week I have prioritized our assigned tasks, which have taken up all of my time allocated for the course. Therefore I haven't done any real learning outside of what was required for moving forward with the tasks. I feel like my knowledge has been enough to get things done, so I don't consider this a huge failure. With this in mind, I will drop this goal for now.
+
+
+My learning objectives for the next week are:
+
+After last week's failure in getting tasks completed, I will try to plan our work and estimate task velocity so that we can get most (preferably all) our assigned tasks done during the sprint. We will need to define the tasks so that we can work in a way where we don't end up with a lot of them almost done like last week.
+
+
 # Week 5
 
 ## 1. What do I want to learn or understand better?
