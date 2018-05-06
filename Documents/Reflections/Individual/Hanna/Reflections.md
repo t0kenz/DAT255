@@ -155,3 +155,31 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 
 #### For the next weeks
 - My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
+
+# Week 6
+### What do I want to learn or understand better?
+- I want a better understanding of how the different views communicate with each other, in order to finish next week task. The task is to implement the main view and I need to understand what changes need to be made to make this change visible.
+- I still want to learn a lot more within javascript, but I thin I learn more and more every week.
+
+
+### How can I help someone else, or the entire team, to learn something new?
+- First of all I want to finish my task for the week, and from there share my knowledge with the rest of the group and also with my coding partner, in order to learn from our mistakes and bring up problems that can come up both further on in this project but also in the future.
+
+
+### What is my contribution towards the team’s application of scrum?
+- I feel like the whole group has gotten a better understanding of important factors when working with scrum. This week I contributed when we decided to change our structure a little bit on the group reflections, in order to better reflect upon "where we are now" and "where we want to be", since we earlier mostly focused on what we were going to do.
+
+
+### What is my contribution towards the team’s deliveries? That means 
+that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+#### Last week
+- We didn't finish our task for this week, but it was mostly due to a shorter week which gave us less time to spend on this task, but also an underestimation of velocity.
+
+#### For the next week
+- Finish the task with the main view. This could give a lot of value when we show the application for the product owner, since it gives a feeling of how the application will look when its finishes.
+
+
+#### For the next weeks
+- My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
+- I will also make sure I am open to help from team members, and mostly that I feel comfortable with asking for help, since a lot of my team members are more experienced within programming and javascript.
