@@ -1,6 +1,29 @@
 ## Linus individual reflections
 
-# Week 4
+# Week 6
+
+### What do I want to learn or understand better?
+
+- I want to understand how we can structure workload in a more appropriate way. Due to recent holidays, it feels like we've lost our "workflow" somewhat. Therefore, I want to look into how we can improve our current situation and organize everything such that we can in the end produce a minimum valuable product.
+
+### How can I help someone learn, or the entire team, to learn something new?
+
+- I will try to integrate the rest of the team in my assigned tasks and hopefully help them learn some of my previous experiences in software development. We have had a horizontal slice-approach to how we divide workload in the team. We were suggested by the course examinator that we should try using a vertical slice-approach instead. I will try to look into how we can do this in the most appropriate way and share with the rest of the group.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+
+#### I reached my last week's learning objectives by:
+
+- I spoke with the product owner regarding the product we're to produce and concluded that here's a pattern in how they work. I also studied the use cases and now more thoroughly understand what their work tasks are and can now also try to reason about what could help improve their day-to-day work.
+
+- I've read up on some theory related to databases. I feel though that I didn't fully accomplish this learning objective, or at least now I would like to change it as I and the others in the team are not sure whether or not we need a databases. There are some data we want to store, but it feels excessive to some extent. We have a suitable model, but it feels like this wasn't what I aimed for as a learning objective.
+
+#### Learning objectives for the next week:
+
+- Understand the key issues with our current structure and solve them.
+
+# Week 4/5
 
 
 ### What do I want to learn or understand better?
