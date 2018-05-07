@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import {
     View,
     StyleSheet,
@@ -44,27 +45,28 @@ class StartView extends Component {
 
     constructor(props) {
         super(props);
-    
-        this._logout = this._logout.bind(this);
-      }
 
-      _logout() {
+        //this._logout = this._logout.bind(this);
+    }
+
+
+    _logout() {
         const { navigation, connection, changeUser, logoutKeycloak } = this.props;
-        if(!!connection.username) {
-          changeUser('', '', false);
-          console.log('Logging out legacy user...');
-          navigation.navigate('LoginView');
+        if (!!connection.username) {
+            changeUser('', '', false);
+            console.log('Logging out legacy user...');
+            navigation.navigate('LoginView');
         } else {
-          console.log('Logging out keycloak user...');
-          logoutKeycloak().then(() => navigation.navigate('LoginView'));
+            console.log('Logging out keycloak user...');
+            logoutKeycloak().then(() => navigation.navigate('LoginView'));
         }
     }
-    render() {
 
+    render() {
         return (
             <View style={locStyles.container}>
                 <TopHeader title='PortableCDM' firstPage navigation={this.props.navigation} />
-                <ScrollView style={styles.container} /* ska det vara scroll? */> 
+                <ScrollView style={styles.container} /* ska det vara scroll? */>
                     <Button
                         backgroundColor={colorScheme.primaryColor}
                         color={colorScheme.primaryTextColor}
@@ -72,29 +74,29 @@ class StartView extends Component {
                         buttonStyle={locStyles.buttonStyle}
                         onPress={() => navigate('PortCalls')}
                     />
-                    
+
                     <Button
-                        /*backgroundColor={colorScheme.primaryColor}
+                        backgroundColor={colorScheme.primaryColor}
                         color={colorScheme.primaryTextColor}
                         title="Requests"
                         buttonStyle={locStyles.buttonStyle}
-                        onPress={() => navigate('Requests')}  */
+                        onPress={() => navigate('Requests')}
                     />
-                     <Button
+                    <Button
                         backgroundColor={colorScheme.primaryColor}
                         color={colorScheme.primaryTextColor}
                         title="About"
                         buttonStyle={locStyles.buttonStyle}
                         onPress={() => navigate('About')}
                     />
-                     <Button
+                    <Button
                         backgroundColor={colorScheme.primaryColor}
                         color={colorScheme.primaryTextColor}
                         title="Settings"
                         buttonStyle={locStyles.buttonStyle}
                         onPress={() => navigate('Settings')}
                     />
-                
+
                 </ScrollView>
             </View>
         );
@@ -142,4 +144,7 @@ const locStyles = StyleSheet.create({
     }
 });
 
-(StartView);
+/**
+ * TODO: READ WHAT CONNECT DOES
+ */
+export default connect()(StartView);
