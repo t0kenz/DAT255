@@ -51,10 +51,10 @@
 
 ### 9. The three KPIs you use for monitoring your progress
 - We use three main KPIs: 
- - Burn up-chart
- - Code deletion 
- - Code coverage
- - Stress index
+  - Burn up-chart
+  - ~~Code deletion~~ 
+  - Code coverage
+  - Stress index
 - We have realized that code deletion will be hard to track, since we will delete much of the original code base. Therefore, we have chosen to replace that KPI with a stress index. The stress index will measure individual stress level on a scale 1-6 and time spent during a sprint, to see the correlation and stress overtime. This will be reported anonymously in this document but visible within the team. 
 
 
