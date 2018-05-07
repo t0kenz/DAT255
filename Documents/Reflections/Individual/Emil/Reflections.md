@@ -9,6 +9,21 @@
 
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
+## Week 6
+### 1. What do I want to learn or understand better?
+- I need to get a deeper understanding of the current APIs, that are used in PortCDM, than I've received until now. 
+- I need to learn more about which state types and time stands we're in need of to build our application. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- I can help the team members who are building our database/server with information about the APIs that we need so that they can do their work. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- As a scrum master, I'm currently responsible for the communication with other teams, securing that we use our scrum board in a proper way and that our reflections lead the way for the changes we need to do in our work. 
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the past week, I've got a better understanding of how the APIs work through searching the specifications from PortCDM
+- During the upcoming week, I will establish a document with all the state types/time stamps we need to subscribe to and which API we should use to do that. This will be needed in order for other team mates to do their work. 
+
 ## Week 5
 ### 1. What do I want to learn or understand better?
 - I want to get a better understanding of the APIs and data strucuture currently used in the PortCDM-database in order to know how we should use it in our own database. 
