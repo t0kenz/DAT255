@@ -95,8 +95,8 @@
 |           | Stress |    |      | 3  |    |    |
 | 7         | Timmar | 10 | 12   | 8  |    |    |
 |           | Stress | 3  | 4    | 4  |    |    |
-| 8         | Timmar | 7  | 9    |    |    |    |
-|           | Stress | 2  | 3    |    |    |    |
+| 8         | Timmar | 7  | 9    | 13 |    |    |
+|           | Stress | 2  | 3    | 4  |    |    |
 
 ### 14. The sprint review (either in terms of outcome of the current week's exercise or meeting the product owner)
 - When talking to the tugboat operator we got a lot of positive feedback about the changes we want to make to the UI and the general user experience of the application. The operator had some problems with our current implementation of requesting tugboats regarding security and he doesn’t want to share how many tugboats he has accepted to a certain portcall. We discussed this issue and came to a solution that only an agent and the operator will be able to see this information.

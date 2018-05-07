@@ -1,6 +1,6 @@
 # mac crap
 .DS_Store
-Documents/
+#Documents/
 node_modules/
 /portablecdm/
 
