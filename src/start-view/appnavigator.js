@@ -92,7 +92,7 @@ const MainNavigator = DrawerNavigator({
 export const AppNavigator  = StackNavigator({
     LoginView: { screen: LoginView },
     //LoginKeyCloak: { screen: LoginKeyCloakView }, 
-    Application: { screen: MainNavigator},
+    Application: { screen: StartNavigator},
 }, {
     headerMode: 'none',
 });
