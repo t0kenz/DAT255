@@ -74,8 +74,8 @@
 |           | Stress | 2  | 3    |    |    |    |
 | 5         | Timmar | 10 | 14,5 |    |    |    |
 |           | Stress | 3  | 3    |    |    |    |
-| 6         | Timmar | 6  |      |    |    |    |
-|           | Stress |    |      |    |    |    |
+| 6         | Timmar | 6  | 10   |    |    |    |
+|           | Stress | 2  | 3    |    |    |    |
 | 7         | Timmar | 10 | 12   |    |    |    |
 |           | Stress | 3  | 4    |    |    |    |
 | 8         | Timmar | 7  | 9    |    |    |    |
