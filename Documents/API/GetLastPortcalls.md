@@ -1,11 +1,11 @@
 ### Get the last portcalls (http://specification.portcdm.eu/)
 
-#### 1 Get last portcalls and use the portcall id query the server for more information
+#### 1 Get last portcalls from a specific date, in a limited nr, and sorted and ordered by 
 ```````````
 {
          method: "GET",
-         URL: http://sandbox-6.portcdm.eu:8080/pcr/port_call/created_after?createdAfter=$DATE
-         header: {
+         URL: http://sandbox-6.portcdm.eu:8080/pcb/port_call?after=$DATE&limit=100&sort_by=LAST_UPDATE&order=DESCENDING
+: {
                   X-PortCDM-UserId: Tugboat 
                   X-PortCDM-Password: De7Haven
                   X-PortCDM-APIKey: PortableCDM
@@ -14,18 +14,16 @@
  
  RETURNS [
      {
-        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:00021d23-4841-4211-8eda-38cc4a1afb5d",
-        "vesselId": "urn:mrn:stm:vessel:IMO:9197791",
-        "startTime": "2018-05-02T04:00:00Z",
-        "endTime": "2018-05-02T04:00:00Z",
-        "createdAt": "2018-04-30T15:46:30Z"
-    },
-    {
-        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:007cadab-3f3a-4fb4-afb1-60af8eada384",
-        "vesselId": "urn:mrn:stm:vessel:IMO:9319571",
-        "startTime": "2018-05-01T19:30:00Z",
-        "endTime": "2018-05-04T09:00:00Z",
-        "createdAt": "2018-04-26T15:02:31Z"
+        "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:27a7de6f-c8d0-463b-aebe-8e3e18c68cca",
+        "vesselId": "urn:mrn:stm:vessel:IMO:9530890",
+        "startTime": "2018-05-07T18:16:48Z",
+        "endTime": "2018-05-10T19:00:00Z",
+        "stage": "ANCHORED",
+        "status": "WARNING",
+        "lastUpdated": "2018-05-08T15:43:56Z",
+        "lastUpdatedBy": "urn:mrn:stm:user:legacy:SSPA",
+        "lastUpdatedState": "Departure_EscortTug_Vessel",
+        "lastUpdatedTimeType": "ACTUAL"
     },
     ....
  ]
