@@ -161,7 +161,7 @@ RETURNS: {
  http.GET
  ```````````
  #### 7 Status on towage
- #### "Listen to the "lastUpdatedState" to genereate a Status: 
+ "Listen" to the "lastUpdatedState" to genereate a Status: 
  - Towage_Requested -> Requested
  - EscortTowage_Requested -> Requested
  - EscortTowage_ReqReceived -> Request received
@@ -207,8 +207,53 @@ RETURNS: {
  
  ```````````
  #### 8 Type of towage
+ "Listen" to the "lastUpdatedState". If it includes the following state_type, it's a Escort Towage: 
+ - EscortTowage_Requested
+ - EscortTowage_ReqReceived
+ - EscortTowage_Confirmed
+ - EscortTowage_Denied
+ - EscortTowage_Cancelled
+ - EscortTowage_Commenced
+ - EscortTowage_Completed
+ - (Maybe all the location-states as well)
+ 
+  "Listen" to the "lastUpdatedState". If it includes the following state_type, it's a Harbor Towage: 
+ - Towage_Requested
+ - Towage_ReqReceived 
+ - Towage_Confirmed
+ - Towage_Denied
+ - Towage_Cancelled
+ - Towage_Commenced
+ - Towage_Completed
+ - (Maybe all the location-states as well)
+ 
   ```````````
- http.GET
+  {
+         method: "GET",
+         URL: http://sandbox-6.portcdm.eu:8080/pcb/port_call/$portcall-id
+         header: {
+                  X-PortCDM-UserId: Tugboat 
+                  X-PortCDM-Password: De7Haven
+                  X-PortCDM-APIKey: PortableCDM
+                  }
+ }
+ 
+ RETURNS [
+     {
+    "portCallId": "urn:mrn:stm:portcdm:port_call:SEGOT:00021d23-4841-4211-8eda-38cc4a1afb5d",
+    "vesselId": "urn:mrn:stm:vessel:IMO:9197791",
+    "startTime": "2018-05-02T04:00:00Z",
+    "endTime": "2018-05-02T04:00:00Z",
+    "stage": "PLANNED",
+    "status": "OK",
+    "lastUpdated": "2018-04-30T15:45:27Z",
+    "lastUpdatedBy": "GHAB",
+    "lastUpdatedState": "PortVisit_Confirmed",
+    "lastUpdatedTimeType": null
+}
+ ]
+ 
+ 
  ```````````
  #### 9 ETA planned or set
   ```````````
