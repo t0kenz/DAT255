@@ -42,5 +42,21 @@ module.exports = {
                 'callback': './APIs/getAcceptedTugboats'
             }
         }
+    },
+    'database': {
+        'connection': {
+            'host': 'localhost',
+            'user': 'portcdm',
+            'port': '3306',
+            'password': 'portcdmtest',
+            'db': 'kirunakraft'
+        }
+    },
+    'portCDM': {
+        'UserId': 'Tugboat',
+        'Password': "De7Haven",
+        'APIKey': 'PortableCDM',
+        'baseURL': 'http://sandbox-6.portcdm.eu:8080',
+        'requestDelay': '10'
     }
 };

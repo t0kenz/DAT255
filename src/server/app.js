@@ -11,7 +11,13 @@ var server = require('http').Server(app);
  * Declaring Internal dependencies
  */
 var config = require('./config/config');
-//var database = ...
+var httpUtil = require('./httpUtil');
+var PortCDM = require('./PortCDM');
+var Database = require('./Database');
+
+var http = new httpUtil();
+var db = new Database(config.database.connection);
+var portCDM = new PortCDM(db, config.portCDM, http);
 
 /**
  * Logs every request for dev reasons (EX: 404 not found...)
@@ -56,13 +62,4 @@ require('./routes.js')(app, express, config.APIs);
 server.listen(config.ports.port, config.ports.host);
 console.log('Server started on ' + config.ports.host + ' ' + config.ports.port);
 
-
-
-
-
-
-
-
-
-
-
+portCDM.start(config.portCDM.requestDelay, portCDM);
