@@ -103,7 +103,7 @@ RETURNS: {
     "vesselType": "GENERAL CARGO"
 }
  ```````````
- #### 4 Get endpoint
+ #### 4 Get endpoint (provided by the "at"-information in the return)
  ```````````
  {
          method: "GET",
