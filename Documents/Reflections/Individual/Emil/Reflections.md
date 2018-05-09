@@ -9,6 +9,41 @@
 
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
+## Week 6
+### 1. What do I want to learn or understand better?
+- I need to get a deeper understanding of the current APIs, that are used in PortCDM, than I've received until now. 
+- I need to learn more about which state types and time stands we're in need of to build our application. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- I can help the team members who are building our database/server with information about the APIs that we need so that they can do their work. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- As a scrum master, I'm currently responsible for the communication with other teams, securing that we use our scrum board in a proper way and that our reflections lead the way for the changes we need to do in our work. 
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the past week, I've got a better understanding of how the APIs work through searching the specifications from PortCDM
+- During the upcoming week, I will establish a document with all the state types/time stamps we need to subscribe to and which API we should use to do that. This will be needed in order for other team mates to do their work. 
+
+## Week 5
+### 1. What do I want to learn or understand better?
+- I want to get a better understanding of the APIs and data strucuture currently used in the PortCDM-database in order to know how we should use it in our own database. 
+
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- Since I'm responsible for learning more about the APIs used today, I can share this knowledge with my team members
+- In the role as Scrum master, I constantly communicate with other groups and it's therefore possible for me to help them as well as my other team mates
+
+### 3. What is my contribution towards the team’s application of scrum?
+- I was partly responsible for creating a set of user stories during the past week which we reviewed to our product owner. We've now changed these stories but they were a good foundation on which we could develop them further. 
+- As a scrum master, I'm currently responsible for the communication with other teams, securing that we use our scrum board in a proper way and that our reflections lead the way for the changes we need to do in our work. 
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the past week I've reached my learning objects through;
+	- Creating a painting of how our UI should look
+	- Reading the Scenario
+- During the upcoming week, I want to learn more about how the APIs and data strucuture currently used in the PortCDM-database in order to know how we should use it in our own database. 
+- I will reach this by reading the PortCDM-APIs with another team member who has a good understanding of JavaScript
+
 ## Week 4
 ### 1. What do I want to learn or understand better?
 - At the moment, we have a conceptual idea over what we should deliver to our PO and the end user. I want to understand how we should develop our UI even further and I will try to do this by painting a UI. 
@@ -24,7 +59,7 @@
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 - During the past week I reached almost all my ambitions except of the part where I was supposed to read the scenario even more. I haven't got the time to do that unfortunately. 
 - During the upcoming week I want to: 
-	- Get a better understanding of the scenario we should be able to tackle and 		analyze if our conceptual solution will do this. 
+	- Get a better understanding of the scenario we should be able to tackle and analyze if our conceptual solution will do this. 
 	- Develop a conceptual idea over how our UI should manifest itself
 - I will reach this by
 	- Reading the scenarion once again

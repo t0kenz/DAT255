@@ -1,0 +1,11 @@
+# Exclude everything except specified directories
+/*
+!.gitignore
+!/actions/
+!/assets/
+!/components/
+!/config/
+!/files/
+!/navigators/
+!/reducers/
+!/util/

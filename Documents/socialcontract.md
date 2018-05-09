@@ -13,7 +13,7 @@ A member should strive to stay up to date in regards to group messages (Slack) a
 
 
 #### Roles
-The role as Scrum master will be permanent. The preliminary Scrum master is Emil.
+The role as Scrum master will be permanent. The Scrum master is Emil.
 
 The following will be responsible for compiling the KPI data before every weekly reflection meeting:
 Robin - Burnup-chart
@@ -30,8 +30,8 @@ Monday 9.30-10 (purpose: daily scrum)
 Wednesday 12-17
   12-13 (purpose: get ready for review)
   13-15 (purpose: review from PO)
-  15-17 (purpose: weekly reflections)
-Thursday 9-11 (purpose: change scrum board and get ready for the new sprint)
+  15-17 (purpose: weekly reflections to the extent me manage)
+Thursday 9-11 (purpose: change scrum board and get ready for the new sprint and finish the group reflections)
 
 The standardized meeting agendas can be found i a map on GitHub
 
