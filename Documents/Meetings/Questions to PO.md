@@ -1,5 +1,10 @@
 # Questions
 
+## Week
+### Questions to Jan-Philippe
+- Feedback on our current scope and how we should decrease it
+- Feedback on our reflection structure
+
 ## Week 4
 ### Questions to PO
 - Feedback about our UI
