@@ -1,6 +1,14 @@
-import React, { Component } from 'react';
-import { Text, Dimensions } from 'react-native';
-import { StackNavigator, DrawerNavigator } from 'react-navigation';
+import React, {
+    Component
+} from 'react';
+import {
+    Text,
+    Dimensions
+} from 'react-native';
+import {
+    StackNavigator,
+    DrawerNavigator
+} from 'react-navigation';
 
 import LoginView from '../components/login-view';
 import SendPortCall from '../components/send-portcall-view';
@@ -20,11 +28,39 @@ import ErrorView from '../components/error-view';
 import BearthList from '../components/berth-list-view';
 import BerthList from '../components/berth-list-view';
 import BerthTimeLine from '../components/berth-timeline-view';
-import StartView from '../components/start-view'; //Added import
+import StartView from '../components/start-view';
+import NewPortCalls from '../components/portcall-view';
 
 const BerthViewNavigator = StackNavigator({
-    BerthList: { screen: BearthList }, // THIS SHOULD BE FIRST!!
-    BerthTimeLine: { screen: BerthTimeLine },
+    BerthList: {
+        screen: BearthList
+    }, // THIS SHOULD BE FIRST!!
+    BerthTimeLine: {
+        screen: BerthTimeLine
+    },
+}, {
+        headerMode: 'none'
+    });
+const NewPortCallNavigator = StackNavigator({
+    NewPortCalls: {
+        screen: NewPortCalls
+    },
+    StartView: {
+        screen: StartView
+    },
+
+}, {
+        headerMode: 'none'
+    });
+
+
+const StartViewNavigator = StackNavigator({
+    StartView: {
+        screen: StartView
+    },
+    NewPortCalls: {
+        screen: NewPortCalls
+    }
 }, {
         headerMode: 'none'
     });
@@ -32,57 +68,95 @@ const BerthViewNavigator = StackNavigator({
 
 
 const TimeLineNavigator = StackNavigator({
-    TimeLineDetails: { screen: TimeLineView },
-    StateDetails: { screen: StateDetails },
-    FavoriteStates: { screen: StateList },
-    SelectFavoriteStatesTimeLine: { screen: SelectFavoriteState },
-    SendPortCall: { screen: SendPortCall },
+    TimeLineDetails: {
+        screen: TimeLineView
+    },
+    StateDetails: {
+        screen: StateDetails
+    },
+    FavoriteStates: {
+        screen: StateList
+    },
+    SelectFavoriteStatesTimeLine: {
+        screen: SelectFavoriteState
+    },
+    SendPortCall: {
+        screen: SendPortCall
+    },
 }, {
         headerMode: 'none',
     });
 
 const PortCallListNavigator = StackNavigator({
-    PortCallList: { screen: PortCallList },
-    FilterMenu: { screen: FilterMenu },
+    PortCallList: {
+        screen: PortCallList
+    },
+    FilterMenu: {
+        screen: FilterMenu
+    },
 }, {
         headerMode: 'none',
     });
 
 const SettingsNavigator = StackNavigator({
-    SettingsStart: { screen: Settings },
-    VesselLists: { screen: VesselLists },
-    FavoriteStateSetting: { screen: SelectFavoriteState },
+    SettingsStart: {
+        screen: Settings
+    },
+    VesselLists: {
+        screen: VesselLists
+    },
+    FavoriteStateSetting: {
+        screen: SelectFavoriteState
+    },
 }, {
         headerMode: 'none'
     })
 
 const InitiatePortCallNavigator = StackNavigator({
-    FavoriteStatesInit: { screen: StateList },
-    SelectFavoriteStateInit: { screen: SelectFavoriteState },
-    InitPortCall: { screen: SendPortCall },
+    FavoriteStatesInit: {
+        screen: StateList
+    },
+    SelectFavoriteStateInit: {
+        screen: SelectFavoriteState
+    },
+    InitPortCall: {
+        screen: SendPortCall
+    },
 }, {
         headerMode: 'none'
     });
 
-const StartNavigator = StackNavigator({
-    StartView: { screen: StartView },
-    PortCalls: { screen: PortCallListNavigator },
-    SettingsStart: { screen: Settings },
-    About: { screen: AboutView },
-}, {
-        headerMode: 'none'
-    }); //added
-
 const MainNavigator = DrawerNavigator({
-    StartView: { screen: StartNavigator }, // THIS SHOULD BE FIRST!!
-    Berths: { screen: BerthViewNavigator },
-    TimeLine: { screen: TimeLineNavigator },
-    FavoriteStatesSideMenu: { screen: StateList },
-    FavoriteStatesInit: { screen: InitiatePortCallNavigator },
-    VesselInfo: { screen: VesselInfo },
-    Settings: { screen: SettingsNavigator },
-    About: { screen: AboutView },
-    Error: { screen: ErrorView },
+    StartView: {
+        screen: StartViewNavigator
+    },
+    PortCalls: {
+        screen: PortCallListNavigator
+    }, // THIS SHOULD BE FIRST!!
+    Berths: {
+        screen: BerthViewNavigator
+    },
+    TimeLine: {
+        screen: TimeLineNavigator
+    },
+    FavoriteStatesSideMenu: {
+        screen: StateList
+    },
+    FavoriteStatesInit: {
+        screen: InitiatePortCallNavigator
+    },
+    VesselInfo: {
+        screen: VesselInfo
+    },
+    Settings: {
+        screen: SettingsNavigator
+    },
+    About: {
+        screen: AboutView
+    },
+    Error: {
+        screen: ErrorView
+    },
 }, {
         headerMode: 'none',
         drawerWidth: 3 * Dimensions.get('window').width / 4,
@@ -90,9 +164,13 @@ const MainNavigator = DrawerNavigator({
     });
 
 export const AppNavigator = StackNavigator({
-    LoginView: { screen: LoginView },
+    LoginView: {
+        screen: LoginView
+    },
     //LoginKeyCloak: { screen: LoginKeyCloakView }, 
-    Application: { screen: StartNavigator },
+    Application: {
+        screen: MainNavigator
+    },
 }, {
         headerMode: 'none',
     });
