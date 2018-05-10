@@ -63,43 +63,43 @@ class StartView extends Component {
     }
 
     render() {
-        return (
-            <View style={locStyles.container}>
-                <TopHeader title='PortableCDM' firstPage navigation={this.props.navigation} />
-                <ScrollView style={styles.container} /* ska det vara scroll? */>
-                    <Button
-                        backgroundColor={colorScheme.primaryColor}
-                        color={colorScheme.primaryTextColor}
-                        title="Port Calls"
-                        buttonStyle={locStyles.buttonStyle}
-                        onPress={() => navigate('PortCalls')}
-                    />
+        const { navigation } = this.props;
+        const { navigate } = navigation;
+        return (<View style={locStyles.container}>
+            <TopHeader title='PortableCDM' firstPage navigation={this.props.navigation} />
+            <ScrollView style={styles.container} /* ska det vara scroll? */>
+                <Button
+                    backgroundColor={colorScheme.primaryColor}
+                    color={colorScheme.primaryTextColor}
+                    title="Port Calls"
+                    buttonStyle={locStyles.buttonStyle}
+                    onPress={() => navigate('NewPortCalls')}
+                />
 
-                    <Button
-                        backgroundColor={colorScheme.primaryColor}
-                        color={colorScheme.primaryTextColor}
-                        title="Requests"
-                        buttonStyle={locStyles.buttonStyle}
-                        onPress={() => navigate('Requests')}
-                    />
-                    <Button
-                        backgroundColor={colorScheme.primaryColor}
-                        color={colorScheme.primaryTextColor}
-                        title="About"
-                        buttonStyle={locStyles.buttonStyle}
-                        onPress={() => navigate('About')}
-                    />
-                    <Button
-                        backgroundColor={colorScheme.primaryColor}
-                        color={colorScheme.primaryTextColor}
-                        title="Settings"
-                        buttonStyle={locStyles.buttonStyle}
-                        onPress={() => navigate('Settings')}
-                    />
+                <Button
+                    backgroundColor={colorScheme.primaryColor}
+                    color={colorScheme.primaryTextColor}
+                    title="Requests"
+                    buttonStyle={locStyles.buttonStyle}
+                    onPress={() => navigate('Requests')}
+                />
+                <Button
+                    backgroundColor={colorScheme.primaryColor}
+                    color={colorScheme.primaryTextColor}
+                    title="About"
+                    buttonStyle={locStyles.buttonStyle}
+                    onPress={() => navigate('About')}
+                />
+                <Button
+                    backgroundColor={colorScheme.primaryColor}
+                    color={colorScheme.primaryTextColor}
+                    title="Settings"
+                    buttonStyle={locStyles.buttonStyle}
+                    onPress={() => navigate('Settings')}
+                />
 
-                </ScrollView>
-            </View>
-        );
+            </ScrollView>
+        </View>);
     }
 }
 
