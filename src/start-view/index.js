@@ -70,6 +70,7 @@ class StartView extends Component {
             <ScrollView style={styles.container} /* ska det vara scroll? */>
                 <Button
                     backgroundColor={colorScheme.primaryColor}
+                    leftIcon={{name:'directions-boat',color:'white'}}
                     color={colorScheme.primaryTextColor}
                     title="Port Calls"
                     buttonStyle={locStyles.buttonStyle}
@@ -78,6 +79,7 @@ class StartView extends Component {
 
                 <Button
                     backgroundColor={colorScheme.primaryColor}
+                    leftIcon={{name:'acces-time',color:'white'}}
                     color={colorScheme.primaryTextColor}
                     title="Requests"
                     buttonStyle={locStyles.buttonStyle}
@@ -85,6 +87,7 @@ class StartView extends Component {
                 />
                 <Button
                     backgroundColor={colorScheme.primaryColor}
+                    leftIcon={{name:'info',color:'white'}}
                     color={colorScheme.primaryTextColor}
                     title="About"
                     buttonStyle={locStyles.buttonStyle}
@@ -92,6 +95,7 @@ class StartView extends Component {
                 />
                 <Button
                     backgroundColor={colorScheme.primaryColor}
+                    leftIcon={{name:'settings',color:'white'}}
                     color={colorScheme.primaryTextColor}
                     title="Settings"
                     buttonStyle={locStyles.buttonStyle}
