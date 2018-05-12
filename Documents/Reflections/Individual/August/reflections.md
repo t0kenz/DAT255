@@ -26,7 +26,7 @@ We completed our assigned tasks. However, we ended up without a lot to do at the
 
 My learning objectives for the next week are:
 
-I will attempt to work more incrementally and not worry too much about the end result until it's necessary. This includes using placeholders when appropriate and pushing often to our repo.
+Until now I may have been too worried about the implementation details. I will attempt to work more incrementally and not think too much about the end result until it's necessary. This includes using placeholders when appropriate and pushing often to our repo.
 
 
 # Week 6
