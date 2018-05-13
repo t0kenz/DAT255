@@ -108,3 +108,20 @@ Next week I will make sure to finish the tasks I have to do to for the sprint an
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 #### For the next week
 Next week i will make sure to talk to the others in the team so that we can think about what we can do with the app in the time that is left.
+
+
+
+## Reflections each week by John - week 6
+
+### What do I want to learn or understand better?
+ - Right now i mostly want to focus on making my planning skills better since it seems that there is not much time left and we still have a lot to do. Therefore i want to get better at planning so that i can do it better in the future. This is still what i want to learn the most but i have also realized that sometimes its important to just try and solve a problem without planning on how it should be done therefore i want to get a balance between these two aspects of planning and trying to get things done.
+
+### How can I help someone else, or the entire team, to learn something new?
+- Since the issues right now seem to be to get all of the parts we have made to work together I can help by trying to communicate with the team and help by explaining how the parts that i have worked on can fit together with the rest.
+
+### What is my contribution towards the team’s application of scrum?
+- I have tried to participate in the planning process and make sure that we all have tasks to do including myself. However now i feel as if we have made too many tasks and that we won't be able to complete all of them. Since we now know what we want to do the best i can do to accomplish our goals is to make sure to try and help with some tasks and to communicate when im available.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### For the next week
+Next week i will go to our meetings and see if someone who can build the project is free when i am so that we can work together.
