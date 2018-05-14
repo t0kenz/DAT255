@@ -63,51 +63,83 @@ class StartView extends Component {
     }
 
     render() {
-        const { navigation } = this.props;
-        const { navigate } = navigation;
-        return (<View style={locStyles.container}>
-            <TopHeader title='PortableCDM' firstPage navigation={this.props.navigation} />
-            <ScrollView style={styles.container} /* ska det vara scroll? */>
-                <Button
-                    backgroundColor={colorScheme.primaryColor}
-                    leftIcon={{name:'directions-boat',color:'white'}}
-                    color={colorScheme.primaryTextColor}
-                    title="Port Calls"
-                    buttonStyle={locStyles.buttonStyle}
-                    onPress={() => navigate('NewPortCalls')}
-                />
+        const {navigation} = this.props;
+        const {navigate} = navigation;
+        return (
+            <View style={locStyles.container}>
+                <TopHeader title='PortableCDM' firstPage navigation={this.props.navigation} />
+                <View style={locStyles.centerView}>
+                    <View style={locStyles.topView}>
 
-                <Button
-                    backgroundColor={colorScheme.primaryColor}
-                    leftIcon={{name:'acces-time',color:'white'}}
-                    color={colorScheme.primaryTextColor}
-                    title="Requests"
-                    buttonStyle={locStyles.buttonStyle}
-                    onPress={() => navigate('Requests')}
-                />
-                <Button
-                    backgroundColor={colorScheme.primaryColor}
-                    leftIcon={{name:'info',color:'white'}}
-                    color={colorScheme.primaryTextColor}
-                    title="About"
-                    buttonStyle={locStyles.buttonStyle}
-                    onPress={() => navigate('About')}
-                />
-                <Button
-                    backgroundColor={colorScheme.primaryColor}
-                    leftIcon={{name:'settings',color:'white'}}
-                    color={colorScheme.primaryTextColor}
-                    title="Settings"
-                    buttonStyle={locStyles.buttonStyle}
-                    onPress={() => navigate('Settings')}
-                />
+                            <Button
+                                backgroundColor={colorScheme.primaryColor}
+                                color={colorScheme.primaryTextColor}
+                                leftIcon={{name:'directions-boat', color:'white'}}
+                                title="PortCalls"
+                                buttonStyle={locStyles.buttonStyle}
+                                onPress={() => navigate('PortCalls')}
+                            />
 
-            </ScrollView>
-        </View>);
+                            <Button
+                                backgroundColor={colorScheme.primaryColor}
+                                color={colorScheme.primaryTextColor}
+                                leftIcon={{name:'acces-time', color:'white'}}
+                                title="Requests"
+                                buttonStyle={locStyles.buttonStyle}
+                                onPress={() => navigate('Requests')}
+                            />
+                        </View>
+                        <View style={locStyles.bottomView}>
+                            <Button
+                                backgroundColor={colorScheme.primaryColor}
+                                color={colorScheme.primaryTextColor}
+                                leftIcon={{name:'info', color:'white'}}
+                                title="About"
+                                buttonStyle={locStyles.buttonStyle}
+                                onPress={() => navigate('About')}
+                            />
+                            <Button
+                                backgroundColor={colorScheme.primaryColor}
+                                color={colorScheme.primaryTextColor}
+                                leftIcon={{name:'settings', color:'white'}}
+                                title="Settings"
+                                buttonStyle={locStyles.buttonStyle}
+                                onPress={() => navigate('Settings')}
+                            />
+                        </View>
+                </View>
+                
+            </View>
+        );
     }
 }
 
 const locStyles = StyleSheet.create({
+    centerView: {
+        flex: 1, 
+        justifyContent: "center",
+        flexDirection: "column",
+        backgroundColor: colorScheme.backgroundColor,
+        height: 100,
+        marginTop: "35%",
+        marginBottom: "35%"
+    },
+    topView: {
+        flex: 1, 
+        justifyContent: "center",
+        backgroundColor: colorScheme.backgroundColor,
+        flexDirection: "row",
+        height: 50,
+        width:"100%"
+    },
+    bottomView: {
+        flex: 1, 
+        justifyContent: "center",
+        flexDirection: "row",
+        backgroundColor: colorScheme.backgroundColor,
+        height: 50,
+        width:"100%"
+    },
     container: {
         flex: 1,
         backgroundColor: colorScheme.backgroundColor,
@@ -131,13 +163,16 @@ const locStyles = StyleSheet.create({
         marginTop: 10,
         borderColor: colorScheme.primaryColor,
         borderWidth: 1,
-        borderRadius: 1,
+        borderRadius: 10,
+        width:120,
+        height:120,
     },
     titleStyle: {
         color: colorScheme.quaternaryTextColor,
         fontSize: 16,
         fontWeight: 'bold',
         paddingLeft: 10,
+        textAlign: 'center',
     },
     badgeText: {
         color: colorScheme.secondaryColor,
