@@ -1,21 +1,21 @@
 ## Reflections each week by Jesper
-
-# Template week X
+# Week 7
 ### What do I want to learn or understand better?
--
+- I feel comfortable programming in the project and the code base is no longer unfamiliar. I feel like I've made progress within the application and acheived something of value. During the past week I spent a lot of my time learning the different API's of the server and learned how to extract the information we need for our application. This included implementing some new request to the server, which also went fine. My next goal within programming in this application is to get a hold of all the different internal states and make the compucations async. I will do this by learning how states/components work in react native (ComponentWillMount for example) and apply it to our already existing code. Not only to make it faster and more secure, but also to follow the existing code bases structure.
+- Scrum feels more at home now. I feel like I understand the concept and workflow. However I feel like its really hard to predict/"guess" the velocity of a task. We've only been able to accurately guess the velocity a few times, and those tasks where guessed accurately because of it was similar to something I've done before. I think that the only way to get better at predicting the velocity of a task is by practise, and reflecting on the predictions outcome. 
 
 ### How can I help someone else, or the entire team, to learn something new?
--
+- I have written a lot of code within the application and I hope that I'll able to help our team solve problems if they're similar to the problems I faced. I will attend to all the meetings when I can, I'll also attend our group programming sessions where I will share the problems I found and listen to the rest of our teams problems and we'll work out a solution. (I refer problem to a challange within the coding of our application) 
 
 ### What is my contribution towards the team’s application of scrum?
--
+- Even with last weeks objective in mind (to slice our big tasks into small, but still vertical tasks) we still have a problem with slicing tasks to big. We did put more effort in our last slicing session and the tasks did indeed get smaller. But some of the tasks where still to big for us to comfortably say that we'll be able to complete them within a sprint. To address this we will have to put even more effort into the slicing to get achievable tasks.
 
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 #### From the previous week
-- 
+- It felt really bad that we did not have anything of value to show to our product owners the last sprint. So during this sprint I tried to accomplish my tasks within the sprint, which I also did manage to accomplish. During this sprint I had to realize that I dont have that much time to spend on this course and break down my tasks accordingly. The breakdown went good but I still felt that we had to big tasks which is something I hope to fix for our next sprint.   
 
 #### For the next week
--
+- For the next sprint I will try to split our tasks to even smaller tasks, while still trying to keep them vertical. I also aim to fully complete my tasks and help my team complete theirs, if a problem arises. As of now, only 4 out of 8 in our team can get the project to work on their computers. This means that we will have to code in bigger groups to make every member able to accomplish their tasks and to contribut to the team. 
 
 # Week 6
 ### What do I want to learn or understand better?
