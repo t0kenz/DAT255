@@ -1,3 +1,34 @@
+# Week 7
+
+## 1. What do I want to learn or understand better?
+
+The Scrum philosophy of trying things out and not planning too long ahead. This hasn't been applied enough during the project. We will need to do this during the remaining two weeks.
+
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+I will be working with a new programming partner this sprint (we are switching partners due to some people having problems with building the app on their computers). I will discuss the process of pair programming and programming in general with them and see if we can learn something from discussing our previous experiences and working with each other.
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+I brought up the fact that we lacked frequent communication about our progress. Consequently we added requirements about providing status updates via Slack twice per week in addition to the meetings.
+
+I also pointed out the issue that we weren't taking detailed enough meeting notes. We therefore decided to have a secretary for each meeting, to make sure decisions, progress reports etc are well documented.
+
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Since last week:
+
+Task planning:
+We completed our assigned tasks. However, we ended up without a lot to do at the end of the sprint. Maybe we were a bit too cautious about taking on more tasks? It seems a lot of practice is needed to learn to get sprint estimation right.
+
+My learning objectives for the next week are:
+
+Until now I may have been too worried about the implementation details. I will attempt to work more incrementally and not think too much about the end result until it's necessary. This includes using placeholders when appropriate and pushing often to our repo.
+
+
 # Week 6
 
 ## 1. What do I want to learn or understand better?

@@ -9,6 +9,26 @@
 
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
+## Week 7
+### 1. What do I want to learn or understand better?
+- I need to learn more about the algoritm that should search for the information we need for a specific portcall
+- I want to learn more about how to create views in react-native and more specific a nestled view
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- I can help others to narrow down the scope of their work since we're now running out of time
+- I can contribute to my programming group by read more about react-native before we meet next time since
+
+### 3. What is my contribution towards the team’s application of scrum?
+- I made the suggestion this week to narrow down our scope in order to deliver something valueable to the product owner. 
+- I made the suggestion to the group that we should just start working with something instead of focusing on writing good user stories and tasks. I feel that this have had some effect. 
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the past week I've learned more about the APIs used in portCDM. I wrote down all the neccessary APIs and how to communicate with them at our repo in order to share it with my team. 
+- During the past week I've also written down all time stamps in portCDM that are related to towage in order for us to get an understanding of the time-stamp system. 
+- During the upcoming week I need to develop a start view together with my programming group. In order to make that possible, I need to learn more about how react-native works and specifically the nestled views.
+- During the upcoming week, I want to contribute to preparing the team for the last sprint and make sure that we'll get the application up and running. That means that we need to really focus on the essential parts of our soloution. I will do this by keep pushing for that we need to narrow down the scope of our work and focus on the parts that makes the application ready to go. 
+
+
 ## Week 6
 ### 1. What do I want to learn or understand better?
 - I need to get a deeper understanding of the current APIs, that are used in PortCDM, than I've received until now. 
