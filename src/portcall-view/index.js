@@ -113,10 +113,7 @@ class PortCallList extends Component {
 
     }
     openPortcallDetials() {
-        /**
-         * TODO: ADD NAVIGATE TO PORTCALL 
-         */
-        console.log("openPortcallDetials");
+        this.props.navigation.navigate('VesselLists');
     }
 
     getHarbor(portCall) {
