@@ -30,6 +30,7 @@ import BerthList from '../components/berth-list-view';
 import BerthTimeLine from '../components/berth-timeline-view';
 import StartView from '../components/start-view';
 import NewPortCalls from '../components/portcall-view';
+import RequestsView from '../components/requests-view';
 import FilterMenu from '../components/portcall-view/sections/filterMenu';
 
 const BerthViewNavigator = StackNavigator({
@@ -51,7 +52,30 @@ const NewPortCallNavigator = StackNavigator({
     },
     FilterMenu: {
         screen: FilterMenu
+    },
+    VesselLists: {
+        screen: VesselLists
     }
+
+
+}, {
+        headerMode: 'none'
+    });
+
+const RequestsViewNavigator = StackNavigator({
+    RequestsView: {
+        screen: RequestsView
+    },
+    StartView: {
+        screen: StartView
+    },
+    FilterMenu: {
+        screen: FilterMenu
+    },
+    VesselLists: {
+        screen: VesselLists
+    }
+
 
 }, {
         headerMode: 'none'
@@ -64,6 +88,9 @@ const StartViewNavigator = StackNavigator({
     },
     NewPortCalls: {
         screen: NewPortCalls
+    },
+    RequestsView: {
+        screen: RequestsView
     }
 }, {
         headerMode: 'none'
@@ -131,8 +158,8 @@ const InitiatePortCallNavigator = StackNavigator({
     });
 
 const MainNavigator = DrawerNavigator({
-    NewPortCalls: {
-        screen: NewPortCallNavigator
+    StartView: {
+        screen: StartViewNavigator
     },
     PortCalls: {
         screen: PortCallListNavigator
