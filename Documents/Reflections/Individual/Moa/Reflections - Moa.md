@@ -25,7 +25,7 @@
 - I want to understand the codebase better in order to know exactly where to make the changes  
 - I want to know how the js-files communicate with each other
 - I want to learn the javascript language 
-- I want to learn how to handle the errors in android studio
+- I want to learn how to handle some common errors in android studio
 
 ### How can I help someone else, or the entire team, to learn something new?
 - Last week, I, together with Hanna, started implementing the "head view" of the app. However, we did not get completely done since we failed to test it so we continued with the same task this week. I've learned a lot while writing and testing our code - not only the javascript language but I've also gotten a much better overview of the application's codebase. I think that I can help the team members with implementing the other views. 
