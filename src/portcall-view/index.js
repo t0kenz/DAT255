@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {
+    getStatements,
+    updatePortCalls,
+    selectPortCall,
+    toggleFavoritePortCall,
+    toggleFavoriteVessel,
+    appendPortCalls,
+    bufferPortCalls,
+    setError,
+} from '../../actions';
 
 import {
+    RefreshControl,
     View,
     StyleSheet,
     Image,
@@ -18,44 +29,28 @@ import {
     Icon,
     List,
     ListItem,
-    FormInput,
     SearchBar,
-    FormLabel,
     Button,
-    CheckBox,
     Slider,
 } from 'react-native-elements';
 
-import { Util } from 'expo';
-
-import TopHeader from '../top-header-view';
 import colorScheme from '../../config/colors';
-import styles from '../../config/styles';
 import { getDateTimeString } from '../../util/timeservices';
 
-import {
-    updatePortCalls,
-    selectPortCall,
-    toggleFavoritePortCall,
-    toggleFavoriteVessel,
-    appendPortCalls,
-    bufferPortCalls,
-    setError,
-} from '../../actions';
-
-class PortCallView extends Component {
-
-    constructor(props) {
-        super(props);
-
-        //this._logout = this._logout.bind(this);
+class PortCallList extends Component {
+    state = {
+        searchTerm: '',
+        refreshing: false,
+        numLoadedPortCalls: 20,
     }
 
     componentWillMount() {
         this.loadPortCalls = this.loadPortCalls.bind(this);
         this._appendPortCalls = this._appendPortCalls.bind(this);
+        var preparePortCalls = this.preparePortCalls.bind(this)
         this.loadPortCalls()
-            .then(this.props.bufferPortCalls);
+            .then(this.props.bufferPortCalls)
+            .then(preparePortCalls());
     }
 
     loadPortCalls() {
@@ -73,6 +68,50 @@ class PortCallView extends Component {
         }
     }
 
+    checkBottom(event) {
+        let { layoutMeasurement, contentOffset, contentSize } = event.nativeEvent;
+        const paddingToBottom = 100;
+        if (!this.props.showLoadingIcon && layoutMeasurement.height + contentOffset.y >= contentSize.height - paddingToBottom) {
+            let numLoaded = this.state.numLoadedPortCalls;
+
+            this.setState({ numLoadedPortCalls: numLoaded + 20 });
+            let { portCalls, appendPortCalls } = this.props;
+            if (numLoaded >= portCalls.length) {
+                this._appendPortCalls();
+            } else {
+                console.log('Loading more local port calls. Showing ' + numLoaded + ' of ' + portCalls.length + ' port calls.');
+            }
+        }
+    }
+
+    /**
+     * Prepares the view for portcalls, loading new informations like statements to get harbor
+     */
+    preparePortCalls() {
+        var self = this;
+        return new Promise(function (resolve, reject) {
+            var portCalls = self.props.portCalls;
+            self.portCallStatements = {};
+            var promises = [];
+            for (var i = 0; i < portCalls.length; i++) {
+                var portCall = portCalls[i];
+                var promise = self.getHarbor(portCall);
+                promises.push(promise);
+            }
+            Promise.all(promises)
+                .then(function (data) {
+                    for (var n = 0; n < data.length; n++) {
+                        var harborMap = data[n];
+                        var portCallId = harborMap.portCallId;
+                        var harbor = harborMap.harbor;
+                        self.portCallStatements[portCallId] = harbor;
+                    }
+                    resolve();
+                });
+        });
+
+
+    }
     openPortcallDetials() {
         /**
          * TODO: ADD NAVIGATE TO PORTCALL 
@@ -80,10 +119,98 @@ class PortCallView extends Component {
         console.log("openPortcallDetials");
     }
 
-    createPortcallList = (portCalls) => {
-        var list = [];
-        for (var i = 0; i < 10; i++) {
+    getHarbor(portCall) {
+        return new Promise(function (resolve, reject) {
+            var getSuffix = function (string, char) {
+                for (var i = string.length - 1; i > 0; i--) {
+                    if (string[i] === char) {
+                        if (i === string.length - 1) i = (string.length - 2);
+                        return string.substring(i + 1);
+                    }
+                }
+                return string;
+            }
 
+            getStatements(portCall)
+                .then(function (statements) {
+                    var stateType = "";
+                    var harbor = "Unknown harbor";
+                    var portCallId = portCall.portCallId;
+                    var harborMap = {};
+                    for (var i = 0; i < statements.length; i++) {
+                        var statement = statements[i];
+                        if (statement === undefined) continue;
+                        if (statement.at === undefined) continue;
+                        if (statement.stateDefinition === undefined) continue;
+                        stateType = statement.stateDefinition;
+
+                        switch (stateType) {
+                            case "Arrival_Vessel_Berth":
+                                harbor = getSuffix(statement.at, ":");
+                                harborMap.portCallId = portCallId;
+                                harborMap.harbor = harbor;
+                                resolve(harborMap);
+                                break;
+                            case "Departure_Vessel_Berth":
+                                harbor = getSuffix(statement.at, ":");
+                                harborMap.portCallId = portCallId;
+                                harborMap.harbor = harbor;
+                                resolve(harborMap);
+                                break;
+                        }
+                        harborMap.portCallId = portCallId;
+                        harborMap.harbor = harbor;
+                        resolve(harborMap);
+                    }
+
+                });
+        });
+    }
+
+    getPhotoURI(portCall) {
+        var vesselURI = null;
+        if (portCall === undefined) return vesselURI;
+        if (portCall.vessel !== undefined) {
+            vesselURI = portCall.vessel.photoURL;
+        }
+
+        return { uri: vesselURI };
+    }
+
+    getPortCallRequets(portCall) {
+        var nextRow = "\n";
+        var randomInt = Math.floor(Math.random() * 4)
+        return "Requested" + nextRow + randomInt + " Tugboats" + nextRow + "Escort  ->";
+    }
+
+    getPortCallDetails(portCall) {
+        var nextRow = "\n";
+        var vesselName = "Unknown vessel name";
+        var endDate = "Unknown date";
+        var harbor = "Unknown harbor";
+
+        var portCallId = portCall.portCallId;
+        var statements = this.portCallStatements[portCallId];
+        if (portCall.vessel !== undefined) vesselName = portCall.vessel.name;
+        if (statements !== undefined) harbor = statements;
+        if (portCall.endTime !== undefined) endDate = getDateTimeString(new Date(portCall.endTime))
+
+        if (harbor.length > 0) {
+            var prefix = harbor.substring(0, 1).toUpperCase();
+            harbor = prefix + harbor.substring(1);
+        }
+        return vesselName + nextRow + harbor + nextRow + endDate;
+    }
+
+    createPortCallList = () => {
+        var portCalls = this.props.portCalls;
+        var list = [];
+        for (var i = 0; i < portCalls.length; i++) {
+            var portCall = portCalls[i];
+            if (portCall === undefined) continue;
+            var photoURI = this.getPhotoURI(portCall);
+            var portCallDetails = this.getPortCallDetails(portCall);
+            var portCallRequets = this.getPortCallRequets(portCall)
             list.push(
                 <View style={localStyles.listContainer}
                     backgroundColor={(i % 2 === 0) ? "#f0f0f0" : "#ffffff"}
@@ -93,7 +220,7 @@ class PortCallView extends Component {
                         <Avatar
                             size="small"
                             rounded
-                            source={{ uri: "http://photos.marinetraffic.com/ais/showphoto.aspx?photoid=154634" }}
+                            source={photoURI}
                         />
                     </View>
                     <View style={localStyles.listPortcallDetails}>
@@ -101,15 +228,14 @@ class PortCallView extends Component {
                             style={localStyles.listPortcallDetailsText}
                             h4
                         >
-                            {"Beate\nRya Harbor 562\n05/06/2018 13:40 (E)"}
+                            {portCallDetails}
                         </Text>
                     </View>
                     <View style={localStyles.listPortcallRequets}>
                         <Text
                             style={localStyles.listPortcallRequetsText}
-
                         >
-                            {"Requested\n3 Tugboats\nEscort  ->"}
+                            {portCallRequets}
                         </Text>
                     </View>
                     <View style={localStyles.listPortcallOnPress}>
@@ -129,19 +255,26 @@ class PortCallView extends Component {
                                         this.openPortcallDetials();
                                     }}
                                 />
-
                             }
                         </List>
                     </View>
                 </View>
             );
+
         }
         return list;
     }
 
     render() {
-        const { navigation } = this.props;
+        const { navigation, showLoadingIcon, portCalls, selectPortCall } = this.props;
         const { navigate } = navigation;
+        const { searchTerm } = this.state;
+
+        // Quick fix for having 1 element with null value
+        if (portCalls.length === 1) {
+            portCalls.splice(0, 1);
+        }
+
         return (
             <View style={localStyles.backgroundContainer}>
                 <View style={localStyles.topContainer}>
@@ -192,11 +325,58 @@ class PortCallView extends Component {
                     </View>
 
                 </View>
-                <ScrollView style={localStyles.scrollContainer}>
-                    {this.createPortcallList(portCalls)}
+                <ScrollView
+                    refreshControl={
+                        <RefreshControl
+                            refreshing={this.state.refreshing}
+                            onRefresh={this.loadPortCalls.bind(this)}
+                        />
+                    }
+                    onScroll={this.checkBottom.bind(this)}
+                    scrollEventThrottle={4}
+                    style={localStyles.scrollContainer}
+                >
+                    {this.createPortCallList()}
                 </ScrollView>
 
             </View >);
+    }
+    isFavorite(portCall) {
+        return this.props.favoritePortCalls.includes(portCall.portCallId) ||
+            this.props.favoriteVessels.includes(portCall.vessel.imo);
+    }
+
+    sortFilters(a, b) {
+        let aFav = this.isFavorite(a);
+        let bFav = this.isFavorite(b);
+        if (aFav && !bFav) return -1;
+        if (bFav && !aFav) return 1;
+
+        let { filters } = this.props;
+        let invert = filters.order === 'ASCENDING';
+        if (filters.sort_by === 'LAST_UPDATE') {
+            if (a.lastUpdated > b.lastUpdated)
+                return invert ? 1 : -1;
+            else return invert ? -1 : 1;
+        } else if (filters.sort_by === 'ARRIVAL_DATE') {
+            if (a.startTime > b.startTime)
+                return invert ? 1 : -1;
+            else return invert ? -1 : 1;
+        }
+
+        return 0;
+    }
+
+    search(portCalls, searchTerm) {
+        let { filters } = this.props;
+
+        return portCalls.filter(portCall => {
+            return (portCall.vessel.name.toUpperCase().includes(searchTerm.toUpperCase()) ||
+                portCall.vessel.imo.split('IMO:')[1].startsWith(searchTerm) ||
+                portCall.vessel.mmsi.split('MMSI:')[1].startsWith(searchTerm)) &&
+                (!portCall.stage || filters.stages.includes(portCall.stage));
+        }).sort((a, b) => this.sortFilters(a, b))//.sort((a,b) => a.status !== 'OK' ? -1 : 1)
+            .slice(0, this.state.numLoadedPortCalls);
     }
 }
 
@@ -303,66 +483,35 @@ const localStyles = StyleSheet.create({
         marginTop: 6
     },
     searchBar: {
-        backgroundColor: styles.primaryColor,
+        backgroundColor: colorScheme.primaryColor,
         borderBottomWidth: 0,
         borderTopWidth: 0
     },
     scrollContainer: {
         flex: 2,
-    },
+    }
 
 });
 
-const portCalls = [
-    /*
-    {
-        name: 'Skagern',
-        avatar_url: 'http://photos.marinetraffic.com/ais/showphoto.aspx?photoid=154634',
-        date: "2018-05-02T19:43:38Z",
-        port: ,
-        type: ,
-        status: ,
-        tugBoats: 3,
-    },
-    */
-    {
-        name: 'Chris Jackson',
-        //avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice Chairman'
-    },
-    {
-        name: 'Amy Farha',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice President'
-    },
-    {
-        name: 'Chris Jackson',
-        //avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice Chairman'
-    },
-    {
-        name: 'Amy Farha',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice President'
-    },
-    {
-        name: 'Chris Jackson',
-        //avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice Chairman'
+function mapStateToProps(state) {
+    return {
+        portCalls: state.cache.portCalls,
+        cacheLimit: state.cache.limit,
+        favoritePortCalls: state.favorites.portCalls,
+        favoriteVessels: state.favorites.vessels,
+        showLoadingIcon: state.portCalls.portCallsAreLoading,
+        filters: state.filters,
+        error: state.error,
+        isAppendingPortCalls: state.cache.appendingPortCalls
     }
-]
+}
 
-
-
-/**
- * TODO: READ WHAT CONNECT DOES
- */
-export default connect("", {
+export default connect(mapStateToProps, {
     updatePortCalls,
     appendPortCalls,
     selectPortCall,
     toggleFavoritePortCall,
     toggleFavoriteVessel,
     bufferPortCalls,
-    setError
-})(PortCallView);
+    setError,
+})(PortCallList);
