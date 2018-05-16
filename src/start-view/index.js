@@ -83,7 +83,7 @@ class StartView extends Component {
                             <Button
                                 backgroundColor={colorScheme.primaryColor}
                                 color={colorScheme.primaryTextColor}
-                                leftIcon={{name:'acces-time', color:'white'}}
+                                leftIcon={{name:'access-time', color:'white'}}
                                 title="Requests"
                                 buttonStyle={locStyles.buttonStyle}
                                 onPress={() => navigate('Requests')}
