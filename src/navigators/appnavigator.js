@@ -62,6 +62,18 @@ const NewPortCallNavigator = StackNavigator({
         headerMode: 'none'
     });
 
+
+    const VesselInfoNavigator = StackNavigator({
+        // ChangeStatus: {
+        //     screen: ChangeStatus
+        // },
+        NewPortCalls: {
+            screen: NewPortCalls
+        }
+     }, {
+        headerMode: 'none'
+     });
+
 const RequestsViewNavigator = StackNavigator({
     RequestsView: {
         screen: RequestsView
