@@ -28,6 +28,11 @@ module.exports = {
                 'token': 'temporarykey',
                 'callback': './APIs/postAcceptTugboat'
             }
+            'changeStateTugboat': {
+                'address': '/API=changeStateTugboat*',
+                'token': 'temporarykey',
+                'callback': './APIs/postChangeStateTugboat'
+            }
 
         },
         'GET': {

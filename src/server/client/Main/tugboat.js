@@ -1,40 +1,44 @@
 var BASE_URL = "http://localhost:8080";
 
 window.onload = function () {
-    var left = createDiv(document.body, "left");
-    var right = createDiv(document.body, "right");
-    paintLeft(left);
-    paintRight(right);
+    var view = createDiv(document.body, "view");
+    paintView(view);
 }
 
-function paintLeft(left) {
-    left.header = createDiv(left, "header");
-    left.header.textContent = "Request a tugboat";
-    var addRequestButton = createButton(left, "reqButton", "Add request");
+function paintView(view) {
+    view.acceptedRequests = createDiv(view, "requests");
+    view.acceptedRequests.header = createDiv(view, "header");
+    view.acceptedRequests.header.textContent = "Sent requests";
+    view.requests = createDiv(view, "requests");
 
-    left.acceptedRequests = createDiv(left, "requests");
-    left.acceptedRequests.header = createDiv(left, "header");
-    left.acceptedRequests.header.textContent = "Accepted requests";
-    left.requests = createDiv(left, "requests");
-
-    addEventMouseClick(addRequestButton, false, addRequest.bind("", left));
-    checkHttpRequest(getAcceptedRequests, left.requests);
+    checkHttpRequest(getRequests, view.requests);
 }
 
-function paintRight(right) {
-    right.header = createDiv(right, "header");
-    right.header.textContent = "Requested tugboats";
-    right.requests = createDiv(right, "requests");
-    checkHttpRequest(getPendingRequests, right.requests);
-}
-
-function getAcceptedRequests(container, url, _e) {
-    var INDEX_URL = "/API=getAcceptedTugboats";
+function changeStatusRequest(container, nextState, portCallID, _e) {
+    var INDEX_URL = "/API=changeStateTugboat";
     var token = "temporarykey";
-    getTugboatRequests(container, INDEX_URL, token);
+    changeTugboatStatusRequest(container, INDEX_URL, nextState, portCallID, token, "");
 }
 
-function getPendingRequests(container, url, _e) {
+function changeTugboatStatusRequest (container, INDEX_URL, nextState, portCallID, token, key, cb) {
+    var URL = BASE_URL + INDEX_URL;
+    var header = {
+        'Content-Type': 'application/json',
+        'token': token,
+
+    };
+
+    var body = {
+        'portCallID': portCallID,
+        'newState': nextState
+    };
+    var promise = httpPost(URL, header, body)
+        .then(function (data) {
+            cb && cb(data);
+        });
+}
+
+function getRequests(container, url, _e) {
     var INDEX_URL = "/API=getRequestedTugboats";
     var token = "temporarykey";
     getTugboatRequests(container, INDEX_URL, token);
@@ -42,57 +46,42 @@ function getPendingRequests(container, url, _e) {
 
 function getTugboatRequests(container, INDEX_URL, token) {
     var URL = BASE_URL + INDEX_URL;
+    var nextState;
     var header = {
         'Content-Type': 'application/json',
         'token': token,
     };
-    var body = undefined; // {};
+    var body = undefined; //{};
     var promise = httpGet(URL, header, body)
         .then(function (data) {
-            console.log(data);
             container.innerHTML = "";
             var data = JSON.parse(data);
             var requests = data["tugboatRequests"];
             var mod2 = 0;
             for (var key in requests) {
                 var tugboat = createDiv(container, "requestedTugboat");
-                tugboat.textContent = requests[key];
+                tugboat.textContent = JSON.stringify(requests[key]);
                 if (mod2 % 2 === 1) {
                     tugboat.classList.add("greyBackground");
                 }
                 mod2++;
-                addEventMouseClick(tugboat, false, acceptRequest.bind("", tugboat, key));
+                var nextState;
+                if(requests[key].state === "Requested") {
+                    nextState = "Received";
+                    console.log("nextState = " + nextState);
+                } else if(requests[key].state === "Received") {
+                    nextState = "Confirmed";
+                    console.log("nextState = " + nextState);
+                } else if (requests[key].state === "Confirmed") {
+                    nextState = "Commenced";
+                    console.log("nextState = " + nextState);
+                } else {
+                    nextState = "Completed";
+                    console.log("nextState = " + nextState);
+                }
+                addEventMouseClick(tugboat, false, changeStatusRequest.bind("", tugboat, nextState, requests[key].portCallID));
             }
         });
-}
-
-function addTugboatRequest(container, INDEX_URL, token, key, cb) {
-    var URL = BASE_URL + INDEX_URL;
-    var header = {
-        'Content-Type': 'application/json',
-        'token': token,
-    };
-    var body = { 'key': key };
-    var promise = httpPost(URL, header, body)
-        .then(function (data) {
-            cb && cb(data);
-        });
-}
-
-function addRequest(container, _e) {
-    var INDEX_URL = "/API=addRequestTugboat";
-    var token = "temporarykey";
-    addTugboatRequest(container, INDEX_URL, token, "");
-}
-
-function acceptRequest(container, key, _e) {
-    function callback(data) {
-        var contaierParent = container.parentNode;
-        contaierParent.removeChild(container);
-    }
-    var INDEX_URL = "/API=acceptRequestTugboat";
-    var token = "temporarykey";
-    addTugboatRequest(container, INDEX_URL, token, key, callback);
 }
 
 function httpPost(url, header, body) {
@@ -102,7 +91,6 @@ function httpPost(url, header, body) {
 function httpGet(url, header, body) {
     return httpRequest(url, "GET", header, body);
 }
-
 
 function httpRequest(url, method, header, body) {
     /** documents on fetch
@@ -126,7 +114,6 @@ function httpRequest(url, method, header, body) {
         });
     });
 }
-
 
 function checkHttpRequest(callback, callbackArgs, _e) {
     var delay = 1000;
