@@ -1,3 +1,38 @@
+# Week 7
+
+### What do I want to learn or understand better?
+- I need to get some understanding of how to create UIs in react native.
+- I need to be more efficient in writing these reflections, it takes too much time.
+
+### How can I help someone else, or the entire team, to learn something new?
+- We are all going to learn how to code in react native in the upcoming week so if there is something which I understand that someone else does not, then I can help. 
+### What is my contribution towards the team's application of scrum?
+- As in the other weeks, I have kept track of the burn up chart KPI.
+- I completed my task with my programming partner this week.
+- I have participated in the group meetings and contributed with writing the group reflection.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+#### Last week
+- I did finish my task but it's implementation in the project will be put on hold as we basically have nothing to show the product owners and we are close to the end of the course.
+
+#### Next week
+- When we talked with one of the course supervisors he suggested a method of doing less planning and just start working on whatever task you are supposed to work on. I will try to do this in the upcoming week.
+- As I am going to work with UI in the upcoming week I am going to need to be somewhat comfortable working in react native, which I currently have no experiance with. I am going to do this by applying the method described above by just throwing my self in the current code and try to change a view and proceed from there. I will only read up on something when I actually run in to a problem.
+
+# Week 6
+
+### What do I want to learn or understand better?
+- I would like to be more comfortable with javascript, especially aspects concerning asynchronousity but I doubt that I will have time for that. 
+
+### How can I help someone else, or the entire team, to learn something new?
+- When I am finished with my task of creating functions on the server to receive number of tugboats I can help my team understand how to use it.
+### What is my contribution towards the team's application of scrum?
+- I have contributed by attending our meetings, taking part in our discussions and helping writing the group reflection. I have worked on the tasks which I was assigned to but did unfortunately completed them. 
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+- The goal of next week is to finish the work on the new functions on the server.
+
 # Week 4 and 5
 
 ### What do I want to learn or understand better?

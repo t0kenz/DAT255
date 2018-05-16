@@ -6,11 +6,13 @@ import {
   StyleSheet,
   Image,
   Dimensions,
+
 } from 'react-native';
 
 import {
   Text,
   Button,
+  Icon,
 } from 'react-native-elements';
 import TopHeader from '../top-header-view';
 import colorScheme from '../../config/colors';
@@ -36,80 +38,62 @@ class VesselInfo extends Component {
 
 
   render(){
-    return(
+	const { navigation } = this.props;
+	const { navigate } = navigation;
+    
+    return(  
 
-      <View style={styles.container}>  
-        <TopHeader title = 'Vessel name' firstPage navigation={this.props.navigation}/>
+        
+		<View style={styles.backgroundContainer}>
+        	<View style={styles.topContainer}>
+            	<View style={styles.topHeader}>
+              		<View style={styles.topButtonDiv}>
+                  		<Icon
+                        	name='arrow-back'
+                            color={colorScheme.primaryContainerColor}
+                              size={44}
+                              underlayColor='transparent'
+                              onPress={() => navigate('NewPortCalls')}
+                        />
+                    </View>
+                        <View style={styles.topHeaderDiv}>
+                        	<Text style={styles.headerText} h3>
+                                Vessel example
+                        	</Text>
+                        </View>
+					</View>
+        		</View>
+        	<View style={styles.infoContainer}>
+	        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Status: </Text>{"Commenced"} </Text>
+        		<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Time: </Text>{"Time"} </Text>
+        		<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Work type: </Text>{"Escort"} </Text>
+      			<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Last update: </Text>{"29/04/2018 19:20"} </Text>
+        		<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Nr of tugboats: </Text>{"2"} </Text>
+        		<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Conection point: </Text>{"Trubaduren"} </Text>
+        		<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Destination: </Text>{"Masthuggskajen 72A"} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Length: </Text>{"129"} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Width: </Text>{"19"} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Dead Weight: </Text>{"50 000 tones"} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> IMO: </Text>{"9371878"} </Text>
+          	{/*Put below in separate expandable list? See UI suggestion*/}
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Vessel Type: </Text>{"Oil Tanker?"} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> MMSI: </Text>{"MMSI..."} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Call Sign: </Text>{"Call sign..."} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Flag: </Text>{"SE"} </Text>
+            	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Built Year: </Text>{"2000"} </Text>
 
-        
-        {/*<View style={styles.pictureContainer}>
-          <Image
-            style={{ 
-            width: Dimensions.get('window').width-20,
-            height: Dimensions.get('window').height/4,
-            borderRadius: 5,
-            }}
-            source={{uri:vessel.photoURL }}  
-            />
-        </View>
-		*/}
-        
-        {/*
-        <View style={styles.headerContainer}>
-          <Text style={styles.headerText}>{vessel.name}</Text>
-        </View>
-		*/}
-        
-        
-        <View style={styles.infoContainer}>
-        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Status: </Text>{"Commenced"} </Text>
-        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Time: </Text>{"Time"} </Text>
-        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Work type: </Text>{"Escort"} </Text>
-      		<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Last update: </Text>{"29/04/2018 19:20"} </Text>
-        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Nr of tugboats: </Text>{"2"} </Text>
-        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Conection point: </Text>{"Trubaduren"} </Text>
-        	<Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Destination: </Text>{"Masthuggskajen 72A"} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Length: </Text>{"129"} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Width: </Text>{"19"} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Dead Weight: </Text>{"50 000 tones"} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> IMO: </Text>{"9371878"} </Text>
-          {/*Put below in separate expandable list? See UI suggestion*/}
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Vessel Type: </Text>{"Oil Tanker?"} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> MMSI: </Text>{"MMSI..."} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Call Sign: </Text>{"Call sign..."} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Flag: </Text>{"SE"} </Text>
-            <Text style={styles.infoText}> <Text style={{fontWeight: 'bold'}}> Built Year: </Text>{"2000"} </Text>
-
-        </View>
-        {/*<View style={styles.infoContainerButton}>*/}
-            <Button
+        	</View>
+              <Button
               backgroundColor={colorScheme.primaryColor}
               color={colorScheme.primaryTextColor}
               title="Change State"
+              titleStyle={{ fontWeight: "700"}}
               buttonStyle={styles.buttonStyle}
-              onPress={() => navigate('StatusChangeScreen')}
-            />
-        {/*</View>
-        <View style={styles.infoContainer}>
-          {!!vessel.vesselType &&
-          <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>Vessel Type:  </Text>{vessel.vesselType.replace(/_/g, ' ')}</Text> 
-          }
-          <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>IMO:  </Text>{vessel.imo.replace('urn:mrn:stm:vessel:IMO:', '')}</Text>
-          <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>MMSI:  </Text>{vessel.mmsi.replace('urn:mrn:stm:vessel:MMSI:', '')}</Text>
-          <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>Call Sign:  </Text>{vessel.callSign}</Text>
-          {!!vessel.flag && 
-          <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>Flag: </Text>{vessel.flag}</Text>
-          }
-          {!!vessel.builtYear &&
-          <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>Built year: </Text>{vessel.builtYear}</Text>
-          }
-          {(!!extraInfo && !!extraInfo.length) &&
-            <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>Length: </Text>{extraInfo.length}m</Text>
-          }
-          {(!!extraInfo && !!extraInfo.beam) &&
-            <Text style={styles.infoText}><Text style={{fontWeight: 'bold'}}>Beam: </Text>{extraInfo.beam}m</Text>
-          }*/}
-      </View>
+              onPress={() => navigate('ChangeStatus')}
+/>
+       </View>              
+      
+    
     );
   }
 }
@@ -141,6 +125,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 40,
     borderBottomWidth: 40,
   },
+  
   infoContainer: {
     backgroundColor: colorScheme.primaryContainerColor,
     marginTop: 10,
@@ -170,7 +155,41 @@ const styles = StyleSheet.create({
   infoText: {
     fontSize: 14,
     color: colorScheme.quaternaryTextColor,
-  }
+  },
+
+  headerText: {
+    color: colorScheme.primaryTextColor
+  },
+
+  topButtonDiv: {
+    position: 'absolute',
+    left: 10,
+    top: 30
+  },
+  
+  topHeaderDiv: {
+    position: 'absolute',
+    alignItems: 'center',
+    top: 30,
+    left: "10%",
+    width: '80%'
+  },
+              
+   backgroundContainer: {
+      height: "100%",
+      backgroundColor: colorScheme.backgroundColor,
+  },
+  topContainer: {
+      height: 125,
+      backgroundColor: colorScheme.primaryColor
+  },
+  topHeader: {
+      width: '100%',
+      paddingTop: 30,
+      paddingBottom: 40,
+      marginBottom: -1,
+},
+  
 })
 
 /*function mapStateToProps(state) {

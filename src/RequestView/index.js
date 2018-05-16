@@ -37,7 +37,7 @@ import {
 import colorScheme from '../../config/colors';
 import { getDateTimeString } from '../../util/timeservices';
 
-class PortCallList extends Component {
+class RequestView extends Component {
     state = {
         searchTerm: '',
         refreshing: false,
@@ -511,4 +511,4 @@ export default connect(mapStateToProps, {
     toggleFavoriteVessel,
     bufferPortCalls,
     setError,
-})(PortCallList);
+})(RequestView);
