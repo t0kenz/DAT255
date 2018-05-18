@@ -197,3 +197,35 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 #### For the next weeks
 - My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
 - Finishing the main view and make sure it function the way it's suppose to. I will probably work with this, or similiar views, for the rest of the project.
+
+# Week 8
+### What do I want to learn or understand better?
+- Since the upcoming week is the last one, I will basically just make sure I am up to date with our code and finish the tasks I'll be assigned for next week, and ofcourse make sure I understand every part of it.
+- It will be very interesting to be a part of the final presentation at the end of the week, and see how other groups have worked and the result of the groups together. I'm sure I will also learn a lot during that session.
+
+
+### How can I help someone else, or the entire team, to learn something new?
+- Just like last week I want to finish my task for the week, and from there share my knowledge with the rest of the group and also with my coding partner, in order to learn from our mistakes and bring up problems that can come up both further on in this project but also in the future.
+- This week I also want to contribute a lot to the final reflection, and make sure that both the language looks OK in the reflections and that we consider every important part of the reflection.
+
+
+### What is my contribution towards the team’s application of scrum?
+- I've been active and participating in the meetings and reflections. 
+- Most of our tasks were finished this week, and that is probably due to the fact that our tasks were smaller and we were flexible with what we had time to do, to make sure we brought some value at the end of the week. 
+
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+#### Last week
+- During this last sprint we finished the main view with four buttons that were the most important according to the tugboat operator.
+- The buttons are now also clickable, and navigate to other views (that other group members have developed)
+
+#### For the next week
+- Me and my programming partner will implement "back-buttons" on the settings-view and the about-view to make it easier to navigate between different views
+- We will also implement a logout-button on the main view and connect it to the logout-function.
+
+
+#### For the next weeks
+- My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
+- Finishing the main view, top header, about-view and the settings-view and make sure it function the way it's suppose to. 
+- For this last week it is very important that we also spend extra time on the reflections. If I finish my task in good time, I will put some extra effort into the group reflection as well.
