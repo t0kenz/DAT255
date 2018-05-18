@@ -111,7 +111,7 @@ Next week i will make sure to talk to the others in the team so that we can thin
 
 
 
-## Reflections each week by John - week 6
+## Reflections each week by John - week 7
 
 ### What do I want to learn or understand better?
  - Right now i mostly want to focus on making my planning skills better since it seems that there is not much time left and we still have a lot to do. Therefore i want to get better at planning so that i can do it better in the future. This is still what i want to learn the most but i have also realized that sometimes its important to just try and solve a problem without planning on how it should be done therefore i want to get a balance between these two aspects of planning and trying to get things done.
@@ -125,3 +125,20 @@ Next week i will make sure to talk to the others in the team so that we can thin
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 #### For the next week
 Next week i will go to our meetings and see if someone who can build the project is free when i am so that we can work together.
+
+
+
+## Reflections each week by John - week 8
+
+### What do I want to learn or understand better?
+ - My goals from the beginning in the course still apply i want to get better at programming together with a better group. I have realized during the course is that one important aspect that is necessary to do this well is good planning. But I've also realized that sometimes its important not to plan too much and to just try and get things done instead. It's definitely not something that's easy to balance but i want to get better at it.
+
+### How can I help someone else, or the entire team, to learn something new?
+- Since the issues right now seem to be to get all of the parts we have made to work together I can help by trying to communicate with the team and help by explaining how the parts that i have worked on can fit together with the rest. But in general when trying to help the team to learn something new I can help by asking questions to my team members so that not only they can learn but I as well can.
+
+### What is my contribution towards the team’s application of scrum?
+- I have tried to participate in the planning process and make sure that we all have tasks to do including myself. However now i feel as if we have made too many tasks and that we won't be able to complete all of them. Since we now know what we want to do the best i can do to accomplish our goals is to make sure to try and help with some tasks and to communicate when im available. I've also made sure to try and take on some tasks for myself so that im contributing value to the team and not being passive.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### For the next week
+Next week i will go to our meetings and see if someone who can build the project is free when i am so that we can work together. I will also try and think more about how i can get a better balance with planning and getting things done.
