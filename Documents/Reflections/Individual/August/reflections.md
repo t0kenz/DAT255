@@ -1,3 +1,31 @@
+# Week 8
+
+## 1. What do I want to learn or understand better?
+
+For me, the most important thing this week is to (in parallel with the development) think about the course as a whole and reflect about the process that got us where we are now.
+
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+I will bring up the process during meetings and start discussions about different aspects of how we have been working together. While we still have a week of development left, I think that it is better to have an ongoing discussion about such things rather than doing it all in the last week. Especially since this is the main focus of the course. 
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+I have participated in all meetings and worked on my assigned tasks. 
+
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Since last week:
+
+I worked mainly on a new view together with my programming partner, and we managed to focus on the task at hand, use placeholders a lot, and not worry too much about things that weren't an issue at the moment. It felt like we were able to get a lot done by allowing ourselves to just focus on a limited set of problems and steering away from discussing the details of other parts of the app.
+
+My learning objectives for the next week are:
+
+It feels like we have some clarity about what we want to achieve for the app with our last sprint, and we should be able to accomplish it in time. Since next week is the last sprint, it will be the last opportunity to discuss our working process while actually still being in the process of working on the app. I think it will be good to continuously work on the final reflection while development is still ongoing. Therefore I will start putting some work into the final reflection, and discuss the questions during breaks in work sessions. Hopefully this continuous approach will lead to a better reflection and more knowledge gained from the course.
+
+
 # Week 7
 
 ## 1. What do I want to learn or understand better?
