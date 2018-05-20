@@ -9,6 +9,26 @@
 
 ### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
 
+## Week 8
+### 1. What do I want to learn or understand better?
+- Since the upcoming week will be the last, I neew to figure out how me should present our soloution in a proper manner which requires me to get a good understanding of how the parts we been working on during the last week will work together. 
+- I want to know more about how other groups has created value through their soloutions and moreover how they reflected upon their work. 
+
+### 2. How can I help someone else, or the entire team, to learn something new?
+- I will participate in every meeting during this week and try to contribute by reflecting upon our work and making sure that everything works before our presentation
+- With my knowledge about the timestamps and state types, I think I can contribute with this knowledge during our last work and the presentation since I have good understanding of how the timestamp-system works. 
+
+### 3. What is my contribution towards the team’s application of scrum?
+- During the past week, I've been unavailable during our reflection session but I tried to compensate by starting work on the structure of our final reflection together with some team mates. 
+
+
+### 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation).
+- During the last week, I finalized the start view together with my programming group and got a better understanding of how to use React native.
+- During the last week, I tried to push the group towards focusing on the minimal valuable product which I think we did. 
+- During the upcoming week, I'm more avaiable which ables me to contribute to our final reflection and our presentation. Since I've done some presentations in previous work and courses, I think that I can be helpful in this work. 
+- I need to learn more about how every part of the soloution will fit together which I will do by simply asking my team to clarify the questions I have. 
+- I also want to abstract my perspective a little bit during this last week and try to focus on what I've learned during the hole course. I will do this by putting some extra effert into both our last group reflection as well as my individual one. 
+
 ## Week 7
 ### 1. What do I want to learn or understand better?
 - I need to learn more about the algoritm that should search for the information we need for a specific portcall
