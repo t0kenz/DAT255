@@ -53,8 +53,8 @@ const NewPortCallNavigator = StackNavigator({
     FilterMenu: {
         screen: FilterMenu
     },
-    VesselLists: {
-        screen: VesselLists
+    VesselInfo: {
+        screen: VesselInfo
     }
 
 
@@ -63,16 +63,29 @@ const NewPortCallNavigator = StackNavigator({
     });
 
 
-    const VesselInfoNavigator = StackNavigator({
-        // ChangeStatus: {
-        //     screen: ChangeStatus
-        // },
-        NewPortCalls: {
-            screen: NewPortCalls
-        }
-     }, {
+const VesselInfoNavigator = StackNavigator({
+    VesselInfo: {
+        screen: VesselInfo
+    },
+    NewPortCalls: {
+        screen: NewPortCalls
+    },
+    FavoriteStatesSideMenu: {
+        screen: StateList
+    },
+    FavoriteStates: {
+        screen: StateList
+    },
+    SelectFavoriteStatesTimeLine: {
+        screen: SelectFavoriteState
+    },
+    SendPortCall: {
+        screen: SendPortCall
+    },
+}, {
         headerMode: 'none'
-     });
+    });
+
 
 const RequestsViewNavigator = StackNavigator({
     RequestsView: {
