@@ -77,24 +77,19 @@ class VesselInfo extends Component {
    
       div = <View style={styles.infoContainer}>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{details.jobStatus} </Text>
-        {details.commencedStart && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{details.commencedStart} </Text>}
-        {details.commencedStart && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time type: </Text>{details.timeType} </Text>}
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Start time: </Text>{details.commencedStart ? details.commencedStart : "Not found"} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time type: </Text>{details.timeType ? details.timeType : "Not found "} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{details.jobType}</Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{details.statementReport} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Nr of tugboats: </Text>{details.numberOfTugboats} </Text>
-        {details.connectionPoint && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint} </Text>}
-        {details.connectionPointTimeType && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype} </Text>}
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint ? details.connectionPoint : "Not found} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype ? details.connectionPointTimeType : "Not found} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{details.harbor} </Text>
-        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Length: </Text>{"extraInfo.length"} </Text>*/}
-        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Beam: </Text>{"extraInfo.beam"} </Text>*/}
-        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Dead Weight: </Text>{"50 000 tones"} </Text>*/}
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> IMO: </Text>{portCall.imo} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> IMO: </Text>{portCall.vessel.imo} </Text>
         {/*Put below in separate expandable list? See UI suggestion*/}
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Vessel Type: </Text>{portCall.vesselType} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> MMSI: </Text>{portCall.mmsi} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Call Sign: </Text>{portCall.callSign} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Flag: </Text>{"SE"} </Text>
-        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Built Year: </Text>{"2000"} </Text>*/}
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Vessel Type: </Text>{portCall.vessel.vesselType} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> MMSI: </Text>{portCall.vessel.mmsi} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Call Sign: </Text>{portCall.vessel.callSign} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Comment: </Text>{details.comment} </Text></View>
     
     return div;
