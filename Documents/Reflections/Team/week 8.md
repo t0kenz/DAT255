@@ -108,7 +108,7 @@
 
 
 ### 13. The time you have spent on the course (so keep track of your hours so you can describe the current situation)
-- | Name/week |        | W4 | W5   | W6 | W7 | W8 |
+ | Name/week |        | W4 | W5   | W6 | W7 | W8 |
 |-----------|--------|----|------|----|------|----|
 | 1         | Timmar | 12 | 16,5 | 11 | 17.5 | 20 |
 |           | Stress | 2  | 4    | 2  | 3    | 3  |
