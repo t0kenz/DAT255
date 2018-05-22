@@ -9,6 +9,10 @@ import {
     appendPortCalls,
     bufferPortCalls,
     setError,
+    fetchPortCallEvents,
+    fetchPortCallStates,
+    getPortCallStates,
+    fetchPortCalls,
 } from '../../actions';
 
 import {
@@ -36,6 +40,48 @@ import {
 
 import colorScheme from '../../config/colors';
 import { getDateTimeString } from '../../util/timeservices';
+
+
+const towageStateList = 
+    [
+        "Arrival_Tug_Berth",
+        "Arrival_Tug_TugZone",
+        "Departure_Tug_TugZone",
+        "Arrival_Vessel_TugZone",
+        "Departure_Vessel_TugZone",
+        "Arrival_EscortTug_TugZone",
+        "Departure_EscortTug_TugZone",
+        "Arrival_EscortTug_ETugZone",
+        "Departure_EscortTug_ETugZone",
+        "Arrival_Vessel_ETugZone",
+        "Departure_Vessel_ETugZone",
+        "Arrival_EscortTug_Vessel",
+        "Departure_EscortTug_Vessel",
+        "Arrival_Tug_Vessel",
+        "Departure_Tug_Vessel",
+        "Arrival_Tug_HomeBase",
+        "Departure_Tug_HomeBase",
+        "Arrival_EscortTug_LOC",
+        "Departure_EscortTug_LOC",
+        "Arrival_Tug_LOC",
+        "Departure_Tug_LOC",
+        "EscortTowage_Commenced",
+        "EscortTowage_Completed",
+        "Towage_Commenced",
+        "Towage_Completed",
+        "EscortTowage_Requested",
+        "EscortTowage_ReqReceived",
+        "EscortTowage_Confirmed",
+        "EscortTowage_Denied",
+        "EscortTowage_Cancelled",
+        "Towage_Requested",
+        "Towage_ReqReceived",
+        "Towage_Confirmed",
+        "Towage_Denied",
+        "Towage_Cancelled",
+    ]
+
+    
 
 class RequestView extends Component {
     state = {
@@ -113,7 +159,7 @@ class RequestView extends Component {
 
     }
     openPortcallDetials() {
-        this.props.navigation.navigate('VesselLists');
+        this.props.navigation.navigate('VesselInfo', {testmsg: "testing"});
     }
 
     getHarbor(portCall) {
@@ -177,7 +223,7 @@ class RequestView extends Component {
     getPortCallRequets(portCall) {
         var nextRow = "\n";
         var randomInt = Math.floor(Math.random() * 4)
-        return "Requested" + nextRow + randomInt + " Tugboats" + nextRow + "Escort  ->";
+        return portCall.lastUpdatedState + nextRow + randomInt + " Tugboats" + nextRow + "Escort  ->";
     }
 
     getPortCallDetails(portCall) {
@@ -204,60 +250,65 @@ class RequestView extends Component {
         var list = [];
         for (var i = 0; i < portCalls.length; i++) {
             var portCall = portCalls[i];
-            if (portCall === undefined) continue;
-            var photoURI = this.getPhotoURI(portCall);
-            var portCallDetails = this.getPortCallDetails(portCall);
-            var portCallRequets = this.getPortCallRequets(portCall)
-            list.push(
-                <View style={localStyles.listContainer}
-                    backgroundColor={(i % 2 === 0) ? "#f0f0f0" : "#ffffff"}
-                    key={i}
-                >
-                    <View style={localStyles.listPortcallAvatar} >
-                        <Avatar
-                            size="small"
-                            rounded
-                            source={photoURI}
-                        />
-                    </View>
-                    <View style={localStyles.listPortcallDetails}>
-                        <Text
-                            style={localStyles.listPortcallDetailsText}
-                            h4
-                        >
-                            {portCallDetails}
-                        </Text>
-                    </View>
-                    <View style={localStyles.listPortcallRequets}>
-                        <Text
-                            style={localStyles.listPortcallRequetsText}
-                        >
-                            {portCallRequets}
-                        </Text>
-                    </View>
-                    <View style={localStyles.listPortcallOnPress}>
-                        <Icon
-                            name='chevron-right'
-                            color="black"
-                            size={40}
-                            underlayColor='transparent'
-                        />
-                    </View>
-                    <View style={localStyles.listContainerOverlay} >
-                        <List containerStyle={{ width: "100%", height: "100%", opacity: 0, marginTop: 0 }}>
-                            {
-                                <ListItem
-                                    containerStyle={{ width: "100%", height: "100%" }}
-                                    onPress={() => {
-                                        this.openPortcallDetials();
-                                    }}
-                                />
-                            }
-                        </List>
-                    </View>
-                </View>
-            );
 
+            // Add towage-related portcalls to the list
+            if (towageStateList.includes(portCall.lastUpdatedState)) {
+                if (portCall === undefined) continue;
+                var photoURI = this.getPhotoURI(portCall);
+                var portCallDetails = this.getPortCallDetails(portCall);
+                var portCallRequets = this.getPortCallRequets(portCall)
+                list.push(
+                    <View style={localStyles.listContainer}
+                        backgroundColor={(i % 2 === 0) ? "#f0f0f0" : "#ffffff"}
+                        key={i}
+                    >
+                        <View style={localStyles.listPortcallAvatar} >
+                            <Avatar
+                                size="small"
+                                rounded
+                                source={photoURI}
+                            />
+                        </View>
+                        <View style={localStyles.listPortcallDetails}>
+                            <Text
+                                style={localStyles.listPortcallDetailsText}
+                                h4
+                            >
+                                {portCallDetails}
+                            </Text>
+                        </View>
+                        <View style={localStyles.listPortcallRequets}>
+                            <Text
+                                style={localStyles.listPortcallRequetsText}
+                            >
+                                {portCallRequets}
+                            </Text>
+                        </View>
+                        <View style={localStyles.listPortcallOnPress}>
+                            <Icon
+                                name='chevron-right'
+                                color="black"
+                                size={40}
+                                underlayColor='transparent'
+                            />
+                        </View>
+                        <View style={localStyles.listContainerOverlay} >
+                            <List containerStyle={{ width: "100%", height: "100%", opacity: 0, marginTop: 0 }}>
+                                {
+                                    <ListItem
+                                        containerStyle={{ width: "100%", height: "100%" }}
+                                        onPress={() => {
+                                            console.log(this.props.portCalls[0]);
+                                            this.openPortcallDetials();
+
+                                        }}
+                                    />
+                                }
+                            </List>
+                        </View>
+                    </View>
+                );
+            }
         }
         return list;
     }
