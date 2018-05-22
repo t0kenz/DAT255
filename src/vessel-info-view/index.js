@@ -40,8 +40,11 @@ class VesselInfo extends Component {
   }
 
   componentDidMount() {
-    this.setState({ extraInfo: undefined });
-  }
+    this.props.fetchVesselFromIMO(this.props.vessel.imo.split('IMO:')[1]).then(() => {
+      // DOUBLE EQUALS!! 
+      const ship = ships.find(ship => ship.mmsi == this.props.vessel.mmsi.split('MMSI:')[1]);
+      this.setState({extraInfo: ship});
+  });  }
 
   acceptRequest() {
     const { goBack } = this.props.navigation;
@@ -66,7 +69,7 @@ class VesselInfo extends Component {
     this.forceUpdate();
   }
 
-  createPortCallInfo() {
+  createPortCallInfo(portCall, statements, details) {
     var div;
 
     /*
@@ -76,15 +79,16 @@ class VesselInfo extends Component {
       <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Conection point: </Text>{"Trubaduren"} </Text>
      */
     if (this.state.changeStatus) {
+
       var div =
         <View style={styles.changeStatusBackground}>
           <ScrollView
             scrollEventThrottle={4}
             style={styles.scrollContainer}>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{"Commenced"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{"Escort"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{"29/04/2018 19:20"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{"Masthuggskajen 72A"} </Text>
+            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{details.jobStatus} </Text>
+            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{details.jobType} </Text>
+            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{} </Text>
+            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{details.harbor} </Text>
             <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Length: </Text>{"129"} </Text>
             <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Width: </Text>{"19"} </Text>
             <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Dead Weight: </Text>{"50 000 tones"} </Text>
@@ -166,24 +170,26 @@ class VesselInfo extends Component {
         </View>
     } else {
       div = <View style={styles.infoContainer}>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{"Commenced"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{"Time"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{"Escort"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{"29/04/2018 19:20"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Nr of tugboats: </Text>{"2"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Conection point: </Text>{"Trubaduren"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{"Masthuggskajen 72A"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Length: </Text>{"129"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Width: </Text>{"19"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Dead Weight: </Text>{"50 000 tones"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> IMO: </Text>{"9371878"} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{details.jobStatus} </Text>
+        {/* Check if details.commencedStart is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{details.commencedStart} </Text>
+        {/* Check if details.commencedStart is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time type: </Text>{details.timeType} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{details.jobType}</Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{details.statementReport} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Nr of tugboats: </Text>{details.numberOfTugboats} </Text>
+        {/* Check if details.connectionPoint is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint} </Text>
+        {/* Check if details.connectionPointTimeType is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{details.harbor} </Text>
+        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Length: </Text>{"extraInfo.length"} </Text>*/}
+        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Beam: </Text>{"extraInfo.beam"} </Text>*/}
+        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Dead Weight: </Text>{"50 000 tones"} </Text>*/}
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> IMO: </Text>{portCall.imo} </Text>
         {/*Put below in separate expandable list? See UI suggestion*/}
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Vessel Type: </Text>{"Oil Tanker?"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> MMSI: </Text>{"MMSI..."} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Call Sign: </Text>{"Call sign..."} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Vessel Type: </Text>{portCall.vesselType} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> MMSI: </Text>{portCall.mmsi} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Call Sign: </Text>{portCall.callSign} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Flag: </Text>{"SE"} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Built Year: </Text>{"2000"} </Text>
-      </View>
+        {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Built Year: </Text>{"2000"} </Text>*/}
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Comment: </Text>{details.comment} </Text></View>
     }
     return div;
   }
@@ -220,7 +226,15 @@ class VesselInfo extends Component {
 
 
   render() {
+    const { extraInfo } = this.state;
+
     const { goBack } = this.props.navigation;
+    const { portCall, statements, details } = this.props.navigation.state.params;
+        
+    console.log("VESSEL INFO TEST");
+    console.log(this.props.navigation.state.params.portCall);
+    
+    console.log(this.props.navigation.state.params.statements);
 
     return (
       <View style={styles.backgroundContainer}>
@@ -242,7 +256,7 @@ class VesselInfo extends Component {
             </View>
           </View>
         </View>
-        {this.createPortCallInfo()}
+        {this.createPortCallInfo(portCall, statements, details)}
         {this.createButtonsCont()}
       </View>
     );
