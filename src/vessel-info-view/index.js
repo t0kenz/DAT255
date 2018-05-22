@@ -144,7 +144,7 @@ class VesselInfo extends Component {
             </View>
             <View style={styles.topHeaderDiv}>
               <Text style={styles.headerText} h3>
-                Vessel example
+                {portCall.vessel.name}
                         	</Text>
             </View>
           </View>
