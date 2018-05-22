@@ -47,15 +47,7 @@ that for the personal learning objective you will each week write down what you 
 
 
 
-### What is my contribution towards the team’s deliveries? That means 
-that for the personal learning objective you will each week write down 
-what you have achieved in relation to last week's ambition (technologies, 
-concepts and skills learnt as well as how this was achieved), what you 
-would like to achieve for the next week and how to make the change happen. 
-The first week of the course you describe the current situation by 
-motivating a learning objective. It is perfectly fine to change objective/s 
-each week as long as you can motivate the change and you evaluate the 
-outcome of the previous week (e.g. describing the current situation.
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 
 
 #### For the next week
@@ -83,19 +75,12 @@ During the following week I aim to:
 - I still feel like this is hard to reflect upon now, since we are all still in the initial phase of understanding scrum.
 
 
-### What is my contribution towards the team’s deliveries? That means 
-that for the personal learning objective you will each week write down 
-what you have achieved in relation to last week's ambition (technologies, 
-concepts and skills learnt as well as how this was achieved), what you 
-would like to achieve for the next week and how to make the change happen. 
-The first week of the course you describe the current situation by 
-motivating a learning objective. It is perfectly fine to change objective/s 
-each week as long as you can motivate the change and you evaluate the 
-outcome of the previous week (e.g. describing the current situation.
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 
 
 #### From previous week
 - I have gotten a better understanding of scrum, after reading theory about it on the internet. This has mostly been the basic concepts and why scrum is an appropriate way of working.
+- I have started to read some code, but it's a lot that I don't understand and I think it will be hard for me to understand "everything" in the existing code.
 
 
 #### For the next week
@@ -121,10 +106,11 @@ outcome of the previous week (e.g. describing the current situation.
 
 #### From the previous week
 - From last week I have done some reading and gone through "beginner guides" etc, to learn more about JavaScript. I feel like I have a better understanding, but as I said earlier it is still a lot to learn, ofcourse. This will be an ongoing process during the course, since I will learn more the longer we work with it.
+- The different programs and development tools that are used in the course are now working for me. I understand how most of the different programmes are connected and why we need to use different programs, which is very important to be able to use the tools further on. There is still stuff to learn here, though. 
 
 
 #### For the next weeks
-- As stated, JavaScript is a big part and I want to make sure I really understand all the code that is written.
+- As stated, JavaScript is a big part and I want to make sure I really understand all the code that I, or my programming partner, writes.
 - There are still programs and parts of the developing environment that I don't understand, even though I have a better overview now than in the beginning. This will also be an ongoing process, until everything is clear to me.
 
 # Week 4 + 5
@@ -133,6 +119,8 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 ### What do I want to learn or understand better?
 - Now I feel like I have a good overview of what is expected from the group in the overall project, and also roughly what the Tugboat Operator values in the app. This is a good foundation for the further development of the app, and for me the next step is to get an even better understanding of the underlying code that we should change and update to achive the goals we have set up through the user stories.
 - During this sprint I am going to write my first code that will actually give value to the user, and therefore I want to (and will) learn more about JavaScript through the practice it gives.
+- Something that has gotten more clear to me is the importance of reflections within the team, bascilly of every decision we make. This is also something that we all will keep practising simply by doing it.
+- I think my overall goal of "learning JavaScript" is a very comprehensive and long-term goal, but ofcourse every little thing I do in this course will make me a better developer.
 
 
 ### How can I help someone else, or the entire team, to learn something new?
@@ -150,7 +138,7 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 - I also said I wanted to know about the Tug Boat operator and his view of the project and the app. I participated in the first meeting with him which gave me an understanding of his thoughts.
 
 #### For the next week
--- For next week my main focus is JavaScript and development by actual code writing. I'm sure I will learn a lot from using JavaScript and discuss the solution with my partner.
+- For next week my main focus is JavaScript and development by actual code writing. I'm sure I will learn a lot from using JavaScript and discuss the solution with my partner.
 
 
 #### For the next weeks
@@ -158,7 +146,7 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 
 # Week 6
 ### What do I want to learn or understand better?
-- I want a better understanding of how the different views communicate with each other, in order to finish next week task. The task is to implement the main view and I need to understand what changes need to be made to make this change visible.
+- I want a better understanding of how the different views in the app communicate with each other, in order to finish next week task. The task is to implement the main view and I need to understand what changes need to be made to make this change visible.
 - I still want to learn a lot more within javascript, but I thin I learn more and more every week.
 
 
@@ -170,16 +158,74 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 - I feel like the whole group has gotten a better understanding of important factors when working with scrum. This week I contributed when we decided to change our structure a little bit on the group reflections, in order to better reflect upon "where we are now" and "where we want to be", since we earlier mostly focused on what we were going to do.
 
 
-### What is my contribution towards the team’s deliveries? That means 
-that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
 
 #### Last week
 - We didn't finish our task for this week, but it was mostly due to a shorter week which gave us less time to spend on this task, but also an underestimation of velocity.
+- Further on both me, and the rest of the group, need to make sure we share our problems to get an overview of what tasks will be finished, and which ones will not. This week none of the tasks were finished, which could be OK if we all communicate with each other and share our thoughts.
 
 #### For the next week
 - Finish the task with the main view. This could give a lot of value when we show the application for the product owner, since it gives a feeling of how the application will look when its finishes.
 
 
 #### For the next weeks
+- My overall goal remains: My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
+- I will also make sure I am open to help from team members, and mostly that I feel comfortable with asking for help, since a lot of my team members are more experienced within programming and javascript. This also includes that I will communicate with the group in case I have a problem or won't be able to finish my task.
+
+# Week 7
+### What do I want to learn or understand better?
+- This week I want to learn more about "design" in the views, e.g how the buttons look and how it's possible to structure buttons and views in the app. This is basically commands in javascript I want to understand and being able to use.
+
+
+### How can I help someone else, or the entire team, to learn something new?
+- Just like last week I want to finish my task for the week, and from there share my knowledge with the rest of the group and also with my coding partner, in order to learn from our mistakes and bring up problems that can come up both further on in this project but also in the future.
+
+
+### What is my contribution towards the team’s application of scrum?
+- I've been active and participating in the meetings and reflections. Since we had problems with finishing the tasks last week we need to brake down tasks into smaller tasks, but sometimes it hard to see this before we start the task.
+
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+#### Last week
+- We didn't finish our task for this week either, but we came a long way. From now on it's mostly the design that need some work, which we will continue working on during this week.
+
+#### For the next week
+- Finish the design-parts of the task with the main view. 
+
+
+#### For the next weeks
 - My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
-- I will also make sure I am open to help from team members, and mostly that I feel comfortable with asking for help, since a lot of my team members are more experienced within programming and javascript.
+- Finishing the main view and make sure it function the way it's suppose to. I will probably work with this, or similiar views, for the rest of the project.
+
+# Week 8
+### What do I want to learn or understand better?
+- Since the upcoming week is the last one, I will basically just make sure I am up to date with our code and finish the tasks I'll be assigned for next week, and ofcourse make sure I understand every part of it.
+- It will be very interesting to be a part of the final presentation at the end of the week, and see how other groups have worked and the result of the groups together. I'm sure I will also learn a lot during that session.
+
+
+### How can I help someone else, or the entire team, to learn something new?
+- Just like last week I want to finish my task for the week, and from there share my knowledge with the rest of the group and also with my coding partner, in order to learn from our mistakes and bring up problems that can come up both further on in this project but also in the future.
+- This week I also want to contribute a lot to the final reflection, and make sure that both the language looks OK in the reflections and that we consider every important part of the reflection.
+
+
+### What is my contribution towards the team’s application of scrum?
+- I've been active and participating in the meetings and reflections. 
+- Most of our tasks were finished this week, and that is probably due to the fact that our tasks were smaller and we were flexible with what we had time to do, to make sure we brought some value at the end of the week. 
+
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+#### Last week
+- During this last sprint we finished the main view with four buttons that were the most important according to the tugboat operator.
+- The buttons are now also clickable, and navigate to other views (that other group members have developed)
+
+#### For the next week
+- Me and my programming partner will implement "back-buttons" on the settings-view and the about-view to make it easier to navigate between different views
+- We will also implement a logout-button on the main view and connect it to the logout-function.
+
+
+#### For the next weeks
+- My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
+- Finishing the main view, top header, about-view and the settings-view and make sure it function the way it's suppose to. 
+- For this last week it is very important that we also spend extra time on the reflections. If I finish my task in good time, I will put some extra effort into the group reflection as well.
