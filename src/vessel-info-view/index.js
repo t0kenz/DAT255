@@ -8,7 +8,8 @@ import {
   Image,
   Dimensions,
   ScrollView,
-  TextInput
+  TextInput,
+  Picker
 } from 'react-native';
 
 import {
@@ -20,7 +21,8 @@ import TopHeader from '../top-header-view';
 import colorScheme from '../../config/colors';
 
 import {
-  fetchVesselFromIMO
+  fetchVesselFromIMO,
+  selectPortCall
 } from '../../actions';
 
 import ships from '../../assets/ships';
@@ -40,11 +42,8 @@ class VesselInfo extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchVesselFromIMO(this.props.vessel.imo.split('IMO:')[1]).then(() => {
-      // DOUBLE EQUALS!! 
-      const ship = ships.find(ship => ship.mmsi == this.props.vessel.mmsi.split('MMSI:')[1]);
-      this.setState({extraInfo: ship});
-  });  }
+    this.setState({ extraInfo: undefined });
+  }
 
   acceptRequest() {
     const { goBack } = this.props.navigation;
@@ -59,11 +58,14 @@ class VesselInfo extends Component {
   }
 
   changeStatus() {
+    const { selectPortCall } = this.props;
+    selectPortCall(this.props.navigation.state.params.portCall);
+    this.props.navigation.navigate('FavoriteStatesSideMenu', { portCalls: this.props.navigation.state.params.portCall });
     console.log("change status");
     if (this.state.changeStatus) {
-      this.state.changeStatus = false;
+      //  this.state.changeStatus = false;
     } else {
-      this.state.changeStatus = true;
+      //this.state.changeStatus = true;
     }
 
     this.forceUpdate();
@@ -71,104 +73,8 @@ class VesselInfo extends Component {
 
   createPortCallInfo(portCall, statements, details) {
     var div;
-
-    /*
-
-      <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{"Time"} </Text>
-      <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Nr of tugboats: </Text>{"2"} </Text>
-      <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Conection point: </Text>{"Trubaduren"} </Text>
-     */
-    if (this.state.changeStatus) {
-
-      var div =
-        <View style={styles.changeStatusBackground}>
-          <ScrollView
-            scrollEventThrottle={4}
-            style={styles.scrollContainer}>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{details.jobStatus} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{details.jobType} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{details.harbor} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Length: </Text>{"129"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Width: </Text>{"19"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Dead Weight: </Text>{"50 000 tones"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> IMO: </Text>{"9371878"} </Text>
-            {/*Put below in separate expandable list? See UI suggestion*/}
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Vessel Type: </Text>{"Oil Tanker?"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> MMSI: </Text>{"MMSI..."} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Call Sign: </Text>{"Call sign..."} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Flag: </Text>{"SE"} </Text>
-            <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Built Year: </Text>{"2000"} </Text>
-          </ScrollView>
-          <View style={styles.changeStatusContainer}>
-            <View style={styles.changeStatusField}>
-              <View style={styles.statusTitle}>
-                <Text style={styles.statusTitleText}> {"Status:"} </Text>
-                <TextInput
-                  style={styles.statusTitleField}
-                  onChangeText={(text) => this.setState({ state: text })}
-                  value={this.state.state}
-                />
-              </View>
-            </View>
-            <View style={styles.changeStatusField}>
-              <View style={styles.statusTitle}>
-                <Text style={styles.statusTitleText}> {"Location:"} </Text>
-                <TextInput
-                  style={styles.statusTitleField}
-                  onChangeText={(text) => this.setState({ location: text })}
-                  value={this.state.location}
-                />
-              </View>
-            </View>
-            <View style={styles.changeStatusField}>
-              <View style={styles.statusTitle}>
-                <Text style={styles.statusTitleText}> {"Time:"} </Text>
-                <TextInput
-                  style={styles.statusTitleField}
-                  onChangeText={(text) => this.setState({ time: text })}
-                  value={this.state.time}
-                />
-              </View>
-            </View>
-            <View style={styles.changeStatusField}>
-              <View style={styles.statusTitle}>
-                <Text style={styles.statusTitleText}> {"Tugboats:"} </Text>
-                <TextInput
-                  style={styles.statusTitleField}
-                  onChangeText={(text) => this.setState({ tugboats: text })}
-                  value={this.state.tugboats}
-                />
-              </View>
-            </View>
-            <View style={styles.commentContainer}>
-              <View style={styles.commentTitle}>
-                <Text style={styles.statusTitleText}> {"Comment:"} </Text>
-              </View>
-            </View>
-            <View style={styles.changeStatusButtons}>
-              <View style={styles.buttonLeftContainer}>
-                <Button
-                  color={'black'}
-                  title="Change request"
-                  titleStyle={{ fontWeight: "2500" }}
-                  buttonStyle={styles.buttonStyle}
-                  onPress={() => this.modifyRequest()}
-                />
-              </View>
-              <View style={styles.buttonRightContainer}>
-                <Button
-                  color={'black'}
-                  title="Go back"
-                  titleStyle={{ fontWeight: "2500" }}
-                  buttonStyle={styles.buttonStyle}
-                  onPress={() => this.changeStatus()}
-                />
-              </View>
-            </View>
-          </View>
-        </View>
-    } else {
+    console.log(portCall);
+   
       div = <View style={styles.infoContainer}>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{details.jobStatus} </Text>
         {details.commencedStart && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{details.commencedStart} </Text>}
@@ -190,7 +96,7 @@ class VesselInfo extends Component {
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Flag: </Text>{"SE"} </Text>
         {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Built Year: </Text>{"2000"} </Text>*/}
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Comment: </Text>{details.comment} </Text></View>
-    }
+    
     return div;
   }
 
@@ -226,16 +132,8 @@ class VesselInfo extends Component {
 
 
   render() {
-    const { extraInfo } = this.state;
-
     const { goBack } = this.props.navigation;
-    const { portCall, statements, details } = this.props.navigation.state.params;
-        
-    console.log("VESSEL INFO TEST");
-    console.log(this.props.navigation.state.params.portCall);
-    
-    console.log(this.props.navigation.state.params.statements);
-
+    const { portCall, statements, towagePortCallDetails } = this.props.navigation.state.params;
     return (
       <View style={styles.backgroundContainer}>
         <View style={styles.topContainer}>
@@ -256,7 +154,7 @@ class VesselInfo extends Component {
             </View>
           </View>
         </View>
-        {this.createPortCallInfo(portCall, statements, details)}
+        {this.createPortCallInfo(portCall, statements, towagePortCallDetails)}
         {this.createButtonsCont()}
       </View>
     );
@@ -264,6 +162,15 @@ class VesselInfo extends Component {
 }
 
 const styles = StyleSheet.create({
+  pickerContainer: {
+    backgroundColor: colorScheme.primaryContainerColor,
+    borderColor: colorScheme.tertiaryTextColor,
+    borderWidth: 1,
+    borderRadius: 5,
+    marginBottom: 10,
+    marginLeft: 10,
+    marginRight: 10,
+  },
   container: {
     flex: 1,
     backgroundColor: colorScheme.backgroundColor,
@@ -435,9 +342,13 @@ const styles = StyleSheet.create({
 
 })
 
-/*function mapStateToProps(state) {
-    return {
-        }
-        }
-        */
-export default connect()(VesselInfo);
+function mapStateToProps(state) {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, {
+  selectPortCall,
+})(VesselInfo);
+
