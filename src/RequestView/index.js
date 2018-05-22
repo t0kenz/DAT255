@@ -88,6 +88,7 @@ class RequestView extends Component {
         searchTerm: '',
         refreshing: false,
         numLoadedPortCalls: 20,
+        harborsLoaded: false
     }
 
     componentWillMount() {
@@ -152,14 +153,21 @@ class RequestView extends Component {
                         var harbor = harborMap.harbor;
                         self.portCallStatements[portCallId] = harbor;
                     }
+                    self.harborsLoaded = true;
+                    self.forceUpdate();
                     resolve();
                 });
         });
 
 
     }
-    openPortcallDetials() {
-        this.props.navigation.navigate('VesselInfo', {testmsg: "testing"});
+     openPortcallDetials(portCall) {
+        var portCallID = portCall.portCallId;
+        var statements = this.portCallStatements[portCallID];
+        this.props.navigation.navigate('VesselInfo', {
+            'portCall': portCall,
+            'statements': statements
+        });
     }
 
     getHarbor(portCall) {
@@ -248,11 +256,9 @@ class RequestView extends Component {
     createPortCallList = () => {
         var portCalls = this.props.portCalls;
         var list = [];
-        for (var i = 0; i < portCalls.length; i++) {
-            var portCall = portCalls[i];
-
-            // Add towage-related portcalls to the list
-            if (towageStateList.includes(portCall.lastUpdatedState)) {
+        if (this.harborsLoaded) {
+            for (var i = 0; i < portCalls.length; i++) {
+                var portCall = portCalls[i];
                 if (portCall === undefined) continue;
                 var photoURI = this.getPhotoURI(portCall);
                 var portCallDetails = this.getPortCallDetails(portCall);
@@ -298,9 +304,7 @@ class RequestView extends Component {
                                     <ListItem
                                         containerStyle={{ width: "100%", height: "100%" }}
                                         onPress={() => {
-                                            console.log(this.props.portCalls[0]);
-                                            this.openPortcallDetials();
-
+                                            this.openPortcallDetials(portCall);
                                         }}
                                     />
                                 }
@@ -310,9 +314,10 @@ class RequestView extends Component {
                 );
             }
         }
+
         return list;
     }
-
+    
     render() {
         const { navigation, showLoadingIcon, portCalls, selectPortCall } = this.props;
         const { navigate } = navigation;
