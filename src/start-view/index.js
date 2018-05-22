@@ -63,52 +63,52 @@ class StartView extends Component {
     }
 
     render() {
-        const {navigation} = this.props;
-        const {navigate} = navigation;
+        const { navigation } = this.props;
+        const { navigate } = navigation;
         return (
             <View style={locStyles.container}>
                 <TopHeader title='PortableCDM' firstPage navigation={this.props.navigation} />
                 <View style={locStyles.centerView}>
                     <View style={locStyles.topView}>
 
-                            <Button
-                                backgroundColor={colorScheme.primaryColor}
-                                color={colorScheme.primaryTextColor}
-                                leftIcon={{name:'directions-boat', color:'white'}}
-                                title="PortCalls"
-                                buttonStyle={locStyles.buttonStyle}
-                                onPress={() => navigate('PortCalls')}
-                            />
+                        <Button
+                            backgroundColor={colorScheme.primaryColor}
+                            color={colorScheme.primaryTextColor}
+                            leftIcon={{ name: 'directions-boat', color: 'white' }}
+                            title="PortCalls"
+                            buttonStyle={locStyles.buttonStyle}
+                            onPress={() => navigate('NewPortCalls')}
+                        />
 
-                            <Button
-                                backgroundColor={colorScheme.primaryColor}
-                                color={colorScheme.primaryTextColor}
-                                leftIcon={{name:'access-time', color:'white'}}
-                                title="Requests"
-                                buttonStyle={locStyles.buttonStyle}
-                                onPress={() => navigate('Requests')}
-                            />
-                        </View>
-                        <View style={locStyles.bottomView}>
-                            <Button
-                                backgroundColor={colorScheme.primaryColor}
-                                color={colorScheme.primaryTextColor}
-                                leftIcon={{name:'info', color:'white'}}
-                                title="About"
-                                buttonStyle={locStyles.buttonStyle}
-                                onPress={() => navigate('About')}
-                            />
-                            <Button
-                                backgroundColor={colorScheme.primaryColor}
-                                color={colorScheme.primaryTextColor}
-                                leftIcon={{name:'settings', color:'white'}}
-                                title="Settings"
-                                buttonStyle={locStyles.buttonStyle}
-                                onPress={() => navigate('Settings')}
-                            />
-                        </View>
+                        <Button
+                            backgroundColor={colorScheme.primaryColor}
+                            color={colorScheme.primaryTextColor}
+                            leftIcon={{ name: 'access-time', color: 'white' }}
+                            title="Tows"
+                            buttonStyle={locStyles.buttonStyle}
+                            onPress={() => navigate('RequestsView')}
+                        />
+                    </View>
+                    <View style={locStyles.bottomView}>
+                        <Button
+                            backgroundColor={colorScheme.primaryColor}
+                            color={colorScheme.primaryTextColor}
+                            leftIcon={{ name: 'info', color: 'white' }}
+                            title="About"
+                            buttonStyle={locStyles.buttonStyle}
+                            onPress={() => navigate('About')}
+                        />
+                        <Button
+                            backgroundColor={colorScheme.primaryColor}
+                            color={colorScheme.primaryTextColor}
+                            leftIcon={{ name: 'settings', color: 'white' }}
+                            title="Settings"
+                            buttonStyle={locStyles.buttonStyle}
+                            onPress={() => navigate('Settings')}
+                        />
+                    </View>
                 </View>
-                
+
             </View>
         );
     }
@@ -116,7 +116,7 @@ class StartView extends Component {
 
 const locStyles = StyleSheet.create({
     centerView: {
-        flex: 1, 
+        flex: 1,
         justifyContent: "center",
         flexDirection: "column",
         backgroundColor: colorScheme.backgroundColor,
@@ -125,20 +125,20 @@ const locStyles = StyleSheet.create({
         marginBottom: "35%"
     },
     topView: {
-        flex: 1, 
+        flex: 1,
         justifyContent: "center",
         backgroundColor: colorScheme.backgroundColor,
         flexDirection: "row",
         height: 50,
-        width:"100%"
+        width: "100%"
     },
     bottomView: {
-        flex: 1, 
+        flex: 1,
         justifyContent: "center",
         flexDirection: "row",
         backgroundColor: colorScheme.backgroundColor,
         height: 50,
-        width:"100%"
+        width: "100%"
     },
     container: {
         flex: 1,
@@ -164,8 +164,8 @@ const locStyles = StyleSheet.create({
         borderColor: colorScheme.primaryColor,
         borderWidth: 1,
         borderRadius: 10,
-        width:120,
-        height:120,
+        width: 120,
+        height: 120,
     },
     titleStyle: {
         color: colorScheme.quaternaryTextColor,
