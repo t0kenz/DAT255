@@ -9,10 +9,6 @@ import {
     appendPortCalls,
     bufferPortCalls,
     setError,
-    fetchPortCallEvents,
-    fetchPortCallStates,
-    getPortCallStates,
-    fetchPortCalls,
 } from '../../actions';
 
 import {
@@ -41,55 +37,16 @@ import {
 import colorScheme from '../../config/colors';
 import { getDateTimeString } from '../../util/timeservices';
 
-
-const towageStateList = 
-    [
-        "Arrival_Tug_Berth",
-        "Arrival_Tug_TugZone",
-        "Departure_Tug_TugZone",
-        "Arrival_Vessel_TugZone",
-        "Departure_Vessel_TugZone",
-        "Arrival_EscortTug_TugZone",
-        "Departure_EscortTug_TugZone",
-        "Arrival_EscortTug_ETugZone",
-        "Departure_EscortTug_ETugZone",
-        "Arrival_Vessel_ETugZone",
-        "Departure_Vessel_ETugZone",
-        "Arrival_EscortTug_Vessel",
-        "Departure_EscortTug_Vessel",
-        "Arrival_Tug_Vessel",
-        "Departure_Tug_Vessel",
-        "Arrival_Tug_HomeBase",
-        "Departure_Tug_HomeBase",
-        "Arrival_EscortTug_LOC",
-        "Departure_EscortTug_LOC",
-        "Arrival_Tug_LOC",
-        "Departure_Tug_LOC",
-        "EscortTowage_Commenced",
-        "EscortTowage_Completed",
-        "Towage_Commenced",
-        "Towage_Completed",
-        "EscortTowage_Requested",
-        "EscortTowage_ReqReceived",
-        "EscortTowage_Confirmed",
-        "EscortTowage_Denied",
-        "EscortTowage_Cancelled",
-        "Towage_Requested",
-        "Towage_ReqReceived",
-        "Towage_Confirmed",
-        "Towage_Denied",
-        "Towage_Cancelled",
-    ]
-
-    
-
 class RequestView extends Component {
     state = {
         searchTerm: '',
         refreshing: false,
         numLoadedPortCalls: 20,
-        harborsLoaded: false
+        harborsLoaded: true,
     }
+    towagePortCalls = [];
+    towagePortCallsStatement = {};
+    towagePortCallDetails = {};
 
     componentWillMount() {
         this.loadPortCalls = this.loadPortCalls.bind(this);
@@ -139,39 +96,101 @@ class RequestView extends Component {
         return new Promise(function (resolve, reject) {
             var portCalls = self.props.portCalls;
             self.portCallStatements = {};
-            var promises = [];
             for (var i = 0; i < portCalls.length; i++) {
                 var portCall = portCalls[i];
-                var promise = self.getHarbor(portCall);
-                promises.push(promise);
+                getStatements(portCall)
+                    .then(function (statements) {
+                        self.prepareTowagePortCalls(portCall, statements, self)
+                            .then(function (data) {
+                                self.state.harborsLoaded = true;
+                                self.forceUpdate();
+                                self.setHarbor(portCall, self)
+                                    .then(function (data) {
+                                        self.state.harborsLoaded = true;
+                                        self.forceUpdate();
+                                    });
+                            });
+                    });
             }
-            Promise.all(promises)
-                .then(function (data) {
-                    for (var n = 0; n < data.length; n++) {
-                        var harborMap = data[n];
-                        var portCallId = harborMap.portCallId;
-                        var harbor = harborMap.harbor;
-                        self.portCallStatements[portCallId] = harbor;
-                    }
-                    self.harborsLoaded = true;
-                    self.forceUpdate();
-                    resolve();
-                });
         });
-
-
     }
-     openPortcallDetials(portCall) {
+
+    prepareTowagePortCalls(portCall, statements, self) {
+        var towageStateList =
+            [
+                "Arrival_Tug_Berth",
+                "Arrival_Tug_TugZone",
+                "Departure_Tug_TugZone",
+                "Arrival_Vessel_TugZone",
+                "Departure_Vessel_TugZone",
+                "Arrival_EscortTug_TugZone",
+                "Departure_EscortTug_TugZone",
+                "Arrival_EscortTug_ETugZone",
+                "Departure_EscortTug_ETugZone",
+                "Arrival_Vessel_ETugZone",
+                "Departure_Vessel_ETugZone",
+                "Arrival_EscortTug_Vessel",
+                "Departure_EscortTug_Vessel",
+                "Arrival_Tug_Vessel",
+                "Departure_Tug_Vessel",
+                "Arrival_Tug_HomeBase",
+                "Departure_Tug_HomeBase",
+                "Arrival_EscortTug_LOC",
+                "Departure_EscortTug_LOC",
+                "Arrival_Tug_LOC",
+                "Departure_Tug_LOC",
+                "EscortTowage_Commenced",
+                "EscortTowage_Completed",
+                "Towage_Commenced",
+                "Towage_Completed",
+                "EscortTowage_Requested",
+                "EscortTowage_ReqReceived",
+                "EscortTowage_Confirmed",
+                "EscortTowage_Denied",
+                "EscortTowage_Cancelled",
+                "Towage_Requested",
+                "Towage_ReqReceived",
+                "Towage_Confirmed",
+                "Towage_Denied",
+                "Towage_Cancelled",
+            ];
+
+        return new Promise(function (resolve, reject) {
+            var lastStatmentReport;
+            var lastStatement;
+            for (var i = 0; i < statements.length; i++) {
+                var statement = statements[i];
+                if (towageStateList.includes(statement.stateDefinition)) {
+                    if (lastStatement === undefined) lastStatement = statement;
+                    if (lastStatmentReport === undefined) lastStatmentReport = statement.reportedAt;
+                    if (lastStatmentReport <= statement.reportedAt) {
+                        lastStatement = statement;
+                        lastStatementReport = statement.reportedAt;
+
+                    }
+                }
+            }
+            if (lastStatement !== undefined) {
+                var portCallId = portCall.portCallId;
+                self.towagePortCalls.push(portCall);
+                self.towagePortCallsStatement[portCallId] = statements;
+            }
+            resolve();
+        });
+    }
+    openPortcallDetials(portCall) {
         var portCallID = portCall.portCallId;
-        var statements = this.portCallStatements[portCallID];
+        var statements = this.towagePortCallsStatement[portCallID];
+        console.log(statements);
         this.props.navigation.navigate('VesselInfo', {
             'portCall': portCall,
             'statements': statements
         });
     }
 
-    getHarbor(portCall) {
+    setHarbor(portCall, self) {
         return new Promise(function (resolve, reject) {
+
             var getSuffix = function (string, char) {
                 for (var i = string.length - 1; i > 0; i--) {
                     if (string[i] === char) {
@@ -182,39 +201,42 @@ class RequestView extends Component {
                 return string;
             }
 
-            getStatements(portCall)
-                .then(function (statements) {
-                    var stateType = "";
-                    var harbor = "Unknown harbor";
-                    var portCallId = portCall.portCallId;
-                    var harborMap = {};
-                    for (var i = 0; i < statements.length; i++) {
-                        var statement = statements[i];
-                        if (statement === undefined) continue;
-                        if (statement.at === undefined) continue;
-                        if (statement.stateDefinition === undefined) continue;
-                        stateType = statement.stateDefinition;
+            var stateType = "";
+            var harbor = "Unknown harbor";
+            var portCallId = portCall.portCallId;
+            var statements = self.towagePortCallsStatement[portCallId];
 
-                        switch (stateType) {
-                            case "Arrival_Vessel_Berth":
-                                harbor = getSuffix(statement.at, ":");
-                                harborMap.portCallId = portCallId;
-                                harborMap.harbor = harbor;
-                                resolve(harborMap);
-                                break;
-                            case "Departure_Vessel_Berth":
-                                harbor = getSuffix(statement.at, ":");
-                                harborMap.portCallId = portCallId;
-                                harborMap.harbor = harbor;
-                                resolve(harborMap);
-                                break;
+            if (statements === undefined) resolve();
+            var harborMap = {};
+            for (var i = 0; i < statements.length; i++) {
+
+                var statement = statements[i];
+                if (statement === undefined) continue;
+                if (statement.at === undefined) continue;
+                if (statement.stateDefinition === undefined) continue;
+                stateType = statement.stateDefinition;
+
+                switch (stateType) {
+                    case "Arrival_Vessel_Berth":
+                        harbor = getSuffix(statement.at, ":");
+                        if (self.towagePortCallDetails[portCall.portCallId] === undefined) {
+                            self.towagePortCallDetails[portCall.portCallId] = {};
                         }
-                        harborMap.portCallId = portCallId;
-                        harborMap.harbor = harbor;
-                        resolve(harborMap);
-                    }
+                        self.towagePortCallDetails[portCall.portCallId].harbor = harbor;
+                        resolve(harbor);
+                        break;
+                    case "Departure_Vessel_Berth":
+                        harbor = getSuffix(statement.at, ":");
+                        if (self.towagePortCallDetails[portCall.portCallId] === undefined) {
+                            self.towagePortCallDetails[portCall.portCallId] = {};
+                        }
+                        self.towagePortCallDetails[portCall.portCallId].harbor = harbor;
+                        resolve(harbor);
+                        break;
+                }
 
-                });
+                resolve(undefined);
+            }
         });
     }
 
@@ -231,19 +253,21 @@ class RequestView extends Component {
     getPortCallRequets(portCall) {
         var nextRow = "\n";
         var randomInt = Math.floor(Math.random() * 4)
-        return portCall.lastUpdatedState + nextRow + randomInt + " Tugboats" + nextRow + "Escort  ->";
+        return "Requested" + nextRow + randomInt + " Tugboats" + nextRow + "Escort  ->";
     }
 
     getPortCallDetails(portCall) {
         var nextRow = "\n";
         var vesselName = "Unknown vessel name";
         var endDate = "Unknown date";
-        var harbor = "Unknown harbor";
+        var harbor = "Loading harbor";
 
         var portCallId = portCall.portCallId;
-        var statements = this.portCallStatements[portCallId];
+        if (this.towagePortCallDetails[portCallId] !== undefined) {
+            harbor = this.towagePortCallDetails[portCall.portCallId].harbor;
+            if (harbor === undefined) harbor = "Unknown harbor";
+        }
         if (portCall.vessel !== undefined) vesselName = portCall.vessel.name;
-        if (statements !== undefined) harbor = statements;
         if (portCall.endTime !== undefined) endDate = getDateTimeString(new Date(portCall.endTime))
 
         if (harbor.length > 0) {
@@ -254,15 +278,17 @@ class RequestView extends Component {
     }
 
     createPortCallList = () => {
-        var portCalls = this.props.portCalls;
+        var portCalls = this.towagePortCalls;
         var list = [];
-        if (this.harborsLoaded) {
+
+        if (this.state.harborsLoaded) {
             for (var i = 0; i < portCalls.length; i++) {
                 var portCall = portCalls[i];
                 if (portCall === undefined) continue;
+                console.log(portCall);
                 var photoURI = this.getPhotoURI(portCall);
                 var portCallDetails = this.getPortCallDetails(portCall);
-                var portCallRequets = this.getPortCallRequets(portCall)
+                var portCallRequets = this.getPortCallRequets(portCall);
                 list.push(
                     <View style={localStyles.listContainer}
                         backgroundColor={(i % 2 === 0) ? "#f0f0f0" : "#ffffff"}
@@ -317,11 +343,12 @@ class RequestView extends Component {
 
         return list;
     }
-    
+
     render() {
         const { navigation, showLoadingIcon, portCalls, selectPortCall } = this.props;
         const { navigate } = navigation;
         const { searchTerm } = this.state;
+        const { goBack } = this.props.navigation;
 
         // Quick fix for having 1 element with null value
         if (portCalls.length === 1) {
