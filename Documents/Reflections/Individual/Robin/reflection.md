@@ -1,3 +1,21 @@
+# Week 8
+
+### What do i want to learn or understand better?
+There is not a specific technology or practice that I will have time to learn or understand better as we have a lot to finish up before the presentation. Doing the tasks that I am assigned will of course help me learn but it is not something I will prioritize this sprint.
+### How can I help someone else, or the entire team, to learn something new?
+I believe that this has been one of my weaknesses during the project as my plan on how to help has been for someone else to ask me. This is a bad strategy, at least if I base it on my own behaviour as I rarely ask for help. When I find something that I find really helpful, or learn something that I struggled with it would be better to share that right awway rather than waiting for someone to experiance the same problem. I suspect that I won't have a lot of opportunity to do this as the course is starting to end, but I will reflect on it more in my final reflection.
+### What is my contribution towards the team's application of scrum?
+- I finished my tasks where I worked on creating user interface for our portcall view and request view as well as populating these views with portcalls.
+- I have participated in the meetings and contributed to writing our group reflections.
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+#### Last week
+- When working with the UIs I did not read about react native before starting and this really helped in not getting stuck reading documentation or watching a tutorial that is covering a lot more than what is needed for the task. I did do some reading when I encountered a problem that I could not solve by looking at the current code. So I would say that the goal was reached. But I do need to think about this in future in other projects as I have a tendency to want/need a solid base before I start working.
+#### Next week
+- Do as well as I can in finishing up our product.
+- Start writing on the final group reflection as it probably will take longer than the previous ones since we will reflect on the whole process from the start of the course to the end and onto the future. I will have to think about what I have learned in this course, what has helped us by following the scrum principles and what has not helped.
+
 # Week 7
 
 ### What do I want to learn or understand better?
