@@ -215,21 +215,23 @@ class RequestView extends Component {
                 self.towagePortCallDetails[lastPortCallId].commencedStart = commencedStart;
                 self.towagePortCallDetails[lastPortCallId].connectionPoint = connectionPoint;
                 self.towagePortCallDetails[lastPortCallId].connectionPointTimeType = connectionPointTimeType;
+                self.towagePortCallDetails[lastPortCallId].numberOfTugboats = 1;
             }
 
             resolve(portCall);
         });
     }
     openPortcallDetials(portCall) {
+        //console.log(portCall);
         var portCallId = portCall.portCallId;
         var statements = this.towagePortCallsStatement[portCallId];
         var details = this.towagePortCallDetails[portCallId];
-        console.log(details);
         this.props.navigation.navigate('VesselInfo', {
             'portCall': portCall,
             'statements': statements,
             'towagePortCallDetails': details
         });
+
     }
 
     setHarbor(portCall, self) {
@@ -374,8 +376,7 @@ class RequestView extends Component {
             };
 
         var nextRow = "\n";
-        var randomInt = Math.floor(Math.random() * 3);
-        if (randomInt === 0) randomInt = 1;
+        var randomInt = 0;
         var stateDefinition;
         var jobStatus = "Unknown";
         var jobType = "Unknown"
@@ -384,7 +385,8 @@ class RequestView extends Component {
             stateDefinition = this.towagePortCallDetails[portCall.portCallId].stateDefinition;
             jobStatus = jobStates[stateDefinition];
             jobType = jobTypes[stateDefinition];
-            timeType = this.towagePortCallDetails[portCall.portCallId].timeType
+            timeType = this.towagePortCallDetails[portCall.portCallId].timeType;
+            randomInt = this.towagePortCallDetails[portCall.portCallId].numberOfTugboats;
             this.towagePortCallDetails[portCall.portCallId].jobStatus = jobStatus;
             this.towagePortCallDetails[portCall.portCallId].jobType = jobType;
         }
@@ -420,7 +422,8 @@ class RequestView extends Component {
         if (this.state.harborsLoaded) {
             var portCalls = this.towagePortCalls;
             for (var i = 0; i < portCalls.length; i++) {
-                var portCall = portCalls[i];
+                const ii = i;
+                const portCall = portCalls[ii];
                 if (portCall === undefined) continue;
                 var photoURI = this.getPhotoURI(portCall);
                 var portCallDetails = this.getPortCallDetails(portCall);
@@ -510,7 +513,7 @@ class RequestView extends Component {
                                 style={localStyles.headerText}
                                 h3
                             >
-                                Portcall
+                                Towage portcalls
                         </Text>
                         </View>
                     </View>
@@ -599,7 +602,6 @@ class RequestView extends Component {
 const localStyles = StyleSheet.create({
     listContainerOverlayButton: {
         alignSelf: 'stretch',
-
     },
     listContainerOverlay: {
         position: "absolute",
