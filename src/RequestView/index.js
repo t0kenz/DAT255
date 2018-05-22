@@ -99,12 +99,15 @@ class RequestView extends Component {
             for (var i = 0; i < portCalls.length; i++) {
                 var portCall = portCalls[i];
                 getStatements(portCall)
-                    .then(function (statements) {
-                        self.prepareTowagePortCalls(portCall, statements, self)
+                    .then(function (data) {
+                        var statements = data.statments;
+                        var thisPortCall = data.portCall;
+                        self.prepareTowagePortCalls(thisPortCall, statements, self)
                             .then(function (data) {
+                                var thisPortCall = data;
                                 self.state.harborsLoaded = true;
                                 self.forceUpdate();
-                                self.setHarbor(portCall, self)
+                                self.setHarbor(thisPortCall, self)
                                     .then(function (data) {
                                         self.state.harborsLoaded = true;
                                         self.forceUpdate();
@@ -116,75 +119,116 @@ class RequestView extends Component {
     }
 
     prepareTowagePortCalls(portCall, statements, self) {
-        var towageStateList =
-            [
-                "Arrival_Tug_Berth",
-                "Arrival_Tug_TugZone",
-                "Departure_Tug_TugZone",
-                "Arrival_Vessel_TugZone",
-                "Departure_Vessel_TugZone",
-                "Arrival_EscortTug_TugZone",
-                "Departure_EscortTug_TugZone",
-                "Arrival_EscortTug_ETugZone",
-                "Departure_EscortTug_ETugZone",
-                "Arrival_Vessel_ETugZone",
-                "Departure_Vessel_ETugZone",
-                "Arrival_EscortTug_Vessel",
-                "Departure_EscortTug_Vessel",
-                "Arrival_Tug_Vessel",
-                "Departure_Tug_Vessel",
-                "Arrival_Tug_HomeBase",
-                "Departure_Tug_HomeBase",
-                "Arrival_EscortTug_LOC",
-                "Departure_EscortTug_LOC",
-                "Arrival_Tug_LOC",
-                "Departure_Tug_LOC",
-                "EscortTowage_Commenced",
-                "EscortTowage_Completed",
-                "Towage_Commenced",
-                "Towage_Completed",
-                "EscortTowage_Requested",
-                "EscortTowage_ReqReceived",
-                "EscortTowage_Confirmed",
-                "EscortTowage_Denied",
-                "EscortTowage_Cancelled",
-                "Towage_Requested",
-                "Towage_ReqReceived",
-                "Towage_Confirmed",
-                "Towage_Denied",
-                "Towage_Cancelled",
-            ];
-
         return new Promise(function (resolve, reject) {
+            var getSuffix = function (string, char) {
+                if (string === undefined) return string;
+                if (string === null) return string;
+                for (var i = string.length - 1; i > 0; i--) {
+                    if (string[i] === char) {
+                        if (i === string.length - 1) i = (string.length - 2);
+                        return string.substring(i + 1);
+                    }
+                }
+                return string;
+            }
+            var towageStateList =
+                [
+                    "Arrival_Tug_Berth",
+                    "Arrival_Tug_TugZone",
+                    "Departure_Tug_TugZone",
+                    "Arrival_Vessel_TugZone",
+                    "Departure_Vessel_TugZone",
+                    "Arrival_EscortTug_TugZone",
+                    "Departure_EscortTug_TugZone",
+                    "Arrival_EscortTug_ETugZone",
+                    "Departure_EscortTug_ETugZone",
+                    "Arrival_Vessel_ETugZone",
+                    "Departure_Vessel_ETugZone",
+                    "Arrival_EscortTug_Vessel",
+                    "Departure_EscortTug_Vessel",
+                    "Arrival_Tug_Vessel",
+                    "Departure_Tug_Vessel",
+                    "Arrival_Tug_HomeBase",
+                    "Departure_Tug_HomeBase",
+                    "Arrival_EscortTug_LOC",
+                    "Departure_EscortTug_LOC",
+                    "Arrival_Tug_LOC",
+                    "Departure_Tug_LOC",
+                    "EscortTowage_Commenced",
+                    "EscortTowage_Completed",
+                    "Towage_Commenced",
+                    "Towage_Completed",
+                    "EscortTowage_Requested",
+                    "EscortTowage_ReqReceived",
+                    "EscortTowage_Confirmed",
+                    "EscortTowage_Denied",
+                    "EscortTowage_Cancelled",
+                    "Towage_Requested",
+                    "Towage_ReqReceived",
+                    "Towage_Confirmed",
+                    "Towage_Denied",
+                    "Towage_Cancelled",
+                ];
             var lastStatmentReport;
             var lastStatement;
+            var lastPortCallId;
+            var lastStateDefinition;
+            var lastConnectionPoint;
+            var lastStartTime;
+            var lastComment;
+            var statement;
+            var commencedStart;
+            var connectionPoint;
+            var connectionPointTimeType;
             for (var i = 0; i < statements.length; i++) {
                 var statement = statements[i];
                 if (towageStateList.includes(statement.stateDefinition)) {
                     if (lastStatement === undefined) lastStatement = statement;
                     if (lastStatmentReport === undefined) lastStatmentReport = statement.reportedAt;
                     if (lastStatmentReport <= statement.reportedAt) {
+                        lastPortCallId = statement.portCallId;
                         lastStatement = statement;
                         lastStatementReport = statement.reportedAt;
-
+                        lastStateDefinition = statement.stateDefinition;
+                        lastStartTime = statement.time;
+                        lastComment = statement.comment;
+                        lastTimeType = statement.timeType;
+                    }
+                    if (statement.stateDefinition.contains('Commenced')) {
+                        commencedStart = statement.time;
+                        connectionPoint = getSuffix(statement.from, ':');
+                        connectionPointTimeType = statement.timeType;
                     }
                 }
             }
             if (lastStatement !== undefined) {
-                var portCallId = portCall.portCallId;
+                if (self.towagePortCallDetails[lastPortCallId] === undefined) {
+                    self.towagePortCallDetails[lastPortCallId] = {};
+                }
                 self.towagePortCalls.push(portCall);
-                self.towagePortCallsStatement[portCallId] = statements;
+                self.towagePortCallsStatement[lastPortCallId] = statements;
+                self.towagePortCallDetails[lastPortCallId].statementReport = lastStatementReport;
+                self.towagePortCallDetails[lastPortCallId].stateDefinition = lastStateDefinition;
+                self.towagePortCallDetails[lastPortCallId].startTime = lastStartTime;
+                self.towagePortCallDetails[lastPortCallId].comment = lastComment;
+                self.towagePortCallDetails[lastPortCallId].timeType = lastTimeType;
+                self.towagePortCallDetails[lastPortCallId].commencedStart = commencedStart;
+                self.towagePortCallDetails[lastPortCallId].connectionPoint = connectionPoint;
+                self.towagePortCallDetails[lastPortCallId].connectionPointTimeType = connectionPointTimeType;
             }
-            resolve();
+
+            resolve(portCall);
         });
     }
     openPortcallDetials(portCall) {
-        var portCallID = portCall.portCallId;
-        var statements = this.towagePortCallsStatement[portCallID];
-        console.log(statements);
+        var portCallId = portCall.portCallId;
+        var statements = this.towagePortCallsStatement[portCallId];
+        var details = this.towagePortCallDetails[portCallId];
+        console.log(details);
         this.props.navigation.navigate('VesselInfo', {
             'portCall': portCall,
-            'statements': statements
+            'statements': statements,
+            'towagePortCallDetails': details
         });
     }
 
@@ -251,9 +295,103 @@ class RequestView extends Component {
     }
 
     getPortCallRequets(portCall) {
+        var jobStates =
+            {
+                "Arrival_Tug_Berth": "Arr. Tug Berth",
+                "Arrival_Tug_TugZone": "Arr. Tug Tugzone",
+                "Departure_Tug_TugZone": "Dep. Tug Tugzone",
+                "Arrival_Vessel_TugZone": "Arr. Vessel Tugzone",
+                "Departure_Vessel_TugZone": "Dep. Vessel Tugzone",
+                "Arrival_EscortTug_TugZone": "Arr. Tuh Tugzone",
+                "Departure_EscortTug_TugZone": "Dep. Tug Tugzone",
+                "Arrival_EscortTug_ETugZone": "Arr. Tug ETugzone",
+                "Departure_EscortTug_ETugZone": "Dep. Tug ETugzone",
+                "Arrival_Vessel_ETugZone": "Arr. Vessel ETugzone",
+                "Departure_Vessel_ETugZone": "Dep. Vessel ETugzone",
+                "Arrival_EscortTug_Vessel": "Arr. Tug Vessel",
+                "Departure_EscortTug_Vessel": "Dep. Tug Vessel",
+                "Arrival_Tug_Vessel": "Arr. Tug Vessel",
+                "Departure_Tug_Vessel": "Dep. Tug Vessel",
+                "Arrival_Tug_HomeBase": "Arr. Tug Base",
+                "Departure_Tug_HomeBase": "Dep. Tug Base",
+                "Arrival_EscortTug_LOC": "Arr. Tug U-LOC",
+                "Departure_EscortTug_LOC": "Dep. Tug U-LOC",
+                "Arrival_Tug_LOC": "Arr. Tug U-LOC",
+                "Departure_Tug_LOC": "Dep. Tug U-LOC",
+                "EscortTowage_Commenced": "Commenced",
+                "EscortTowage_Completed": "Completed",
+                "Towage_Commenced": "Commenced",
+                "Towage_Completed": "Completed",
+                "EscortTowage_Requested": "Request",
+                "EscortTowage_ReqReceived": "Received",
+                "EscortTowage_Confirmed": "Confirmed",
+                "EscortTowage_Denied": "Denied",
+                "EscortTowage_Cancelled": "Cancelled",
+                "Towage_Requested": "Request",
+                "Towage_ReqReceived": "Received",
+                "Towage_Confirmed": "Confirmed",
+                "Towage_Denied": "Denied",
+                "Towage_Cancelled": "Cancelled",
+            };
+
+        var jobTypes =
+            {
+                "Arrival_Vessel_ETugZone": "Harbor Towage",
+                "Departure_Vessel_ETugZone": "Harbor Towage",
+                "Arrival_Vessel_TugZone": "Harbor Towage",
+                "Departure_Vessel_TugZone": "Harbor Towage",
+                "Arrival_Tug_Berth": "Harbor Towage",
+                "Arrival_Tug_TugZone": "Harbor Towage",
+                "Departure_Tug_TugZone": "Harbor Towage",
+                "Arrival_EscortTug_TugZone": "Escort",
+                "Departure_EscortTug_TugZone": "Escort",
+                "Arrival_EscortTug_ETugZone": "Escort",
+                "Departure_EscortTug_ETugZone": "Escort",
+                "Arrival_EscortTug_Vessel": "Escort",
+                "Departure_EscortTug_Vessel": "Escort",
+                "Arrival_Tug_Vessel": "Harbor Towage",
+                "Departure_Tug_Vessel": "Harbor Towage",
+                "Arrival_Tug_HomeBase": "Harbor Towage",
+                "Departure_Tug_HomeBase": "Harbor Towage",
+                "Arrival_EscortTug_LOC": "Escort",
+                "Departure_EscortTug_LOC": "Escort",
+                "Arrival_Tug_LOC": "Harbor Towage",
+                "Departure_Tug_LOC": "Harbor Towage",
+                "EscortTowage_Commenced": "Escort",
+                "EscortTowage_Completed": "Escort",
+                "Towage_Commenced": "Harbor Towage",
+                "Towage_Completed": "Harbor Towage",
+                "EscortTowage_Requested": "Escort",
+                "EscortTowage_ReqReceived": "Escort",
+                "EscortTowage_Confirmed": "Escort",
+                "EscortTowage_Denied": "Escort",
+                "EscortTowage_Cancelled": "Escort",
+                "Towage_Requested": "Harbor Towage",
+                "Towage_ReqReceived": "Harbor Towage",
+                "Towage_Confirmed": "Harbor Towage",
+                "Towage_Denied": "Harbor Towage",
+                "Towage_Cancelled": "Harbor Towage",
+            };
+
         var nextRow = "\n";
-        var randomInt = Math.floor(Math.random() * 4)
-        return "Requested" + nextRow + randomInt + " Tugboats" + nextRow + "Escort  ->";
+        var randomInt = Math.floor(Math.random() * 3);
+        if (randomInt === 0) randomInt = 1;
+        var stateDefinition;
+        var jobStatus = "Unknown";
+        var jobType = "Unknown"
+        var timeType = "Unknown";
+        if (this.towagePortCallDetails[portCall.portCallId] !== undefined) {
+            stateDefinition = this.towagePortCallDetails[portCall.portCallId].stateDefinition;
+            jobStatus = jobStates[stateDefinition];
+            jobType = jobTypes[stateDefinition];
+            timeType = this.towagePortCallDetails[portCall.portCallId].timeType
+            this.towagePortCallDetails[portCall.portCallId].jobStatus = jobStatus;
+            this.towagePortCallDetails[portCall.portCallId].jobType = jobType;
+        }
+
+        if (timeType === undefined || timeType === null) timeType = "Estimated";
+
+        return jobStatus + nextRow + timeType + nextRow + randomInt + " Tugboats" + nextRow + jobType;
     }
 
     getPortCallDetails(portCall) {
@@ -278,14 +416,12 @@ class RequestView extends Component {
     }
 
     createPortCallList = () => {
-        var portCalls = this.towagePortCalls;
         var list = [];
-
         if (this.state.harborsLoaded) {
+            var portCalls = this.towagePortCalls;
             for (var i = 0; i < portCalls.length; i++) {
                 var portCall = portCalls[i];
                 if (portCall === undefined) continue;
-                console.log(portCall);
                 var photoURI = this.getPhotoURI(portCall);
                 var portCallDetails = this.getPortCallDetails(portCall);
                 var portCallRequets = this.getPortCallRequets(portCall);
@@ -485,12 +621,13 @@ const localStyles = StyleSheet.create({
         flexDirection: "row",
     },
     listPortcallAvatar: {
+        flex: 0,
         width: "12%",
         justifyContent: "center",
         flexDirection: "column",
     },
     listPortcallDetails: {
-        flex: 2,
+        flex: 3,
         justifyContent: "center",
         flexDirection: "column",
     },
@@ -501,14 +638,14 @@ const localStyles = StyleSheet.create({
         color: "black"
     },
     listPortcallRequets: {
-        flex: 1,
+        flex: 2,
         justifyContent: "center",
         flexDirection: "column",
     },
 
     listPortcallRequetsText: {
         fontSize: 16,
-        lineHeight: 30,
+        lineHeight: 25,
         color: "grey"
     },
     listPortcallOnPress: {
