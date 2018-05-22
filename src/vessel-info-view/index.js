@@ -171,13 +171,13 @@ class VesselInfo extends Component {
     } else {
       div = <View style={styles.infoContainer}>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Status: </Text>{details.jobStatus} </Text>
-        {/* Check if details.commencedStart is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{details.commencedStart} </Text>
-        {/* Check if details.commencedStart is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time type: </Text>{details.timeType} </Text>
+        {details.commencedStart && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time: </Text>{details.commencedStart} </Text>}
+        {details.commencedStart && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Time type: </Text>{details.timeType} </Text>}
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{details.jobType}</Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{details.statementReport} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Nr of tugboats: </Text>{details.numberOfTugboats} </Text>
-        {/* Check if details.connectionPoint is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint} </Text>
-        {/* Check if details.connectionPointTimeType is undefined */}<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype} </Text>
+        {details.connectionPoint && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint} </Text>}
+        {details.connectionPointTimeType && <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype} </Text>}
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{details.harbor} </Text>
         {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Length: </Text>{"extraInfo.length"} </Text>*/}
         {/*<Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Beam: </Text>{"extraInfo.beam"} </Text>*/}
