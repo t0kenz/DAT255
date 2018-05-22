@@ -82,8 +82,8 @@ class VesselInfo extends Component {
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Work type: </Text>{details.jobType}</Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Last update: </Text>{details.statementReport} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Nr of tugboats: </Text>{details.numberOfTugboats} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint ? details.connectionPoint : "Not found} </Text>
-        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype ? details.connectionPointTimeType : "Not found} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection point: </Text>{details.connectionPoint ? details.connectionPoint : "Not found"} </Text>
+        <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Connection time type: </Text>{details.connectionPointTimetype ? details.connectionPointTimeType : "Not found"} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> Destination: </Text>{details.harbor} </Text>
         <Text style={styles.infoText}> <Text style={{ fontWeight: 'bold' }}> IMO: </Text>{portCall.vessel.imo} </Text>
         {/*Put below in separate expandable list? See UI suggestion*/}
