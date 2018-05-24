@@ -1,4 +1,38 @@
 ## Reflections each week by Jesper
+# Week 9
+### What do I want to learn or understand better?
+
+
+### How can I help someone else, or the entire team, to learn something new?
+
+
+### What is my contribution towards the team’s application of scrum?
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### From the previous week
+
+
+#### For the next week
+
+# Week 8
+### What do I want to learn or understand better?
+- For this course's last sprint I feel that I have a good understanding of our project, and its codebase. I think that I can use 100% of my focus implementing new features for the comming sprint, so we have a complete product with good value for the project owners for our last review. This sprint I need to focus on priority and understand what feature has the most value right now, and implement that and only that feature. Then move on to the next task with a high value. I need to continue to do this for the entire sprint, completing small but valueable tasks and not split my focus on several tasks at once.  
+- Scrum feels more at home now. I feel like I understand the concept and workflow. However I feel like its still really hard to predict/"guess" the velocity of a task. We've only been able to accurately guess the velocity a few times, and those tasks where guessed accurately because of it was similar to something I've done before. I think that the only way to get better at predicting the velocity of a task is by practise, and reflecting on the predictions outcome. 
+
+### How can I help someone else, or the entire team, to learn something new?
+- For this last sprint I will atend all our meetings and be active in them. Only a few of us can build and run the application, so we will need to program in bigger groups of 3-4, which is not optimal. Since I've a lot of experience within javascript I will help me team with solving common issues (like complex async problems) whenever it's needed, and hopefully make our team better at javascript.
+
+### What is my contribution towards the team’s application of scrum?
+- Even with last weeks objective in mind (to slice our big tasks into small, but still vertical tasks) we still have a problem with slicing tasks to big. We did put more effort in our last slicing session and the tasks did indeed get smaller. But some of the tasks where still to big for us to comfortably say that we'll be able to complete them within a sprint. To address this we will have to put even more effort into the slicing to get achievable tasks.
+- I will also atend and be active on all our the remaining meetings so we can deliver a good product for our product owners, and for our selfs. I will actively try to pick the task with most value so we can deliver a complete product, and not just a concept.  
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+#### From the previous week
+- I delivered my part of the sprint, and most of our team also did. This felt really good, because now we had something to show to the product owners. We made a compromise with them about what's a possible end product for us, and now it's up to us to make sure we deliver what we promised.
+
+#### For the next week
+- For the next sprint I will try to split our tasks to even smaller tasks, while still trying to keep them vertical. I also aim to fully complete my tasks and help my team complete theirs, and sort them by product owner value. As of now, only 3 out of 8 in our team can get the project to work on their computers. This means that we will have to code in bigger groups to make every member able to accomplish their tasks and to contribut to the team. This will also slow our progress and now it's even more important to slice tasks into realistic tasks with a correct estimate for velocity, so we dont take on more than we can handle. My primary focus for next week will be to complete all my tasks and contribute to us having a good application that we're happy to present to the product owners.
+
 # Week 7
 ### What do I want to learn or understand better?
 - I feel comfortable programming in the project and the code base is no longer unfamiliar. I feel like I've made progress within the application and acheived something of value. During the past week I spent a lot of my time learning the different API's of the server and learned how to extract the information we need for our application. This included implementing some new request to the server, which also went fine. My next goal within programming in this application is to get a hold of all the different internal states and make the compucations async. I will do this by learning how states/components work in react native (ComponentWillMount for example) and apply it to our already existing code. Not only to make it faster and more secure, but also to follow the existing code bases structure.
