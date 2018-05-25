@@ -15,22 +15,6 @@
 ````
 /Documents/Reflections/socialcontract.md
 ````
-## Meeting agendas
-````
-/Documents/Meetings/
-````
-## Source of code
-````
-/src/
-````
-## Code documents
-````
-/Documents/Tech/...
-````
-## APKs
-````
-/APK/...
-````
 ## Team reflections
 ````
 /Documents/Reflections/Team/Reflections...
@@ -39,3 +23,43 @@
 ````
 /Documents/Reflections/Individual/_Member_Name_/...
 ````
+## Meeting agendas
+````
+/Documents/Meetings/
+````
+## Source of our produced code
+````
+/src/
+````
+## Source of original codebase
+````
+/portablecdm @ 42b4df3/
+````
+## Database init sql files
+````
+/Database/...
+````
+## GITworkflow
+````
+/git-workflow.md
+````
+## Code documents
+````
+API related calls
+  /Documents/API/...
+  
+Diagrams over project
+  /Documents/tech/...
+  
+Images of the application
+  /Documents/application images/...
+  
+Appliaction presentation
+  /Documents/preview/
+  
+````
+## APKs
+````
+/APK/...
+````
+
