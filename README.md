@@ -27,6 +27,10 @@
 ````
 /Documents/Meetings/
 ````
+## KPIs
+````
+/Documents/KPI/...
+````
 ## Source of our produced code
 ````
 /src/
