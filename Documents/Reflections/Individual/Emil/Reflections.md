@@ -1,9 +1,19 @@
 # Reflections
 
-## Questions
+
+## Week 9 - final reflections
+In this last reflection, I'll answer all of the given questions except of the one which regards how I can help someone else since I don't think it's relevant at the end the of our work. However, I will reflect upon how I can help someone else in my future work, based on the knowledge and insights I've been given throughout this course. 
+
 ### 1. What do I want to learn or understand better?
+I've learned a lot of things during this course. First of all, I've improved my specific knowledge within JavaScript and React Native. Since we got a hole bunch of code from the existing application, searching through that code enhanced my understanding of the two code languages I previously mentioned. I also got a lot of help from other team mates in regards of understanding the code structure. I've realized the importance of domain specific knowledge (in this case: JavaScript and React Native) in order to understand and analyze a specific problem. In the future, I could get this knowledge by asking someone more knowlegdeable or simply by searching through the code structure myself. 
+
+Second, I've learned to work with people who approaches a specific problem differently. We've been a diversed group, in terms of fields of study. This has lead to different approaches where some focus on the creation of value to the end customer and some focus on the technical implications of a specific soloution. Both approaches are equally important, in my view. But it's crucial to understand the differences in order to do a good job and create a manageable working climat. In future work projects, I'll try to apply this insight by simply try to figure out exactly what is aim/target of the individuals within the team. 
+
+Third, I know have a practical experience of the difficulty to plan the future. During the first four weeks of our work, we didn't implement a single thing. All we did was planning our soloution. At the moment, it seemed like a good idea but it resulted in a heavy and stressful work situationen in the end. We did this even though we've been thaught, on the lectures, to just start doing something. In the end, you really have to experience something before it gets stuck in your head and turns into a lesson. So when I face similar work projects in the future, I'll try to create something in the begging that is valuable and from that develop further. I do also beilive that this approach could be applied on every kind of project-orientated work. 
 
 ### 2. How can I help someone else, or the entire team, to learn something new?
+
+
 
 ### 3. What is my contribution towards the team’s application of scrum?
 
