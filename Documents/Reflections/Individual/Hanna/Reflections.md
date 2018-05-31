@@ -1,28 +1,3 @@
-# Template week X
-### What do I want to learn or understand better?
--
-
-
-### How can I help someone else, or the entire team, to learn something new?
--
-
-
-### What is my contribution towards the team’s application of scrum?
--
-
-
-### What is my contribution towards the team’s deliveries? That means 
-that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
-
-
-#### For the next week
--
-
-
-#### For the next weeks
--
-
-
 # Week 1
 
 
@@ -229,3 +204,24 @@ Due to changed period of the sprint week 4 was short enough to be combined with 
 - My main goal with this project is to get an understanding of a software development project and problems, possibilites and knowledge that comes with it. I don't think I will be able to development all the different parts of the project (eg. server, database, modules etc) but the most important part for me is to see the connections and being able to use the knowledge in projects later in my career (and in school)
 - Finishing the main view, top header, about-view and the settings-view and make sure it function the way it's suppose to. 
 - For this last week it is very important that we also spend extra time on the reflections. If I finish my task in good time, I will put some extra effort into the group reflection as well.
+
+# Final reflection (Week 9)
+### What do I want to learn or understand better?
+- I am curious about my future learning of JavaScript, and how I can use the language in other projects in my career and in my education. I feel like I have a very basic understanding of the language, since I have mostly concentrated on learning parts that were needed for my specific tasks. In a future project there will hopefully be more time to develop my overall skills in JavaScript.
+- I really want to take part in a similiar project in the future as well, were agile methods are applied. Even though I have a better understanding of an agile workflow and the framework Scrum we have realized during the course that there is still much to learn and develop.
+- Another aspect that has been very interesting and developing with this project is the group dynamic and cooperation between group members. Since we didn't know eachother before the course started and we had very different background, it was a bit hard at first to make sure that everyone were on the same page. During the course the group coordination and communication got a lot better. The knowledge from this can be useful in future projects as well, and I think it is very interesting to analyze how groups work together and how this reflects in the end result.
+
+
+### How can I help someone else, or the entire team, to learn something new?
+- What I have learned from this projet, that can be used to contribute to future projects development, is the fact that it is important to consider strengths and weaknesses and use this to make sure that every team member brings value to the project. As mentioned above, we had very different background before this project, which makes it important to open and honest with everyones strenghts.
+
+
+### What is my contribution towards the team’s application of scrum?
+- I feel that everyone in the group has developed a lot within Scrum. In the beginning it was hard to understand what was expected and what was important, but this got a lot clearer later on. Throughout the project I have participated in meetings and reflections, to constantly stay updated and update the other group members. 
+
+
+### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
+
+- My overall goal for this course has been to get an understanding of a software project and its difficulties and possibilities. I feel like I have achieved this, as much as possible in this course. It has been clear that communication is very important and that insufficient communication can cause unnecessary problems in terms of unstructured meetings or that more than one person works with the same task. I think that this will be useful in the future, whne I will be aware of the importance of communication from the beginning.
+- I have developed my programming skills since I have learned a completely new programming language, even though I ofcourse have a lot more to learn. This will be useful in any future project that involves JavaScript.
+- I contributed to the main menu view that was used in our end product/application. I think it was satisfying to actually beeing able to see what we had created and to show it to people who can benefit from it.
