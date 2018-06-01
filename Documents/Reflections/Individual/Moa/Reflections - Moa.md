@@ -1,25 +1,5 @@
 ## Reflections - Moa
 
-# Template week X
-### What do I want to learn or understand better?
--
-
-### How can I help someone else, or the entire team, to learn something new?
--
-
-### What is my contribution towards the team’s application of scrum?
--
-
-### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
-#### From the previous week
-- 
-
-#### For the next week
--
-
-#### For the next weeks
--
-
 # Week 9
 ### What do I want to learn or understand better?
 - I feel like I've gotten a good start and perception of how software engineering projects work. I have found it very educational to work with 7 other students with different skill sets and educational background. However, I would like to do similar projects now that I have been introduced and know how the agile framework Scrum works. I experienced that it took a long time to get started with the application/project since it took long time to 1) understand how the current application worked 2) know what development tools we should use 3) download all necessary programs 4) understand how scrum worked and 5) get to know the project group. Therefore, I feel like I didn't get to do as much coding as I hoped. Since we had a time limit and some of the group members had better coding skills, it was more efficient to let them do some of the biggest coding tasks. I would like to learn more about how to work in reactnative and further develop my coding skills in javascript. 
