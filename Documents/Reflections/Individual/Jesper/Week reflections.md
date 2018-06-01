@@ -1,18 +1,23 @@
 ## Reflections each week by Jesper
-# Week 9
+# Week 9 (last reflection)
 ### What do I want to learn or understand better?
-
+- Scrum. I want to learn how to apply scrum in future projects and take advandage of knowing what is the most important to do, and when to do it. I want to be better at slicing problems into smaller tasks, tasks that have value for the project and its owner. I need to remember that keeping a good communication with the project owner is important for both of us, and a key in applying scrum. However, I will not use all of scrums practises for the next project since I'm the only person in the project, and have to report to several product owners. But I've noticed that it happens that I focuses on the wrong implementations and spend my time on less valuable tasks. This is where I will be focusing my application of scrum, doing sprints with tasks from a board filled with user stories, and their importance and velocity.
+- If I were to continue in this project I would need to spend more time understanding how the internal components of react work. How to keep the structural model of the code base, and how to work with how it stores data and moves them between states. I feel like I've learned a lot of react during this course, but still have a lot to learn if I want to continue develop within this coding language.
 
 ### How can I help someone else, or the entire team, to learn something new?
-
+- As I said in the first reflection, our group had a broad knowledge base, but in different aspects. Five of the members have an background in computer science, and three in industrial engineering. With this in mind we tried to use every members strength when we could. For example I had a lot of experience with programming and not so much knowledge in communication and product management. I had to learn how to be better at communication with the product owner/operator, but helped other members with programming and programming strucure/guidelines.
+- I will continue to learn by other peoples strengths and sharing my strengths in future project, this way every one in the team gets better. 
 
 ### What is my contribution towards the team’s application of scrum?
+- For the last sprints we've had a lot pressure to get a dynamic application, and not just static. We wanted to be able to show live information about portcalls and its details. To complete this we had a lot of focus on dividing user strories into small valuable tasks. Each task would contribute to our final review. I tried to make sure that we divided our stories well enought, but some remained really big (1 / 5th of our entire sprint in velocity). Since I felt comfortable with coding and the code base I took some of the bigger tasks so we could get an even better final product. 
+
+- I delivered my part of the sprint, and most of our team also did. This felt really good, because now we had something to show to the product owners. We made a compromise with them about what's a possible end product for us, and we delivered what was asked from us!
 
 ### What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week's ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation.
-#### From the previous week
+- My goals from last week where to complete my tasks, help other complete their tasks and have a good final application for our final review. I also have had a goal for the last weeks to keep vertical slicing our user stories into small valuable
+tasks. I managed to complete my tasks, and even help other complete theirs during this last sprint. I felt that we presented a good appliction for the final review and we got a lot of positive feedback from the product owners and other groups. Sure, there where things we would have liked to add to our application. But given the time left and our circumstances I feel like we did a great job. 
+-In the future I would like to be more prepared for the final sprint and have less to complete, this time we had to implement tons of new features and debug them at the same time. That's not optimal. This led to us having some bugs in the background of the application that would eat our memory and after 10-15 minutes of running the application would get markedly slower, and with no time to fix the problem we just had to keep the bug. To ensure this doesn't happen in future projects I think that it's good to set a base for how to structure code and what tools to use when debugging. And before a task is done, it should go through some debugging tests. But even with this we would still have a problem with having to much todo during the last sprint. I think that this a common issue among most projects, and there is no simple fix for it. But with better time manangement and keeping the tasks vertical it will not be as big of a problem since each tasks has value for the application and if you don't have time to complete all tasks, you still contributed value to the project.
 
-
-#### For the next week
 
 # Week 8
 ### What do I want to learn or understand better?
