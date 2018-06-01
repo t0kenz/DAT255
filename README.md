@@ -2,7 +2,7 @@
 
 # Overview
 ## Links
-- Trello: https://trello.com/dat255vt18
+- Trello: https://trello.com/b/CWHSjbPb
 - Kurshemsida: https://github.com/hburden/DAT255
 - Källkod: https://github.com/avajadi/portablecdm
 - Code guide: https://docs.npmjs.com/misc/coding-style
