@@ -1,4 +1,65 @@
+# Final / Week 9
+
+## 1. What do I want to learn or understand better?
+
+This project has been my first time working in such a large group, and with students from a non-D/IT/DV programme. I feel like I have learned a lot about working in a large group and how to make people with different personalities and skillsets work well together.
+This project was my first contact with Scrum. I have learned a lot, but I would like to try it full-time to really be able to fully evaluate it. 
+
+In the future I want to become better at keeping meetings short and time-efficient. During this project we have spent a lot of time on unnecessary group discussions, which could have been held between 2-3 people instead of the whole group. In the future I want to practice being more assertive about ensuring that meeting topics are kept relevant to all participants, and that other things are discussed later. To make this happen, I will  continue practice this during meetings, especially when there are other people present who tend to take control of the meeting. I will advocate for having clear agendas, and make sure they are followed. I will also look for situations where I think that a short remote meeting or a written status update may be enough, and suggest this to the group.
+
+I will also work to get the group to divide responsibilities more. Not just development tasks, but also things that are discussed during meetings. I have sometimes felt that we could have made better use of our time by sometimes dividing ourselves into groups of 2-3 to discuss different topics, and then presenting our conclusions to the rest of the group for a shorter discussion. Having a discussion of every meeting topic in a group of 5+ tends to be inefficient - often the discussion is dominated by 2 or 3 people anyway, so it might sometimes be better to divide the meeting participants into smaller groups. I would like to try this in the future. 
+
+With regards to discussions: some people have a thinking process that works a lot better without external distractions and time pressure (i.e. it is not well suited for large meetings). To make use of their potential to contribute, I should encourage the group to spend some time preparing for the meeting, and to write down their thoughts about the topics on the agenda.
+
+Also related to discussions: to ensure that less assertive and vocal people have an opportunity to give their input, I can try to sometimes slow the conversation down a bit, and ask the other group members if they have any thoughts about the topic.
+
+
+## 2. How can I help someone else, or the entire team, to learn something new?
+
+I think that we have learned the most from each other when we have had honest, relaxed discussions about what is working well, what our assumptions are, what we could improve etc. When learning or teaching more technical things it has been important to let the less experienced member set the pace, and not make too many assumptions about what they know. I will do the same in the future.
+
+I think that an important thing I can do in the future to help with learning about how best to work together is to regularly make sure we discuss the process. This should be done both at a higher level, such as how the entire team is organized and how meetings are carried out, and at a lower level, such as the details of pair programming with my current programming partner. When there is no discussion of the process in a project, it has been my experience that the process tends to not only not improve, but often even get worse. Therefore an ongoing meta-discussion is important.
+
+Further, I can be open with my lack of knowledge in some areas, to create a team culture where others feel comfortable to do the same. This is important for the learning process.
+
+
+## 3. What is my contribution towards the team’s application of scrum?
+
+Throughout the project...
+
+I worked on my assigned tasks and kept the team up to date about the progress.
+
+I attended almost all the meetings.
+
+I set up Trello, Drive and Slack for the group, and made additions as needed (added new Slack channels e.g. "tech support" and "status report, and set up a new Trello board for writing the final reflection). 
+These tools were mostly used well, although there was some confusion about exactly which Slack channels to use.
+- When I do similar things in the future I should make it a part of the first meetings to discuss and agree on rules for how all the tools are to be used, especially Slack channels. I should also be ready to evaluate these rules later on in the project and look for things to improve.
+
+I did a lot of the room booking and scheduling of meetings. 
+
+- In the future, I would like there to be a designated person (maybe on a weekly rotation) responsible for room bookings etc. I have a tendency to take on this kind of thing if no one else does it in good time, so I would benefit from having a discussion with the group about who should be responsible. This task could be part of a secretary role.
+
+
+## 4. What is my contribution towards the team’s deliveries? That means that for the personal learning objective you will each week write down what you have achieved in relation to last week’s ambition (technologies, concepts and skills learnt as well as how this was achieved), what you would like to achieve for the next week and how to make the change happen. The first week of the course you describe the current situation by motivating a learning objective. It is perfectly fine to change objective/s each week as long as you can motivate the change and you evaluate the outcome of the previous week (e.g. describing the current situation)
+
+Last week... 
+
+During the last week we spent a lot of time working together, and we didn't divide the tasks as clearly as before. As a result, I have worked on some different things. They have all been related to the functionality of the new views.
+In parallel, I have had some discussions about the process and written down some thoughts for the final reflection.
+
+Throughout the project...
+
+Since I have been present for almost all of the meetings, I have been able to participate in creating the user stories and tasks, as well as writing the reflection each week.
+
+I learned a lot about JS and React, certainly enough to be able to contribute to the development.
+
+Being one of the 5 CS students, I have worked on the development tasks (the I students spent some time on coding, but also on things like designing the UI). 
+
+
+
 # Week 8
+
+
 
 ## 1. What do I want to learn or understand better?
 
